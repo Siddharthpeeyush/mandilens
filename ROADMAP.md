@@ -5,7 +5,7 @@ analysis, and commit. Each week adds a new layer.
 
 ## Week 1 — Pipeline + Exploratory Data Analysis (Days 1–7)
 - [x] Day 1: repo scaffold, fetch/clean/analyze/visualize pipeline, first daily report
-- [ ] Day 2: missing-data audit — which mandis/commodities report irregularly?
+- [x] Day 2: missing-data audit — which mandis/commodities report irregularly?
 - [ ] Day 3: price distributions per commodity (histograms, skew, outliers)
 - [ ] Day 4: geographic spread — state-wise median price heatmap
 - [ ] Day 5: arrival-date gaps — how "daily" is the feed really?
