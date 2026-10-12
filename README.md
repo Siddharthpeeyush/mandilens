@@ -1,29 +1,30 @@
 # 🥬 MandiLens
 
-**Daily analytics of Indian mandi (wholesale market) vegetable prices — a living data-science project.**
+**My daily data-science build — analytics of Indian mandi (wholesale market) vegetable prices.**
 
 ![updated daily](https://img.shields.io/badge/data-updated_daily-brightgreen)
 ![python](https://img.shields.io/badge/python-3.12-blue)
 ![license](https://img.shields.io/badge/license-MIT-lightgrey)
 
-Every day at 7 PM IST, an automated job pulls the latest mandi prices from the
-Government of India's [data.gov.in](https://data.gov.in) Agmarknet feed, cleans them,
-and publishes a fresh report + charts right here. Over 30 days this repo grows from a
-data pipeline into price forecasts and an interactive dashboard.
+Hi, I'm Siddharth — an aspiring data scientist, learning in public. Every day I pull
+the latest mandi prices from the Government of India's [data.gov.in](https://data.gov.in)
+Agmarknet feed, clean the data with pandas, and publish a fresh analysis with charts.
+Over 30 days this repo grows from a data pipeline into price forecasts and an
+interactive dashboard — one commit every day.
 
 **Currently tracking:** Onion, Potato, Tomato across 8 major mandis
 (Azadpur Delhi, Vashi Mumbai, Koyambedu Chennai, Sealdah Kolkata, Yeshwanthpur Bengaluru,
 Bowenpally Hyderabad, Naroda Ahmedabad, Muhana Jaipur).
 
 <!-- DAILY-UPDATE:START -->
-*Last run: 12 Oct 2026*  
-*Data source: seeded sample data — set MANDILENS_DATA_GOV_KEY for the live feed*
+*Day 1 — 12 Oct 2026*  
+*Currently working with seeded sample data while I wire up the live data.gov.in feed.*
 
 ![Price trends](charts/price_trends_2026-10-12.svg)
 
 ![Top movers](charts/top_movers_2026-10-12.svg)
 
-📄 [Full daily report](reports/daily/2026-10-12.md)
+📄 [Full daily log](reports/daily/2026-10-12.md)
 <!-- DAILY-UPDATE:END -->
 
 ## 📁 Project structure

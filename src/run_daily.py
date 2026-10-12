@@ -17,6 +17,7 @@ README = os.path.join(BASE_DIR, "README.md")
 
 START = "<!-- DAILY-UPDATE:START -->"
 END = "<!-- DAILY-UPDATE:END -->"
+DAY_ONE = dt.date(2026, 10, 12)  # Day 1 of the build log
 
 
 def run(script):
@@ -33,16 +34,17 @@ def update_readme(date_s, live):
         content = f.read()
     trend_chart = f"charts/price_trends_{date_s}.svg"
     movers_chart = f"charts/top_movers_{date_s}.svg"
-    source = ("live Agmarknet feed (data.gov.in)" if live
-              else "seeded sample data — set MANDILENS_DATA_GOV_KEY for the live feed")
+    day_n = (dt.date.today() - DAY_ONE).days + 1
+    source = ("Pulling live prices from the data.gov.in Agmarknet feed." if live
+              else "Currently working with seeded sample data while I wire up the live data.gov.in feed.")
     report = f"reports/daily/{date_s}.md"
     block = (
         f"{START}\n"
-        f"*Last run: {pd_today(date_s)}*  \n"
-        f"*Data source: {source}*\n\n"
+        f"*Day {day_n} — {pd_today(date_s)}*  \n"
+        f"*{source}*\n\n"
         f"![Price trends]({trend_chart})\n\n"
         f"![Top movers]({movers_chart})\n\n"
-        f"📄 [Full daily report]({report})\n"
+        f"📄 [Full daily log]({report})\n"
         f"{END}"
     )
     content = re.sub(f"{re.escape(START)}.*?{re.escape(END)}", block,

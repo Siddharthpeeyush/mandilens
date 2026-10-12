@@ -1,7 +1,7 @@
 # MandiLens — 30-day build roadmap
 
-A living data-science project: every day at 7 PM IST the pipeline fetches fresh
-mandi prices, extends the analysis, and commits. Each week adds a new layer.
+My 30-day data-science build log: every day I pull fresh mandi prices, extend the
+analysis, and commit. Each week adds a new layer.
 
 ## Week 1 — Pipeline + Exploratory Data Analysis (Days 1–7)
 - [x] Day 1: repo scaffold, fetch/clean/analyze/visualize pipeline, first daily report
@@ -41,5 +41,5 @@ mandi prices, extends the analysis, and commits. Each week adds a new layer.
 - [ ] Day 29: reproducibility check — fresh clone, one-command run
 - [ ] Day 30: v1.0 release notes + next-30-days plan
 
-> The daily 7 PM job always runs the pipeline first (fresh data → report → charts),
-> then works the next unchecked roadmap item.
+> Every day: fresh data → new analysis → charts → commit, then the next unchecked
+> roadmap item.

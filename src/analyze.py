@@ -5,10 +5,13 @@ Reads : data/processed/mandi_prices_clean.csv
 Writes: reports/daily/YYYY-MM-DD.md
 Prints: one-line summary for the README updater.
 """
+import datetime as dt
 import os
 import sys
 
 import pandas as pd
+
+DAY_ONE = dt.date(2026, 10, 12)  # Day 1 of the build log
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PROCESSED = os.path.join(BASE_DIR, "data", "processed",
@@ -35,7 +38,8 @@ def main():
     date_s = pd.Timestamp(latest).strftime("%Y-%m-%d")
 
     cur = _median_by_day(df, latest)
-    lines = [f"# MandiLens daily report — {pd.Timestamp(latest):%d %b %Y}",
+    day_n = (pd.Timestamp(latest).date() - DAY_ONE).days + 1
+    lines = [f"# MandiLens daily log — Day {day_n} · {pd.Timestamp(latest):%d %b %Y}",
              "",
              f"- Rows analysed: **{len(df):,}** "
              f"({df[df['arrival_date'] == latest].shape[0]:,} for today)",
