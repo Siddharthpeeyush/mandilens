@@ -29,19 +29,22 @@ def run(script):
     return proc.returncode
 
 
-def update_readme(date_s, live):
+def update_readme(date_s, source):
     with open(README, encoding="utf-8") as f:
         content = f.read()
     trend_chart = f"charts/price_trends_{date_s}.svg"
     movers_chart = f"charts/top_movers_{date_s}.svg"
     day_n = (dt.date.today() - DAY_ONE).days + 1
-    source = ("Pulling live prices from the data.gov.in Agmarknet feed." if live
-              else "Currently working with seeded sample data while I wire up the live data.gov.in feed.")
+    source_note = {
+        "portal": "Prices taken from the government's published Agmarknet portal tables — no API key involved.",
+        "api": "Pulling live prices from the data.gov.in Agmarknet feed.",
+        "sample": "Currently working with seeded sample data while I wire up the live feed.",
+    }[source]
     report = f"reports/daily/{date_s}.md"
     block = (
         f"{START}\n"
         f"*Day {day_n} — {pd_today(date_s)}*  \n"
-        f"*{source}*\n\n"
+        f"*{source_note}*\n\n"
         f"![Price trends]({trend_chart})\n\n"
         f"![Top movers]({movers_chart})\n\n"
         f"📄 [Full daily log]({report})\n"
@@ -59,8 +62,15 @@ def pd_today(date_s):
 
 def main():
     os.chdir(BASE_DIR)
-    fetch_rc = run("fetch_prices.py")
-    live = (fetch_rc == 0)
+    date_s = dt.date.today().isoformat()
+    raw_today = os.path.join(BASE_DIR, "data", "raw", f"mandi_prices_{date_s}.csv")
+    if os.path.exists(raw_today) and os.path.getsize(raw_today) > 0:
+        # Browser-extract (keyless portal pull) already placed today's file.
+        print(f"SKIP_FETCH: using existing {raw_today}")
+        source = "portal"
+    else:
+        fetch_rc = run("fetch_prices.py")
+        source = "api" if fetch_rc == 0 else "sample"
     if run("clean.py") != 0:
         return 1
     if run("analyze.py") != 0:
@@ -68,8 +78,8 @@ def main():
     if run("visualize.py") != 0:
         return 1
     date_s = dt.date.today().isoformat()
-    update_readme(date_s, live)
-    mode = "LIVE" if live else "SAMPLE"
+    update_readme(date_s, source)
+    mode = {"portal": "PORTAL", "api": "LIVE", "sample": "SAMPLE"}[source]
     print(f"DAILY DONE [{mode}]: README updated for {date_s}")
     return 0
 

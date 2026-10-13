@@ -6,9 +6,10 @@
 ![python](https://img.shields.io/badge/python-3.12-blue)
 ![license](https://img.shields.io/badge/license-MIT-lightgrey)
 
-Hi, I'm Siddharth — an aspiring data scientist, learning in public. Every day I pull
-the latest mandi prices from the Government of India's [data.gov.in](https://data.gov.in)
-Agmarknet feed, clean the data with pandas, and publish a fresh analysis with charts.
+Hi, I'm Siddharth — an aspiring data scientist, learning in public. Every day I take
+the latest mandi prices from the Government of India's
+[Agmarknet portal](https://agmarknet.gov.in) (published public tables — no API key
+needed), clean the data with pandas, and publish a fresh analysis with charts.
 Over 30 days this repo grows from a data pipeline into price forecasts and an
 interactive dashboard — one commit every day.
 
