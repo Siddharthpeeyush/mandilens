@@ -2,67 +2,40 @@
 
 (Pasted verbatim as a browser-task assignment each day. Read-only: no downloads,
 no logins, no personal data. The target is the Government of India's public
-Agmarknet portal — published mandi price tables.)
+Agmarknet portal — published commodity price tables.)
 
 ## Goal
 
-Extract today's mandi price tables from https://agmarknet.gov.in/home
-("Market Wise Price & Arrival" tab) for each mandi listed below, and report them
-as plain text blocks.
+Extract the published "Market Wise Price & Arrival" table from
+https://agmarknet.gov.in/home — the government's own daily commodity price
+publication (24 commodities: cereals, fibre crops, oil seeds, pulses,
+vegetables including Onion, Potato, Tomato).
 
 ## Steps
 
-1. Open https://agmarknet.gov.in/home and wait for the dashboard to load.
-   Use the "Market Wise Price & Arrival" tab (the default).
-2. For EACH mandi in the list below:
-   a. Click "Reset".
-   b. Open the "State/UT" dropdown: click to UNCHECK "All States/UT", then check
-      the state. (Click the text row, not just the checkbox.)
-   c. Open the "District" dropdown: uncheck "All Districts", then check the
-      district. The Market dropdown enables only after this.
-   d. Open the "Market" dropdown, type the market keyword in its search box and
-      select the matching market. If nothing matches, write a NOT_FOUND block
-      (see format) and continue with the next mandi.
-   e. Click "Go" and wait for the table to load.
-   f. Report the block in the exact format below.
-3. After all mandis, end your report with a line containing only: DONE
-
-## Report format (follow EXACTLY)
-
-Copy every value EXACTLY as displayed. If a cell shows "-" or is blank, write
-EMPTY. NEVER invent, round, or "fix" a value. If a value is not readable, write
-UNREADABLE.
+1. Open https://agmarknet.gov.in/home and wait for the dashboard to load
+   ("Market Wise Price & Arrival" tab is the default).
+2. Click "Go" with the DEFAULT filters (do not change State/District/Market).
+3. Click "Print All Data". A print-friendly view appears containing the FULL
+   unpaginated table (header mentions "Total Records").
+4. Report EXACTLY in the format below — copy every value EXACTLY as displayed.
+   If a cell shows "-" or is blank, write EMPTY. NEVER invent, round, or "fix"
+   a value. If a value is not readable, write UNREADABLE.
 
 ```
-MARKET: <exact market name as shown, e.g. APMC Azadpur>
-STATE: <state>, DISTRICT: <district>
+MARKET: National
 DATES: <date from Price header 1> | <date from Price header 2> | <date from Price header 3>
 HEADER: Commodity Group | Commodity | MSP (Rs./Quintal) | Price_D1 | Price_D2 | Price_D3 | Arrival_D1 | Arrival_D2 | Arrival_D3
-ROW: Vegetables | Onion | - | 3545.46 | 3451.56 | 3129.83 | 3014.78 | 9149.75 | 18629.89
-ROW: ...
-
+ROW: Cereals | Wheat | 2425.00 | 2800.00 | 2790.00 | 2810.00 | 1500.00 | 1600.00 | 1550.00
+ROW: ... (one ROW line per table row — report ALL rows)
 ```
 
-For a missing market:
+5. End your report with a line containing only: DONE
 
-```
-MARKET: NOT_FOUND (searched "<keyword>" in <district>, <state>)
-```
+## Notes
 
-Separate each market's block with one blank line.
-
-## Mandi list (in this order)
-
-1. State "NCT of Delhi" / District "Delhi" / search "Azadpur" (expect "APMC Azadpur")
-2. State "Maharashtra" / District "Thane" / search "Vashi" (may not exist: also try
-   District "Raigad" once; if still nothing, NOT_FOUND)
-3. State "Tamil Nadu" / District "Chennai" / search "Koyambedu"
-4. State "West Bengal" / District "Kolkata" / search "Sealdah"
-5. State "Karnataka" / District "Bengaluru Urban" (if absent try "Bangalore") /
-   search "Yeshwanthpur"
-6. State "Gujarat" / District "Ahmedabad" / search "Naroda"
-7. State "Rajasthan" / District "Jaipur" / search "Muhana"
-8. State "Telangana" / District "Hyderabad" / search "Bowenpally"
-
-If a District option doesn't exist under the state, try the closest variant and
-record the exact names you used in the STATE/DISTRICT line.
+- The DATES line must be copied from the Price column headers (format is like
+  "11 Oct, 2026" — copy it verbatim, commas included).
+- Report every row of the table, including cereals, pulses, oilseeds, fibre
+  crops and vegetables.
+- If the table fails to load, say so plainly and stop — do not guess values.

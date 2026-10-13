@@ -43,8 +43,8 @@ def main():
              "",
              f"- Rows analysed: **{len(df):,}** "
              f"({df[df['arrival_date'] == latest].shape[0]:,} for today)",
-             f"- Coverage: **{df['market'].nunique()}** mandis across "
-             f"**{df['state'].nunique()}** states",
+             f"- Coverage: **{df['market'].nunique()}** market(s), "
+             f"**{df['commodity'].nunique()}** commodities",
              f"- Commodities tracked: {', '.join(sorted(df['commodity'].unique()))}",
              ""]
 
@@ -56,7 +56,7 @@ def main():
                                 / movers["yesterday"] * 100).round(1)
         top = movers.sort_values("pct_change", ascending=False)
         lines += ["## Biggest movers vs previous trading day", "",
-                  "| Commodity | Mandi | Yesterday (₹/q) | Today (₹/q) | Change |",
+                  "| Commodity | Market | Yesterday (₹/q) | Today (₹/q) | Change |",
                   "|---|---|---|---|---|"]
         for (comm, mkt), row in top.head(5).iterrows():
             arrow = "🔺" if row["pct_change"] >= 0 else "🔻"
@@ -64,7 +64,7 @@ def main():
                          f"{row['today']:,.0f} | {arrow} {row['pct_change']:+.1f}% |")
         lines += ["", "### Steepest falls",
                   "",
-                  "| Commodity | Mandi | Yesterday (₹/q) | Today (₹/q) | Change |",
+                  "| Commodity | Market | Yesterday (₹/q) | Today (₹/q) | Change |",
                   "|---|---|---|---|---|"]
         for (comm, mkt), row in top.tail(5).iloc[::-1].iterrows():
             arrow = "🔺" if row["pct_change"] >= 0 else "🔻"

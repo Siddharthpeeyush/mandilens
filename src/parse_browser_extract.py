@@ -23,7 +23,7 @@ RAW_DIR = os.path.join(BASE_DIR, "data", "raw")
 
 COLUMNS = ["state", "district", "market", "commodity", "variety", "grade",
            "arrival_date", "min_price", "max_price", "modal_price",
-           "arrival_tonnes"]
+           "arrival_tonnes", "msp_rs"]
 
 
 def num(text):
@@ -37,8 +37,9 @@ def num(text):
 
 
 def parse_date(text):
-    # "11 Oct 2026" -> "11/10/2026"
-    return dt.datetime.strptime(text.strip(), "%d %b %Y").strftime("%d/%m/%Y")
+    # "11 Oct, 2026" or "11 Oct 2026" -> "11/10/2026"
+    return dt.datetime.strptime(text.replace(",", "").strip(),
+                                "%d %b %Y").strftime("%d/%m/%Y")
 
 
 def parse_block(block):
@@ -50,6 +51,8 @@ def parse_block(block):
     if market.upper().startswith("NOT_FOUND"):
         return None
     meta = {"market": market, "state": "", "district": "", "dates": []}
+    if market.lower() == "national":
+        meta["state"], meta["district"] = "All India", "All Districts"
     rows = []
     for ln in lines[1:]:
         up = ln.upper()
@@ -90,6 +93,7 @@ def main():
         markets_seen.add(meta["market"])
         for parts in rows:
             group, commodity = parts[0], parts[1]
+            msp = num(parts[2]) if len(parts) > 2 else ""
             prices, arrivals = parts[3:6], parts[6:9]
             for i, d in enumerate(meta["dates"]):
                 modal = num(prices[i]) if i < len(prices) else ""
@@ -102,6 +106,7 @@ def main():
                     "variety": "Aggregate", "grade": "FAQ",
                     "arrival_date": d, "min_price": "", "max_price": "",
                     "modal_price": modal, "arrival_tonnes": arr,
+                    "msp_rs": msp,
                 })
 
     if not out_rows:

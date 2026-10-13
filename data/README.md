@@ -6,13 +6,15 @@ Live data comes straight from the Government of India's published Agmarknet
 portal tables — **no API key needed**:
 
 - **Portal:** [agmarknet.gov.in](https://agmarknet.gov.in/home) → "Market Wise
-  Price & Arrival" (public, no login)
-- **Method:** once a day, the published per-mandi tables are read (via browser)
-  for each tracked mandi and normalized by `src/parse_browser_extract.py`
-  (exact format: `src/BROWSER_FETCH_BRIEF.md`)
+  Price & Arrival" (public, no login) — 24 commodities across 5 groups
+  (cereals, fibre crops, oil seeds, pulses, vegetables), with 3 days of prices,
+  arrival volumes, and MSP per commodity
+- **Method:** once a day, the published table is read (via browser) and
+  normalized by `src/parse_browser_extract.py` (exact format:
+  `src/BROWSER_FETCH_BRIEF.md`)
 - Each row carries the portal's benchmark **Price (Rs./Quintal)** per day, mapped
   to `modal_price` (`min_price`/`max_price` stay empty — the portal publishes a
-  single benchmark, not a range), plus `arrival_tonnes`.
+  single benchmark, not a range), plus `arrival_tonnes` and `msp_rs`
 
 `src/fetch_prices.py` (data.gov.in API) remains as an *optional* fallback: set
 `MANDILENS_DATA_GOV_KEY` (free key from [data.gov.in](https://data.gov.in) →

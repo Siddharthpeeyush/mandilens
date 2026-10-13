@@ -14,9 +14,9 @@ analysis, and commit. Each week adds a new layer.
 
 ## Week 2 — Cleaning deep-dive + Visual storytelling (Days 8–14)
 - [ ] Day 8: outlier detection rules (IQR vs z-score on modal prices)
-- [ ] Day 9: mandi volatility index — rank mandis by price stability
-- [ ] Day 10: cheapest-basket analysis — where would a bulk buyer shop?
-- [ ] Day 11: inter-mandi price spread per commodity (arbitrage gaps)
+- [ ] Day 9: commodity volatility index — rank commodities by price stability
+- [ ] Day 10: MSP gap analysis — market price vs MSP per commodity (who's above/below support price?)
+- [ ] Day 11: arrival vs price dynamics — do bigger arrivals mean lower prices?
 - [ ] Day 12: weekday effects — do prices move on specific days?
 - [ ] Day 13: animated price-trend chart
 - [ ] Day 14: week-2 summary + chart gallery refresh
@@ -34,7 +34,7 @@ analysis, and commit. Each week adds a new layer.
 - [ ] Day 22: hyperparameter search on the best model
 - [ ] Day 23: 7-day price forecast table in the daily report
 - [ ] Day 24: forecast accuracy dashboard (rolling MAE)
-- [ ] Day 25: Streamlit dashboard — interactive mandi explorer
+- [ ] Day 25: Streamlit dashboard — interactive commodity explorer
 - [ ] Day 26: data-quality badge (feed freshness monitor)
 - [ ] Day 27: full project write-up (methods, findings, limits)
 - [ ] Day 28: README + docs polish, chart gallery

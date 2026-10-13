@@ -1,21 +1,21 @@
 # 🥬 MandiLens
 
-**My daily data-science build — analytics of Indian mandi (wholesale market) vegetable prices.**
+**My daily data-science build — analytics of Indian agri-commodity prices, from the government's own published tables.**
 
 ![updated daily](https://img.shields.io/badge/data-updated_daily-brightgreen)
 ![python](https://img.shields.io/badge/python-3.12-blue)
 ![license](https://img.shields.io/badge/license-MIT-lightgrey)
 
 Hi, I'm Siddharth — an aspiring data scientist, learning in public. Every day I take
-the latest mandi prices from the Government of India's
+the latest commodity prices and arrivals from the Government of India's
 [Agmarknet portal](https://agmarknet.gov.in) (published public tables — no API key
 needed), clean the data with pandas, and publish a fresh analysis with charts.
 Over 30 days this repo grows from a data pipeline into price forecasts and an
 interactive dashboard — one commit every day.
 
-**Currently tracking:** Onion, Potato, Tomato across 8 major mandis
-(Azadpur Delhi, Vashi Mumbai, Koyambedu Chennai, Sealdah Kolkata, Yeshwanthpur Bengaluru,
-Bowenpally Hyderabad, Naroda Ahmedabad, Muhana Jaipur).
+**Currently tracking:** 24 commodities across 5 groups — cereals, fibre crops,
+oil seeds, pulses, and vegetables (including Onion, Potato, Tomato) — with daily
+prices, arrival volumes, and MSP.
 
 <!-- DAILY-UPDATE:START -->
 *Day 2 — 13 Oct 2026*  
