@@ -17,14 +17,14 @@ interactive dashboard — one commit every day.
 Bowenpally Hyderabad, Naroda Ahmedabad, Muhana Jaipur).
 
 <!-- DAILY-UPDATE:START -->
-*Day 1 — 12 Oct 2026*  
+*Day 2 — 13 Oct 2026*  
 *Currently working with seeded sample data while I wire up the live data.gov.in feed.*
 
-![Price trends](charts/price_trends_2026-10-12.svg)
+![Price trends](charts/price_trends_2026-10-13.svg)
 
-![Top movers](charts/top_movers_2026-10-12.svg)
+![Top movers](charts/top_movers_2026-10-13.svg)
 
-📄 [Full daily log](reports/daily/2026-10-12.md)
+📄 [Full daily log](reports/daily/2026-10-13.md)
 <!-- DAILY-UPDATE:END -->
 
 ## 📁 Project structure
