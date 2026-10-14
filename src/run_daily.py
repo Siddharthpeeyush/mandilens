@@ -1,9 +1,14 @@
 #!/usr/bin/env python3
 """MandiLens daily job: fetch -> clean -> analyze -> visualize -> README.
 
-Tolerates a missing/failed live fetch: the pipeline then runs on the
-existing dataset (sample data until a data.gov.in API key is configured)
-and labels the report accordingly.
+Data sources, in order of preference:
+  1. portal — keyless browser extract of the government's published Agmarknet
+     tables (today's raw CSV already placed before this script runs);
+  2. api    — data.gov.in Agmarknet API (needs MANDILENS_DATA_GOV_KEY);
+  3. sample — seeded synthetic data for today (clearly labelled).
+
+Tolerates a missing/failed fetch: the pipeline then runs on the existing
+dataset and labels the report accordingly.
 """
 import datetime as dt
 import os
@@ -20,9 +25,9 @@ END = "<!-- DAILY-UPDATE:END -->"
 DAY_ONE = dt.date(2026, 10, 12)  # Day 1 of the build log
 
 
-def run(script):
-    proc = subprocess.run([sys.executable, os.path.join(SRC_DIR, script)],
-                          capture_output=True, text=True)
+def run(script, args=()):
+    proc = subprocess.run([sys.executable, os.path.join(SRC_DIR, script),
+                           *args], capture_output=True, text=True)
     print(proc.stdout.strip())
     if proc.stderr.strip():
         print(proc.stderr.strip(), file=sys.stderr)
@@ -71,13 +76,20 @@ def main():
     else:
         fetch_rc = run("fetch_prices.py")
         source = "api" if fetch_rc == 0 else "sample"
+    if source == "sample" and not (
+            os.path.exists(raw_today) and os.path.getsize(raw_today) > 0):
+        # No live data today: synthesize today's file deterministically
+        # (seeded by the date, so history is never rewritten).
+        proc = subprocess.run(
+            [sys.executable, os.path.join(BASE_DIR, "tools", "make_sample.py"),
+             "--day", date_s], capture_output=True, text=True)
+        print(proc.stdout.strip())
     if run("clean.py") != 0:
         return 1
-    if run("analyze.py") != 0:
+    if run("analyze.py", (date_s,)) != 0:
         return 1
-    if run("visualize.py") != 0:
+    if run("visualize.py", (date_s,)) != 0:
         return 1
-    date_s = dt.date.today().isoformat()
     update_readme(date_s, source)
     mode = {"portal": "PORTAL", "api": "LIVE", "sample": "SAMPLE"}[source]
     print(f"DAILY DONE [{mode}]: README updated for {date_s}")

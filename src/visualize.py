@@ -28,7 +28,10 @@ def main():
         return 1
     df = pd.read_csv(PROCESSED, parse_dates=["arrival_date"])
     latest = df["arrival_date"].max()
-    date_s = pd.Timestamp(latest).strftime("%Y-%m-%d")
+    # Output files are named for the RUN date (argv) so the README links always
+    # resolve, even when the data's latest date lags behind.
+    date_s = (sys.argv[1] if len(sys.argv) > 1
+              else pd.Timestamp(latest).strftime("%Y-%m-%d"))
     os.makedirs(CHARTS_DIR, exist_ok=True)
 
     # 1) 14-day median modal-price trend per focus commodity

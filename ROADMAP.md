@@ -7,7 +7,7 @@ analysis, and commit. Each week adds a new layer.
 - [x] Day 1: repo scaffold, fetch/clean/analyze/visualize pipeline, first daily report
 - [x] Day 2: missing-data audit — which mandis/commodities report irregularly?
 - [x] Day 3: price distributions per commodity (histograms, skew, outliers) — 2026-10-13: histograms near-symmetric (skew +0.07–+0.16), zero IQR outliers across Onion/Potato/Tomato
-- [ ] Day 4: geographic spread — state-wise median price heatmap
+- [x] Day 4: geographic spread — state-wise median price heatmap — 2026-10-14: Maharashtra cheapest for all 3 vegetables, Gujarat costliest; 36–40% inter-state spreads (src/geographic_spread.py, charts/state_heatmap_*.svg)
 - [ ] Day 5: arrival-date gaps — how "daily" is the feed really?
 - [ ] Day 6: variety & grade price premiums (Red vs White onion, etc.)
 - [ ] Day 7: week-1 summary report + EDA notebook

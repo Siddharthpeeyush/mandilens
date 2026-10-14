@@ -35,7 +35,44 @@ COLUMNS = ["state", "district", "market", "commodity", "variety", "grade",
            "arrival_date", "min_price", "max_price", "modal_price"]
 
 
+def gen_day(day, seed):
+    """Generate one day's sample file. Seed derived from the date so each
+    date is deterministic and re-runnable without rewriting history."""
+    rng = random.Random(seed)
+    market_mult = {m[2]: rng.uniform(0.85, 1.25) for m in MANDIS}
+    rows = []
+    for state, district, market in MANDIS:
+        for comm, spec in COMMODITIES.items():
+            drift = rng.gauss(0, spec["vol"])
+            if comm == "Tomato" and rng.random() < 0.08:  # supply shock
+                drift += rng.choice([0.22, -0.18])
+            modal = round(spec["base"] * market_mult[market]
+                          * (1 + drift) / 10) * 10
+            variety = rng.choice(spec["varieties"])
+            rows.append({
+                "state": state, "district": district, "market": market,
+                "commodity": comm, "variety": variety, "grade": "FAQ",
+                "arrival_date": day.strftime("%d/%m/%Y"),
+                "min_price": round(modal * 0.90 / 10) * 10,
+                "max_price": round(modal * 1.15 / 10) * 10,
+                "modal_price": modal,
+            })
+    os.makedirs(RAW_DIR, exist_ok=True)
+    path = os.path.join(RAW_DIR, f"mandi_prices_{day.isoformat()}.csv")
+    with open(path, "w", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=COLUMNS)
+        w.writeheader()
+        w.writerows(rows)
+    print(f"SAMPLE: {len(rows)} rows -> {path}")
+
+
 def main():
+    # --day YYYY-MM-DD : generate just that one day (seeded by the date).
+    # Otherwise: bulk-generate N days ending today (legacy scaffold mode).
+    if "--day" in sys.argv:
+        day = dt.date.fromisoformat(sys.argv[sys.argv.index("--day") + 1])
+        gen_day(day, int(day.strftime("%Y%m%d")))
+        return
     days = int(sys.argv[1]) if len(sys.argv) > 1 else 14
     end = dt.date.today()
     start = end - dt.timedelta(days=days - 1)

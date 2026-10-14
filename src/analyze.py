@@ -35,7 +35,10 @@ def main():
     days = sorted(df["arrival_date"].unique())
     latest = days[-1]
     prev = days[-2] if len(days) > 1 else None
-    date_s = pd.Timestamp(latest).strftime("%Y-%m-%d")
+    # Output files are named for the RUN date (argv) so the README links always
+    # resolve, even when the data's latest date lags behind.
+    date_s = (sys.argv[1] if len(sys.argv) > 1
+              else pd.Timestamp(latest).strftime("%Y-%m-%d"))
 
     cur = _median_by_day(df, latest)
     day_n = (pd.Timestamp(latest).date() - DAY_ONE).days + 1
