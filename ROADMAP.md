@@ -8,7 +8,7 @@ analysis, and commit. Each week adds a new layer.
 - [x] Day 2: missing-data audit — which mandis/commodities report irregularly?
 - [x] Day 3: price distributions per commodity (histograms, skew, outliers) — 2026-10-13: histograms near-symmetric (skew +0.07–+0.16), zero IQR outliers across Onion/Potato/Tomato
 - [x] Day 4: geographic spread — state-wise median price heatmap — 2026-10-14: Maharashtra cheapest for all 3 vegetables, Gujarat costliest; 36–40% inter-state spreads (src/geographic_spread.py, charts/state_heatmap_*.svg)
-- [ ] Day 5: arrival-date gaps — how "daily" is the feed really?
+- [x] Day 5: arrival-date gaps — how "daily" is the feed really? — 2026-10-15: 94.1% calendar coverage (16/17 days, only 2026-10-13 missing), longest gap 1 day, feed freshness 0 days (src/arrival_gaps.py, charts/arrival_gaps_2026-10-15.svg, reports/day5_arrival_date_gaps.md)
 - [ ] Day 6: variety & grade price premiums (Red vs White onion, etc.)
 - [ ] Day 7: week-1 summary report + EDA notebook
 
