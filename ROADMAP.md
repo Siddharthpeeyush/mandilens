@@ -10,7 +10,7 @@ analysis, and commit. Each week adds a new layer.
 - [x] Day 4: geographic spread — state-wise median price heatmap — 2026-10-14: Maharashtra cheapest for all 3 vegetables, Gujarat costliest; 36–40% inter-state spreads (src/geographic_spread.py, charts/state_heatmap_*.svg)
 - [x] Day 5: arrival-date gaps — how "daily" is the feed really? — 2026-10-15: 94.1% calendar coverage (16/17 days, only 2026-10-13 missing), longest gap 1 day, feed freshness 0 days (src/arrival_gaps.py, charts/arrival_gaps_2026-10-15.svg, reports/day5_arrival_date_gaps.md)
 - [x] Day 6: variety & grade price premiums (Red vs White onion, etc.) — 2026-10-16: market-adjusted premiums ≈ 0 (Onion −1.6%, Potato −0.1%, Tomato +3.4% — noise, as expected on seeded sample where variety is price-independent); grade premium unmeasurable — feed reports only FAQ (src/variety_premiums.py, charts/variety_premiums_2026-10-16.svg, reports/day6_variety_grade_premiums.md)
-- [ ] Day 7: week-1 summary report + EDA notebook
+- [x] Day 7: week-1 summary report + EDA notebook — 2026-10-17: 432 rows over 18/19 calendar days, spreads Onion 39.1%/Potato 35.4%/Tomato 33.1%, Maharashtra cheapest / Gujarat costliest for all 3, variety premiums ≈ 0; consolidated notebook with embedded SVG charts (tools/build_week1_notebook.py, notebooks/01_week1_eda.ipynb, reports/day7_week1_summary.md)
 
 ## Week 2 — Cleaning deep-dive + Visual storytelling (Days 8–14)
 - [ ] Day 8: outlier detection rules (IQR vs z-score on modal prices)
