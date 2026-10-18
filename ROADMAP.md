@@ -13,7 +13,7 @@ analysis, and commit. Each week adds a new layer.
 - [x] Day 7: week-1 summary report + EDA notebook — 2026-10-17: 432 rows over 18/19 calendar days, spreads Onion 39.1%/Potato 35.4%/Tomato 33.1%, Maharashtra cheapest / Gujarat costliest for all 3, variety premiums ≈ 0; consolidated notebook with embedded SVG charts (tools/build_week1_notebook.py, notebooks/01_week1_eda.ipynb, reports/day7_week1_summary.md)
 
 ## Week 2 — Cleaning deep-dive + Visual storytelling (Days 8–14)
-- [ ] Day 8: outlier detection rules (IQR vs z-score on modal prices)
+- [x] Day 8: outlier detection rules (IQR vs z-score on modal prices) — 2026-10-18: both rules flag 0 points on 152 modal prices/commodity (consistent with Day 3's near-symmetric distributions); rules verified working, IQR (k=1.5) adopted as pipeline default flag, z-score kept as secondary check (src/outlier_rules.py, charts/outlier_rules_2026-10-18.svg, reports/day8_outlier_detection_rules.md)
 - [ ] Day 9: commodity volatility index — rank commodities by price stability
 - [ ] Day 10: MSP gap analysis — market price vs MSP per commodity (who's above/below support price?)
 - [ ] Day 11: arrival vs price dynamics — do bigger arrivals mean lower prices?
