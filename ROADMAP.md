@@ -15,7 +15,7 @@ analysis, and commit. Each week adds a new layer.
 ## Week 2 — Cleaning deep-dive + Visual storytelling (Days 8–14)
 - [x] Day 8: outlier detection rules (IQR vs z-score on modal prices) — 2026-10-18: both rules flag 0 points on 152 modal prices/commodity (consistent with Day 3's near-symmetric distributions); rules verified working, IQR (k=1.5) adopted as pipeline default flag, z-score kept as secondary check (src/outlier_rules.py, charts/outlier_rules_2026-10-18.svg, reports/day8_outlier_detection_rules.md)
 - [x] Day 9: commodity volatility index — rank commodities by price stability — 2026-10-19: index = 100·CV/max(CV): Potato #1 most stable (76, CV 11.8%), Onion #2 (84), Tomato #3 most volatile (100, CV 15.4%); robust IQR/median agrees with CV ranking; day-to-day swing 2.3% (Potato) vs 5.4% (Tomato); mandi-level CV heatmap shows Koyambedu-Tomato (16.6%) as hottest cell (src/volatility_index.py, charts/volatility_index_2026-10-19.svg, reports/day9_commodity_volatility_index.md)
-- [ ] Day 10: MSP gap analysis — market price vs MSP per commodity (who's above/below support price?)
+- [x] Day 10: MSP gap analysis — market price vs MSP per commodity (who's above/below support price?) — 2026-10-20: verified finding — 0/3 tracked commodities have a notified MSP (vegetables aren't in the 22 mandated crops, Kharif+Rabi 2026-27 per PIB); coverage audit + reusable gap module built, activates when a mandated crop (e.g. Tur/Arhar, Wheat) is added (src/msp_data.py, src/msp_gap_analysis.py, charts/msp_gap_2026-10-20.svg, reports/day10_msp_gap_analysis.md)
 - [ ] Day 11: arrival vs price dynamics — do bigger arrivals mean lower prices?
 - [ ] Day 12: weekday effects — do prices move on specific days?
 - [ ] Day 13: animated price-trend chart
