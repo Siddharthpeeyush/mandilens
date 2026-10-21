@@ -1,25 +1,25 @@
-state,district,market,commodity,variety,grade,arrival_date,min_price,max_price,modal_price
-NCT of Delhi,Delhi,Azadpur,Onion,Red,FAQ,02/10/2026,2020,2590,2250
-NCT of Delhi,Delhi,Azadpur,Potato,Jyoti,FAQ,02/10/2026,1490,1910,1660
-NCT of Delhi,Delhi,Azadpur,Tomato,Desi,FAQ,02/10/2026,2480,3170,2760
-Maharashtra,Mumbai,Vashi,Onion,Red,FAQ,02/10/2026,1670,2140,1860
-Maharashtra,Mumbai,Vashi,Potato,Jyoti,FAQ,02/10/2026,1140,1460,1270
-Maharashtra,Mumbai,Vashi,Tomato,Hybrid,FAQ,02/10/2026,1880,2400,2090
-Tamil Nadu,Chennai,Koyambedu,Onion,Red,FAQ,02/10/2026,1640,2090,1820
-Tamil Nadu,Chennai,Koyambedu,Potato,Chipsona,FAQ,02/10/2026,1280,1630,1420
-Tamil Nadu,Chennai,Koyambedu,Tomato,Desi,FAQ,02/10/2026,2020,2590,2250
-West Bengal,Kolkata,Sealdah Koley Market,Onion,Red,FAQ,02/10/2026,1610,2060,1790
-West Bengal,Kolkata,Sealdah Koley Market,Potato,Jyoti,FAQ,02/10/2026,1310,1680,1460
-West Bengal,Kolkata,Sealdah Koley Market,Tomato,Hybrid,FAQ,02/10/2026,1720,2200,1910
-Karnataka,Bengaluru,Yeshwanthpur,Onion,Red,FAQ,02/10/2026,2190,2790,2430
-Karnataka,Bengaluru,Yeshwanthpur,Potato,Jyoti,FAQ,02/10/2026,1560,1990,1730
-Karnataka,Bengaluru,Yeshwanthpur,Tomato,Hybrid,FAQ,02/10/2026,1840,2350,2040
-Telangana,Hyderabad,Bowenpally,Onion,White,FAQ,02/10/2026,2330,2980,2590
-Telangana,Hyderabad,Bowenpally,Potato,Chipsona,FAQ,02/10/2026,1330,1700,1480
-Telangana,Hyderabad,Bowenpally,Tomato,Hybrid,FAQ,02/10/2026,2450,3130,2720
-Gujarat,Ahmedabad,Naroda,Onion,Red,FAQ,02/10/2026,2290,2920,2540
-Gujarat,Ahmedabad,Naroda,Potato,Chipsona,FAQ,02/10/2026,1590,2040,1770
-Gujarat,Ahmedabad,Naroda,Tomato,Desi,FAQ,02/10/2026,2660,3390,2950
-Rajasthan,Jaipur,Muhana,Onion,Red,FAQ,02/10/2026,1710,2180,1900
-Rajasthan,Jaipur,Muhana,Potato,Jyoti,FAQ,02/10/2026,1170,1490,1300
-Rajasthan,Jaipur,Muhana,Tomato,Desi,FAQ,02/10/2026,2120,2710,2360
+state,district,market,commodity,variety,grade,arrival_date,min_price,max_price,modal_price,arrival_tonnes
+NCT of Delhi,Delhi,Azadpur,Onion,Red,FAQ,02/10/2026,2020,2590,2250,1496
+NCT of Delhi,Delhi,Azadpur,Potato,Jyoti,FAQ,02/10/2026,1490,1910,1660,1200
+NCT of Delhi,Delhi,Azadpur,Tomato,Desi,FAQ,02/10/2026,2480,3170,2760,443
+Maharashtra,Mumbai,Vashi,Onion,Red,FAQ,02/10/2026,1670,2140,1860,756
+Maharashtra,Mumbai,Vashi,Potato,Jyoti,FAQ,02/10/2026,1140,1460,1270,625
+Maharashtra,Mumbai,Vashi,Tomato,Hybrid,FAQ,02/10/2026,1880,2400,2090,657
+Tamil Nadu,Chennai,Koyambedu,Onion,Red,FAQ,02/10/2026,1640,2090,1820,1335
+Tamil Nadu,Chennai,Koyambedu,Potato,Chipsona,FAQ,02/10/2026,1280,1630,1420,617
+Tamil Nadu,Chennai,Koyambedu,Tomato,Desi,FAQ,02/10/2026,2020,2590,2250,752
+West Bengal,Kolkata,Sealdah Koley Market,Onion,Red,FAQ,02/10/2026,1610,2060,1790,674
+West Bengal,Kolkata,Sealdah Koley Market,Potato,Jyoti,FAQ,02/10/2026,1310,1680,1460,384
+West Bengal,Kolkata,Sealdah Koley Market,Tomato,Hybrid,FAQ,02/10/2026,1720,2200,1910,527
+Karnataka,Bengaluru,Yeshwanthpur,Onion,Red,FAQ,02/10/2026,2190,2790,2430,380
+Karnataka,Bengaluru,Yeshwanthpur,Potato,Jyoti,FAQ,02/10/2026,1560,1990,1730,160
+Karnataka,Bengaluru,Yeshwanthpur,Tomato,Hybrid,FAQ,02/10/2026,1840,2350,2040,469
+Telangana,Hyderabad,Bowenpally,Onion,White,FAQ,02/10/2026,2330,2980,2590,489
+Telangana,Hyderabad,Bowenpally,Potato,Chipsona,FAQ,02/10/2026,1330,1700,1480,350
+Telangana,Hyderabad,Bowenpally,Tomato,Hybrid,FAQ,02/10/2026,2450,3130,2720,387
+Gujarat,Ahmedabad,Naroda,Onion,Red,FAQ,02/10/2026,2290,2920,2540,472
+Gujarat,Ahmedabad,Naroda,Potato,Chipsona,FAQ,02/10/2026,1590,2040,1770,319
+Gujarat,Ahmedabad,Naroda,Tomato,Desi,FAQ,02/10/2026,2660,3390,2950,353
+Rajasthan,Jaipur,Muhana,Onion,Red,FAQ,02/10/2026,1710,2180,1900,286
+Rajasthan,Jaipur,Muhana,Potato,Jyoti,FAQ,02/10/2026,1170,1490,1300,229
+Rajasthan,Jaipur,Muhana,Tomato,Desi,FAQ,02/10/2026,2120,2710,2360,188
