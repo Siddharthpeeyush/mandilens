@@ -36,8 +36,9 @@ def main():
     for col in ["state", "district", "market", "commodity", "variety", "grade"]:
         if col in data.columns:
             data[col] = data[col].astype(str).str.strip().str.title()
-    for col in ["min_price", "max_price", "modal_price"]:
-        data[col] = pd.to_numeric(data[col], errors="coerce")
+    for col in ["min_price", "max_price", "modal_price", "arrival_tonnes"]:
+        if col in data.columns:
+            data[col] = pd.to_numeric(data[col], errors="coerce")
     data["arrival_date"] = pd.to_datetime(data["arrival_date"],
                                          format="%d/%m/%Y", errors="coerce")
 
