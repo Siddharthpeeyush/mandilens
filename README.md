@@ -18,14 +18,14 @@ oil seeds, pulses, and vegetables (including Onion, Potato, Tomato) — with dai
 prices, arrival volumes, and MSP.
 
 <!-- DAILY-UPDATE:START -->
-*Day 12 — 23 Oct 2026*  
+*Day 13 — 24 Oct 2026*  
 *Currently working with seeded sample data while I wire up the live feed.*
 
-![Price trends](charts/price_trends_2026-10-23.svg)
+![Price trends](charts/price_trends_2026-10-24.svg)
 
-![Top movers](charts/top_movers_2026-10-23.svg)
+![Top movers](charts/top_movers_2026-10-24.svg)
 
-📄 [Full daily log](reports/daily/2026-10-23.md)
+📄 [Full daily log](reports/daily/2026-10-24.md)
 <!-- DAILY-UPDATE:END -->
 
 ## 📁 Project structure
