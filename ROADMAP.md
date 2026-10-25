@@ -22,7 +22,7 @@ analysis, and commit. Each week adds a new layer.
 - [x] Day 14: week-2 summary + chart gallery refresh — 2026-10-24: 600 rows over 25/26 calendar days (only 2026-10-13 missing); volatility ranking Potato < Onion < Tomato holds; arrival↔price, weekday and variety nulls honestly labelled as expected on sample data (portal 403 again today); gallery = 37 charts in 15 families (CHART_GALLERY.md, tools/build_chart_gallery.py), summary in reports/day14_week2_summary.md
 
 ## Week 3 — Feature engineering + Forecasting baselines (Days 15–21)
-- [ ] Day 15: lag/rolling features (3-day, 7-day moving averages)
+- [x] Day 15: lag/rolling features (3-day, 7-day moving averages) — 2026-10-25: 24 series, 576 rows with MA3 / 480 with MA7 (full windows only); hand-check Azadpur Onion MA7 Rs 2220.00 matches rolling output exactly; latest snapshot 12/24 series above MA7, median |dev vs MA7| 12.4%; feature table feeds Day 16 forecasts unchanged (src/rolling_features.py, data/processed/rolling_features.csv, charts/rolling_features_2026-10-25.svg, reports/day15_lag_rolling_features.md)
 - [ ] Day 16: naive baselines — persistence & moving-average forecasts
 - [ ] Day 17: linear regression on lag features, per commodity
 - [ ] Day 18: train/test split by time + MAE/RMSE evaluation
