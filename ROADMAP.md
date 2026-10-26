@@ -23,7 +23,7 @@ analysis, and commit. Each week adds a new layer.
 
 ## Week 3 — Feature engineering + Forecasting baselines (Days 15–21)
 - [x] Day 15: lag/rolling features (3-day, 7-day moving averages) — 2026-10-25: 24 series, 576 rows with MA3 / 480 with MA7 (full windows only); hand-check Azadpur Onion MA7 Rs 2220.00 matches rolling output exactly; latest snapshot 12/24 series above MA7, median |dev vs MA7| 12.4%; feature table feeds Day 16 forecasts unchanged (src/rolling_features.py, data/processed/rolling_features.csv, charts/rolling_features_2026-10-25.svg, reports/day15_lag_rolling_features.md)
-- [ ] Day 16: naive baselines — persistence & moving-average forecasts
+- [x] Day 16: naive baselines — persistence & moving-average forecasts — 2026-10-26: leak-free forecasts (persistence, MA3, MA7 — all use only prices up to t−1); MA3 forecast wins on all 3 commodities and overall (MAE Rs 187.07/qtl vs persistence 206.81, MA7 197.20); Tomato hardest to predict (MA3 MAE 279.13), matching Day 9 volatility ranking; hand-check Azadpur Onion all 3 forecasts match manual recomputation (src/naive_baselines.py, data/processed/naive_baselines.csv, charts/naive_baselines_2026-10-26.svg, reports/day16_naive_baselines.md)
 - [ ] Day 17: linear regression on lag features, per commodity
 - [ ] Day 18: train/test split by time + MAE/RMSE evaluation
 - [ ] Day 19: random forest regressor, feature importances
