@@ -1,0 +1,25 @@
+state,district,market,commodity,variety,grade,arrival_date,min_price,max_price,modal_price,arrival_tonnes
+NCT of Delhi,Delhi,Azadpur,Onion,Red,FAQ,28/10/2026,2330,2980,2590,1436
+NCT of Delhi,Delhi,Azadpur,Potato,Jyoti,FAQ,28/10/2026,1690,2160,1880,939
+NCT of Delhi,Delhi,Azadpur,Tomato,Desi,FAQ,28/10/2026,2120,2710,2360,1308
+Maharashtra,Mumbai,Vashi,Onion,Red,FAQ,28/10/2026,1940,2470,2150,798
+Maharashtra,Mumbai,Vashi,Potato,Jyoti,FAQ,28/10/2026,1410,1810,1570,715
+Maharashtra,Mumbai,Vashi,Tomato,Desi,FAQ,28/10/2026,2310,2960,2570,578
+Tamil Nadu,Chennai,Koyambedu,Onion,Red,FAQ,28/10/2026,1980,2530,2200,1029
+Tamil Nadu,Chennai,Koyambedu,Potato,Jyoti,FAQ,28/10/2026,1400,1790,1560,809
+Tamil Nadu,Chennai,Koyambedu,Tomato,Desi,FAQ,28/10/2026,1790,2290,1990,969
+West Bengal,Kolkata,Sealdah Koley Market,Onion,Red,FAQ,28/10/2026,2250,2880,2500,509
+West Bengal,Kolkata,Sealdah Koley Market,Potato,Chipsona,FAQ,28/10/2026,1600,2050,1780,420
+West Bengal,Kolkata,Sealdah Koley Market,Tomato,Desi,FAQ,28/10/2026,2050,2620,2280,523
+Karnataka,Bengaluru,Yeshwanthpur,Onion,White,FAQ,28/10/2026,1970,2520,2190,530
+Karnataka,Bengaluru,Yeshwanthpur,Potato,Chipsona,FAQ,28/10/2026,1410,1810,1570,386
+Karnataka,Bengaluru,Yeshwanthpur,Tomato,Hybrid,FAQ,28/10/2026,2080,2660,2310,394
+Telangana,Hyderabad,Bowenpally,Onion,Red,FAQ,28/10/2026,1840,2360,2050,502
+Telangana,Hyderabad,Bowenpally,Potato,Jyoti,FAQ,28/10/2026,1180,1510,1310,339
+Telangana,Hyderabad,Bowenpally,Tomato,Hybrid,FAQ,28/10/2026,1760,2240,1950,373
+Gujarat,Ahmedabad,Naroda,Onion,Red,FAQ,28/10/2026,1840,2360,2050,428
+Gujarat,Ahmedabad,Naroda,Potato,Chipsona,FAQ,28/10/2026,1280,1630,1420,284
+Gujarat,Ahmedabad,Naroda,Tomato,Desi,FAQ,28/10/2026,2140,2740,2380,438
+Rajasthan,Jaipur,Muhana,Onion,Red,FAQ,28/10/2026,1790,2290,1990,312
+Rajasthan,Jaipur,Muhana,Potato,Chipsona,FAQ,28/10/2026,1180,1510,1310,202
+Rajasthan,Jaipur,Muhana,Tomato,Hybrid,FAQ,28/10/2026,2050,2620,2280,309
