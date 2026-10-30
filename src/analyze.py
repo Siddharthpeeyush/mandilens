@@ -78,8 +78,12 @@ def main():
     lines += ["## Cheapest vs costliest mandi (median modal price today)", "",
               "| Commodity | Cheapest mandi | ₹/q | Costliest mandi | ₹/q |",
               "|---|---|---|---|---|"]
+    # The portal's National row is an all-India aggregate, not a mandi —
+    # keep it out of the mandi comparison (it still appears in movers).
+    mandi_cur = cur[cur.index.get_level_values("market") != "National"]
     for comm in FOCUS:
-        sub = cur.xs(comm, level="commodity") if comm in cur.index.get_level_values(0) else None
+        sub = (mandi_cur.xs(comm, level="commodity")
+               if comm in mandi_cur.index.get_level_values(0) else None)
         if sub is None or sub.empty:
             continue
         cheap_mkt, cheap_px = sub.idxmin(), sub.min()
