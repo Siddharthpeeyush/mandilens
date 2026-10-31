@@ -1,0 +1,71 @@
+state,district,market,commodity,variety,grade,arrival_date,min_price,max_price,modal_price,arrival_tonnes,msp_rs
+All India,All Districts,National,Bajra(Pearl Millet/Cumbu),Aggregate,FAQ,29/10/2026,,,2532.8,5814.86,2900
+All India,All Districts,National,Bajra(Pearl Millet/Cumbu),Aggregate,FAQ,28/10/2026,,,2476.38,6461.88,2900
+All India,All Districts,National,Bajra(Pearl Millet/Cumbu),Aggregate,FAQ,27/10/2026,,,2542.75,7923.72,2900
+All India,All Districts,National,Barley(Jau),Aggregate,FAQ,29/10/2026,,,2861.98,40.37,2150
+All India,All Districts,National,Barley(Jau),Aggregate,FAQ,28/10/2026,,,3077.65,17.64,2150
+All India,All Districts,National,Barley(Jau),Aggregate,FAQ,27/10/2026,,,3043.48,16.42,2150
+All India,All Districts,National,Jowar(Sorghum),Aggregate,FAQ,29/10/2026,,,3344.01,1008.72,4023
+All India,All Districts,National,Jowar(Sorghum),Aggregate,FAQ,28/10/2026,,,3923.65,561.56,4023
+All India,All Districts,National,Jowar(Sorghum),Aggregate,FAQ,27/10/2026,,,4162.11,611.04,4023
+All India,All Districts,National,Maize,Aggregate,FAQ,29/10/2026,,,2556.65,92952.88,2410
+All India,All Districts,National,Maize,Aggregate,FAQ,28/10/2026,,,2522.13,100796.29,2410
+All India,All Districts,National,Maize,Aggregate,FAQ,27/10/2026,,,2477.58,115301.7,2410
+All India,All Districts,National,Paddy(Common),Aggregate,FAQ,29/10/2026,,,2951.5,126147.65,2441
+All India,All Districts,National,Paddy(Common),Aggregate,FAQ,28/10/2026,,,2969.2,140996.64,2441
+All India,All Districts,National,Paddy(Common),Aggregate,FAQ,27/10/2026,,,2897.03,159597.2,2441
+All India,All Districts,National,Paddy(Fine/Superfine/Grade A),Aggregate,FAQ,29/10/2026,,,2481.07,5027,2461
+All India,All Districts,National,Ragi(Finger Millet),Aggregate,FAQ,29/10/2026,,,3499.77,172.6,5205
+All India,All Districts,National,Ragi(Finger Millet),Aggregate,FAQ,28/10/2026,,,3574.15,440.4,5205
+All India,All Districts,National,Ragi(Finger Millet),Aggregate,FAQ,27/10/2026,,,3417.41,396.7,5205
+All India,All Districts,National,Wheat,Aggregate,FAQ,29/10/2026,,,2945.13,19670.42,2585
+All India,All Districts,National,Wheat,Aggregate,FAQ,28/10/2026,,,2930.9,23974.66,2585
+All India,All Districts,National,Wheat,Aggregate,FAQ,27/10/2026,,,2982,27038.51,2585
+All India,All Districts,National,Cotton,Aggregate,FAQ,29/10/2026,,,8878.75,15341.39,8267
+All India,All Districts,National,Cotton,Aggregate,FAQ,28/10/2026,,,8920.14,15010.26,8267
+All India,All Districts,National,Cotton,Aggregate,FAQ,27/10/2026,,,9071.54,17509.09,8267
+All India,All Districts,National,Copra,Aggregate,FAQ,29/10/2026,,,25496.54,291,12100
+All India,All Districts,National,Copra,Aggregate,FAQ,28/10/2026,,,27255.13,343.85,12100
+All India,All Districts,National,Copra,Aggregate,FAQ,27/10/2026,,,27696.32,614.1,12100
+All India,All Districts,National,Groundnut,Aggregate,FAQ,29/10/2026,,,7522.81,7441.44,7517
+All India,All Districts,National,Groundnut,Aggregate,FAQ,28/10/2026,,,7765.68,7400.97,7517
+All India,All Districts,National,Groundnut,Aggregate,FAQ,27/10/2026,,,7614.44,9083.59,7517
+All India,All Districts,National,Mustard,Aggregate,FAQ,29/10/2026,,,8334.14,1962.27,6200
+All India,All Districts,National,Mustard,Aggregate,FAQ,28/10/2026,,,8307.07,1575.47,6200
+All India,All Districts,National,Mustard,Aggregate,FAQ,27/10/2026,,,8237.8,1743.64,6200
+All India,All Districts,National,Safflower,Aggregate,FAQ,29/10/2026,,,6187.2,71.5,6540
+All India,All Districts,National,Safflower,Aggregate,FAQ,28/10/2026,,,6254.56,104.8,6540
+All India,All Districts,National,Safflower,Aggregate,FAQ,27/10/2026,,,6121.21,125.2,6540
+All India,All Districts,National,"Sesamum(Sesame,Gingelly,Til)",Aggregate,FAQ,29/10/2026,,,14796.78,632.33,10346
+All India,All Districts,National,"Sesamum(Sesame,Gingelly,Til)",Aggregate,FAQ,28/10/2026,,,14762.36,607.78,10346
+All India,All Districts,National,"Sesamum(Sesame,Gingelly,Til)",Aggregate,FAQ,27/10/2026,,,14470.87,714.07,10346
+All India,All Districts,National,Soyabean,Aggregate,FAQ,29/10/2026,,,6745.16,39613.24,5708
+All India,All Districts,National,Soyabean,Aggregate,FAQ,28/10/2026,,,6808.72,49943.18,5708
+All India,All Districts,National,Soyabean,Aggregate,FAQ,27/10/2026,,,6929.26,51502.44,5708
+All India,All Districts,National,Sunflower/Sunflower Seed,Aggregate,FAQ,29/10/2026,,,7908.77,105.2,8343
+All India,All Districts,National,Sunflower/Sunflower Seed,Aggregate,FAQ,28/10/2026,,,7842.67,43.2,8343
+All India,All Districts,National,Sunflower/Sunflower Seed,Aggregate,FAQ,27/10/2026,,,8128.51,222.4,8343
+All India,All Districts,National,Bengal Gram(Gram)(Whole),Aggregate,FAQ,29/10/2026,,,7112,2336.77,5875
+All India,All Districts,National,Bengal Gram(Gram)(Whole),Aggregate,FAQ,28/10/2026,,,7034.7,3168.31,5875
+All India,All Districts,National,Bengal Gram(Gram)(Whole),Aggregate,FAQ,27/10/2026,,,7178.34,3609.73,5875
+All India,All Districts,National,Black Gram(Urd Beans)(Whole),Aggregate,FAQ,29/10/2026,,,7969.53,1617.7,8200
+All India,All Districts,National,Black Gram(Urd Beans)(Whole),Aggregate,FAQ,28/10/2026,,,7611.12,2210.69,8200
+All India,All Districts,National,Black Gram(Urd Beans)(Whole),Aggregate,FAQ,27/10/2026,,,7331.72,2381.29,8200
+All India,All Districts,National,Green Gram(Moong)(Whole),Aggregate,FAQ,29/10/2026,,,8179.89,2269.35,8780
+All India,All Districts,National,Green Gram(Moong)(Whole),Aggregate,FAQ,28/10/2026,,,8181.78,2215.8,8780
+All India,All Districts,National,Green Gram(Moong)(Whole),Aggregate,FAQ,27/10/2026,,,8027.04,3559.81,8780
+All India,All Districts,National,Lentil(Masur)(Whole),Aggregate,FAQ,29/10/2026,,,7852.11,457.99,7000
+All India,All Districts,National,Lentil(Masur)(Whole),Aggregate,FAQ,28/10/2026,,,7934.47,560.12,7000
+All India,All Districts,National,Lentil(Masur)(Whole),Aggregate,FAQ,27/10/2026,,,7763.54,570.97,7000
+All India,All Districts,National,Red gram/Arhar/Tur(whole),Aggregate,FAQ,29/10/2026,,,9605.53,1031.15,8450
+All India,All Districts,National,Red gram/Arhar/Tur(whole),Aggregate,FAQ,28/10/2026,,,9606.42,1502.34,8450
+All India,All Districts,National,Red gram/Arhar/Tur(whole),Aggregate,FAQ,27/10/2026,,,9368.45,1426.97,8450
+All India,All Districts,National,Onion,Aggregate,FAQ,29/10/2026,,,3452.71,13991.9,
+All India,All Districts,National,Onion,Aggregate,FAQ,28/10/2026,,,3533.77,16940.14,
+All India,All Districts,National,Onion,Aggregate,FAQ,27/10/2026,,,3510.16,18737.99,
+All India,All Districts,National,Potato,Aggregate,FAQ,29/10/2026,,,1103.08,7819.51,
+All India,All Districts,National,Potato,Aggregate,FAQ,28/10/2026,,,1097.13,7746.04,
+All India,All Districts,National,Potato,Aggregate,FAQ,27/10/2026,,,1103.49,10444.74,
+All India,All Districts,National,Tomato,Aggregate,FAQ,29/10/2026,,,1944.79,4413.98,
+All India,All Districts,National,Tomato,Aggregate,FAQ,28/10/2026,,,2001.18,4765.28,
+All India,All Districts,National,Tomato,Aggregate,FAQ,27/10/2026,,,1963.47,4658.17,
