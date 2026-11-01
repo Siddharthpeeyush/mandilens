@@ -31,7 +31,7 @@ analysis, and commit. Each week adds a new layer.
 - [x] Day 21: week-3 summary — which model wins so far? — 2026-10-31: all 5 methods re-scored on the one common test window (2026-10-24..29, 144 rows); linear regression wins overall (MAE Rs 207.22/qtl, best pooled corr 0.806, smallest bias +0.76) and 7/24 series; MA7 edges MA3 on this 6-day window (Day 16's MA3 win was a longer evaluation — order flips by window); random forest still takes Potato (151.79 vs 152.82) as on Day 19; within-commodity corr ≈ 0 for every method (honest null on sample noise); pure-Python hand-check of champion MAE matches to the paisa (src/week3_summary.py — self-contained, no sklearn in this env; data/processed/week3_model_comparison.csv, charts/week3_model_comparison_2026-10-31.svg, reports/day21_week3_summary.md)
 
 ## Week 4 — Model tuning + Dashboard + Polish (Days 22–30)
-- [ ] Day 22: hyperparameter search on the best model
+- [x] Day 22: hyperparameter search on the best model — 2026-11-01: ridge alpha grid {0,1,3,10,30,100,300,1000,3000,10000} on the OLS champion (Day 18's exact time split, now 576 train / 188 test rows with today's portal pull); best alpha = 0 (Onion) and 10000 with ≤0.01 gain (Potato/Tomato) — regularization is a verified null, plain OLS champion ships unchanged; alpha=0 reproduces Day 18's lstsq OLS to the paisa, grid re-run bit-identical, hand-check Azadpur Onion alpha=100 matches manual Rs 2186.44/qtl (src/hyperparameter_search.py, data/processed/hyperparameter_search.csv, charts/hyperparameter_search_2026-11-01.svg, reports/day22_hyperparameter_search.md)
 - [ ] Day 23: 7-day price forecast table in the daily report
 - [ ] Day 24: forecast accuracy dashboard (rolling MAE)
 - [ ] Day 25: Streamlit dashboard — interactive commodity explorer
