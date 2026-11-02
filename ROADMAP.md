@@ -32,7 +32,7 @@ analysis, and commit. Each week adds a new layer.
 
 ## Week 4 — Model tuning + Dashboard + Polish (Days 22–30)
 - [x] Day 22: hyperparameter search on the best model — 2026-11-01: ridge alpha grid {0,1,3,10,30,100,300,1000,3000,10000} on the OLS champion (Day 18's exact time split, now 576 train / 188 test rows with today's portal pull); best alpha = 0 (Onion) and 10000 with ≤0.01 gain (Potato/Tomato) — regularization is a verified null, plain OLS champion ships unchanged; alpha=0 reproduces Day 18's lstsq OLS to the paisa, grid re-run bit-identical, hand-check Azadpur Onion alpha=100 matches manual Rs 2186.44/qtl (src/hyperparameter_search.py, data/processed/hyperparameter_search.csv, charts/hyperparameter_search_2026-11-01.svg, reports/day22_hyperparameter_search.md)
-- [ ] Day 23: 7-day price forecast table in the daily report
+- [x] Day 23: 7-day price forecast table in the daily report — 2026-11-02: champion OLS refit on all history, recursive 7-day forecasts for 24 market-commodity series (30 Oct–5 Nov); walk-forward 1-day MAE Onion ₹208 / Potato ₹144 / Tomato ₹266; Azadpur Onion h=1 (₹2219.74) / h=2 (₹2288.07) hand-check matches to the paisa; deterministic re-run byte-identical; table now auto-appends to every daily report via run_daily.py (src/forecast_table.py, data/processed/forecast_table_2026-11-02.csv, charts/forecast_7day_2026-11-02.svg, reports/day23_forecast_table.md)
 - [ ] Day 24: forecast accuracy dashboard (rolling MAE)
 - [ ] Day 25: Streamlit dashboard — interactive commodity explorer
 - [ ] Day 26: data-quality badge (feed freshness monitor)
