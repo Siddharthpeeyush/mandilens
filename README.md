@@ -18,14 +18,14 @@ oil seeds, pulses, and vegetables (including Onion, Potato, Tomato) — with dai
 prices, arrival volumes, and MSP.
 
 <!-- DAILY-UPDATE:START -->
-*Day 23 — 03 Nov 2026*  
+*Day 25 — 05 Nov 2026*  
 *Prices taken from the government's published Agmarknet portal tables — no API key involved.*
 
-![Price trends](charts/price_trends_2026-11-03.svg)
+![Price trends](charts/price_trends_2026-11-05.svg)
 
-![Top movers](charts/top_movers_2026-11-03.svg)
+![Top movers](charts/top_movers_2026-11-05.svg)
 
-📄 [Full daily log](reports/daily/2026-11-03.md)
+📄 [Full daily log](reports/daily/2026-11-05.md)
 <!-- DAILY-UPDATE:END -->
 
 ## 📁 Project structure
