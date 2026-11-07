@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MandiLens — Daily Indian mandi prices, trends &amp; forecasts</title>
+<meta name="description" content="Daily wholesale prices for 26 Indian agri-commodities from the Government of India's Agmarknet portal — with trends, mandi comparison, MSP check and a price calculator.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <div class="logo">🥬 Mandi<span>Lens</span></div>
+    <div class="tagline">Daily mandi prices, made readable</div>
+    <nav class="main" aria-label="Sections">
+      <a href="#prices">Today's prices</a>
+      <a href="#mandis">Mandi compare</a>
+      <a href="#forecast">Forecast</a>
+      <a href="#calculator">Calculator</a>
+      <a href="#about">About the data</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="hero">
+    <h1>Aaj ke mandi bhav — today's wholesale prices</h1>
+    <p class="lede">Modal (most common) wholesale prices from the Government of India's
+      Agmarknet portal, plus trends, MSP comparison and a 7-day outlook.
+      Prices are ₹ per quintal (100&nbsp;kg).</p>
+    <div class="fresh" id="freshBadge">Loading latest prices…</div>
+    <div class="hero-cards" id="heroCards"></div>
+  </div>
+
+  <section class="block" aria-label="Biggest movers">
+    <h2>Biggest movers today</h2>
+    <p class="sub" id="moversSub"></p>
+    <div class="movers">
+      <div class="card">
+        <strong>⬆ Biggest rises</strong>
+        <div id="risers"></div>
+      </div>
+      <div class="card">
+        <strong>⬇ Biggest falls</strong>
+        <div id="fallers"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="prices">
+    <h2>Today's prices — all commodities</h2>
+    <p class="sub">National benchmark from Agmarknet. Tap any row for its price trend,
+      MSP comparison and arrivals. <span class="badge-real">Real portal data</span></p>
+    <div class="controls">
+      <input type="search" id="search" placeholder="Search — e.g. onion, प्याज, wheat…" aria-label="Search commodities">
+      <select id="sort" aria-label="Sort prices">
+        <option value="name">Sort: Name A–Z</option>
+        <option value="priceDesc">Sort: Price, high to low</option>
+        <option value="priceAsc">Sort: Price, low to high</option>
+        <option value="chgDesc">Sort: Biggest rise first</option>
+        <option value="chgAsc">Sort: Biggest fall first</option>
+      </select>
+    </div>
+    <div class="chips" id="chips" role="group" aria-label="Filter by category"></div>
+    <div class="card" style="padding:6px 12px;">
+      <div class="price-head" aria-hidden="true">
+        <span>Commodity</span><span>₹ / quintal</span><span>₹ / kg</span><span>Change</span><span>vs MSP</span>
+      </div>
+      <div id="priceList"></div>
+    </div>
+  </section>
+
+  <section class="block" id="detail" hidden>
+    <div class="card">
+      <div class="detail-head">
+        <h3 id="detailTitle"></h3>
+        <span class="date" id="detailDate"></span>
+      </div>
+      <div class="stat-grid" id="detailStats"></div>
+      <canvas class="chart" id="trendChart" height="260" aria-label="Price trend chart"></canvas>
+      <p class="chart-note" id="detailNote"></p>
+    </div>
+  </section>
+
+  <section class="block" id="mandis">
+    <h2>Mandi compare — onion, potato, tomato</h2>
+    <p class="sub">Cheapest vs costliest mandi for the three vegetables, across
+      Azadpur (Delhi), Vashi (Mumbai), Koyambedu (Chennai), Sealdah (Kolkata),
+      Yeshwanthpur (Bengaluru), Bowenpally (Hyderabad), Naroda (Ahmedabad) and
+      Muhana (Jaipur). <span class="badge-sample">Sample data</span></p>
+    <div class="tabs" id="mandiTabs" role="tablist" aria-label="Vegetable"></div>
+    <div class="card table-scroll">
+      <table class="data" id="mandiTable"></table>
+    </div>
+    <div class="note"><strong>Read this before using these mandi prices:</strong>
+      the per-mandi series is seeded sample data from the project's early days
+      (29 Sep – 29 Oct 2026), kept to show how the comparison works — it is
+      <strong>not</strong> real mandi prices. The National prices above are the
+      real, current Agmarknet data. Real per-mandi prices return to this page
+      once the portal publishes them again.</div>
+  </section>
+
+  <section class="block" id="forecast">
+    <h2>7-day price outlook</h2>
+    <p class="sub" id="forecastSub"></p>
+    <div class="tabs" id="forecastTabs" role="tablist" aria-label="Vegetable forecast"></div>
+    <div class="card table-scroll">
+      <table class="data" id="forecastTable"></table>
+    </div>
+    <div class="note" id="forecastNote"></div>
+  </section>
+
+  <section class="block" id="calculator">
+    <h2>Price calculator</h2>
+    <p class="sub">How much will your quantity cost at today's modal price?</p>
+    <div class="card">
+      <div class="calc-grid">
+        <div>
+          <label for="calcCommodity">Commodity</label>
+          <select id="calcCommodity"></select>
+        </div>
+        <div>
+          <label for="calcQty">Quantity</label>
+          <input type="number" id="calcQty" value="10" min="0" step="any" inputmode="decimal">
+        </div>
+        <div>
+          <label for="calcUnit">Unit</label>
+          <select id="calcUnit">
+            <option value="qtl">Quintal (100 kg)</option>
+            <option value="kg">Kilogram</option>
+            <option value="tonne">Tonne (1,000 kg)</option>
+          </select>
+        </div>
+      </div>
+      <div class="calc-result" id="calcResult"></div>
+    </div>
+  </section>
+
+  <section class="block" id="about">
+    <h2>About the data</h2>
+    <div class="card">
+      <ul class="about-list">
+        <li><strong>Source:</strong> Agmarknet portal (agmarknet.gov.in), Government of
+          India — published public tables, no login. Prices are the portal's
+          benchmark Price (₹/Quintal) per day; arrivals in metric tonnes.</li>
+        <li><strong>MSP:</strong> Minimum Support Price as published on the portal.
+          "vs MSP" shows how far today's modal price sits above or below MSP.
+          Vegetables (onion, potato, tomato) have no MSP.</li>
+        <li><strong>Freshness:</strong> the portal feed runs about 2 days behind —
+          the latest prices here are dated <span id="aboutLatest"></span>. The
+          site is rebuilt every evening from the daily pipeline.</li>
+        <li><strong>Forecasts:</strong> plain OLS regression on the last 3 days'
+          prices (lag1/lag2/lag3), refit daily. Typical 1-day error:
+          onion ₹208, potato ₹144, tomato ₹266 per quintal. Treat days 5–7 as
+          directional only.</li>
+        <li><strong>Open data, open code:</strong> the full dataset (978 rows),
+          daily reports and analysis live at
+          <a href="https://github.com/Siddharthpeeyush/mandilens">github.com/Siddharthpeeyush/mandilens</a>.
+          Data © Government of India (Open Government Data License); site code MIT.</li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    MandiLens — a daily data-science project by Siddharth Peeyush.
+    Prices are wholesale modal prices, not retail. Always confirm with your
+    local mandi before buying or selling.
+  </div>
+</footer>
+
+<noscript><p style="padding:20px;text-align:center;">MandiLens needs JavaScript to show prices.</p></noscript>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
