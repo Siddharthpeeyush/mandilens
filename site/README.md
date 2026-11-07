@@ -38,3 +38,10 @@ with the daily run — the HTML/JS never needs to change for a data update.
 - **Calculator** — quintal/kg/tonne cost at today's modal price.
 - **Search + category filter + sort** across all 26 commodities (Hindi names
   included).
+
+> **Hidden for now (7 Nov 2026, user's call):** the Mandi compare and
+> 7-day outlook sections rest on the seeded sample series, so they are
+> hidden with the `hidden` attribute on their `<section>` tags (plus their
+> nav links and the Forecasts bullet in About). The code and data stay in
+> place — to restore, remove `hidden` from those sections, un-comment the
+> nav links and the Forecasts bullet.

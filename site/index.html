@@ -15,8 +15,7 @@
     <div class="tagline">Daily mandi prices, made readable</div>
     <nav class="main" aria-label="Sections">
       <a href="#prices">Today's prices</a>
-      <a href="#mandis">Mandi compare</a>
-      <a href="#forecast">Forecast</a>
+      <!-- HIDDEN 2026-11-07 (sample data): <a href="#mandis">Mandi compare</a> <a href="#forecast">Forecast</a> — restore together with those sections -->
       <a href="#calculator">Calculator</a>
       <a href="#about">About the data</a>
     </nav>
@@ -28,7 +27,7 @@
   <div class="hero">
     <h1>Aaj ke mandi bhav — today's wholesale prices</h1>
     <p class="lede">Modal (most common) wholesale prices from the Government of India's
-      Agmarknet portal, plus trends, MSP comparison and a 7-day outlook.
+      Agmarknet portal, plus trends and MSP comparison.
       Prices are ₹ per quintal (100&nbsp;kg).</p>
     <div class="fresh" id="freshBadge">Loading latest prices…</div>
     <div class="hero-cards" id="heroCards"></div>
@@ -84,7 +83,8 @@
     </div>
   </section>
 
-  <section class="block" id="mandis">
+  <!-- HIDDEN 2026-11-07 by user choice: mandi compare rests on seeded SAMPLE data (ends 29 Oct 2026). To restore, remove `hidden` from this section and the nav links above. -->
+  <section class="block" id="mandis" hidden>
     <h2>Mandi compare — onion, potato, tomato</h2>
     <p class="sub">Cheapest vs costliest mandi for the three vegetables, across
       Azadpur (Delhi), Vashi (Mumbai), Koyambedu (Chennai), Sealdah (Kolkata),
@@ -102,7 +102,8 @@
       once the portal publishes them again.</div>
   </section>
 
-  <section class="block" id="forecast">
+  <!-- HIDDEN 2026-11-07 by user choice: forecast is built on the per-mandi SAMPLE series (fit to 29 Oct 2026). To restore, remove `hidden` from this section and the nav links above. -->
+  <section class="block" id="forecast" hidden>
     <h2>7-day price outlook</h2>
     <p class="sub" id="forecastSub"></p>
     <div class="tabs" id="forecastTabs" role="tablist" aria-label="Vegetable forecast"></div>
@@ -151,10 +152,12 @@
         <li><strong>Freshness:</strong> the portal feed runs about 2 days behind —
           the latest prices here are dated <span id="aboutLatest"></span>. The
           site is rebuilt every evening from the daily pipeline.</li>
+        <!-- HIDDEN 2026-11-07 with the forecast section (sample data). Restore together with it.
         <li><strong>Forecasts:</strong> plain OLS regression on the last 3 days'
           prices (lag1/lag2/lag3), refit daily. Typical 1-day error:
           onion ₹208, potato ₹144, tomato ₹266 per quintal. Treat days 5–7 as
           directional only.</li>
+        -->
         <li><strong>Open data, open code:</strong> the full dataset (978 rows),
           daily reports and analysis live at
           <a href="https://github.com/Siddharthpeeyush/mandilens">github.com/Siddharthpeeyush/mandilens</a>.
