@@ -28,6 +28,18 @@ FAMILIES = [
     ("eda_distributions", "Week-1 EDA distributions (Day 7)"),
     ("eda_rows_per_day", "Week-1 EDA rows per day (Day 7)"),
     ("coverage_matrix", "Missing-data coverage matrix (Day 2)"),
+    ("rolling_features", "Lag / rolling features (Day 15)"),
+    ("naive_baselines", "Naive forecast baselines (Day 16)"),
+    ("linear_regression", "Linear regression on lags (Day 17)"),
+    ("train_test_split", "Train/test split evaluation (Day 18)"),
+    ("random_forest", "Random forest regressor (Day 19)"),
+    ("forecast_tracking", "Forecast vs actual tracking (Day 20)"),
+    ("forecast_bias", "Forecast bias (Day 20)"),
+    ("week3_model_comparison", "Week-3 model comparison (Day 21)"),
+    ("hyperparameter_search", "Hyperparameter search (Day 22)"),
+    ("forecast_7day", "7-day forecast charts (Day 23)"),
+    ("forecast_accuracy", "Forecast accuracy dashboard (Day 24)"),
+    ("data_quality_badge", "Data-quality badge (Day 26)"),
 ]
 
 

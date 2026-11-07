@@ -6,6 +6,62 @@ newest first within each family. Regenerate with
 
 ## Daily price trends
 
+### price_trends_2026-11-07.svg (2026-11-07)
+
+![price_trends_2026-11-07.svg](charts/price_trends_2026-11-07.svg)
+
+### price_trends_2026-11-06.svg (2026-11-06)
+
+![price_trends_2026-11-06.svg](charts/price_trends_2026-11-06.svg)
+
+### price_trends_2026-11-05.svg (2026-11-05)
+
+![price_trends_2026-11-05.svg](charts/price_trends_2026-11-05.svg)
+
+### price_trends_2026-11-04.svg (2026-11-04)
+
+![price_trends_2026-11-04.svg](charts/price_trends_2026-11-04.svg)
+
+### price_trends_2026-11-03.svg (2026-11-03)
+
+![price_trends_2026-11-03.svg](charts/price_trends_2026-11-03.svg)
+
+### price_trends_2026-11-02.svg (2026-11-02)
+
+![price_trends_2026-11-02.svg](charts/price_trends_2026-11-02.svg)
+
+### price_trends_2026-11-01.svg (2026-11-01)
+
+![price_trends_2026-11-01.svg](charts/price_trends_2026-11-01.svg)
+
+### price_trends_2026-10-31.svg (2026-10-31)
+
+![price_trends_2026-10-31.svg](charts/price_trends_2026-10-31.svg)
+
+### price_trends_2026-10-30.svg (2026-10-30)
+
+![price_trends_2026-10-30.svg](charts/price_trends_2026-10-30.svg)
+
+### price_trends_2026-10-29.svg (2026-10-29)
+
+![price_trends_2026-10-29.svg](charts/price_trends_2026-10-29.svg)
+
+### price_trends_2026-10-28.svg (2026-10-28)
+
+![price_trends_2026-10-28.svg](charts/price_trends_2026-10-28.svg)
+
+### price_trends_2026-10-27.svg (2026-10-27)
+
+![price_trends_2026-10-27.svg](charts/price_trends_2026-10-27.svg)
+
+### price_trends_2026-10-26.svg (2026-10-26)
+
+![price_trends_2026-10-26.svg](charts/price_trends_2026-10-26.svg)
+
+### price_trends_2026-10-25.svg (2026-10-25)
+
+![price_trends_2026-10-25.svg](charts/price_trends_2026-10-25.svg)
+
 ### price_trends_2026-10-24.svg (2026-10-24)
 
 ![price_trends_2026-10-24.svg](charts/price_trends_2026-10-24.svg)
@@ -55,6 +111,62 @@ newest first within each family. Regenerate with
 ![price_trends_2026-10-12.svg](charts/price_trends_2026-10-12.svg)
 
 ## Daily top movers
+
+### top_movers_2026-11-07.svg (2026-11-07)
+
+![top_movers_2026-11-07.svg](charts/top_movers_2026-11-07.svg)
+
+### top_movers_2026-11-06.svg (2026-11-06)
+
+![top_movers_2026-11-06.svg](charts/top_movers_2026-11-06.svg)
+
+### top_movers_2026-11-05.svg (2026-11-05)
+
+![top_movers_2026-11-05.svg](charts/top_movers_2026-11-05.svg)
+
+### top_movers_2026-11-04.svg (2026-11-04)
+
+![top_movers_2026-11-04.svg](charts/top_movers_2026-11-04.svg)
+
+### top_movers_2026-11-03.svg (2026-11-03)
+
+![top_movers_2026-11-03.svg](charts/top_movers_2026-11-03.svg)
+
+### top_movers_2026-11-02.svg (2026-11-02)
+
+![top_movers_2026-11-02.svg](charts/top_movers_2026-11-02.svg)
+
+### top_movers_2026-11-01.svg (2026-11-01)
+
+![top_movers_2026-11-01.svg](charts/top_movers_2026-11-01.svg)
+
+### top_movers_2026-10-31.svg (2026-10-31)
+
+![top_movers_2026-10-31.svg](charts/top_movers_2026-10-31.svg)
+
+### top_movers_2026-10-30.svg (2026-10-30)
+
+![top_movers_2026-10-30.svg](charts/top_movers_2026-10-30.svg)
+
+### top_movers_2026-10-29.svg (2026-10-29)
+
+![top_movers_2026-10-29.svg](charts/top_movers_2026-10-29.svg)
+
+### top_movers_2026-10-28.svg (2026-10-28)
+
+![top_movers_2026-10-28.svg](charts/top_movers_2026-10-28.svg)
+
+### top_movers_2026-10-27.svg (2026-10-27)
+
+![top_movers_2026-10-27.svg](charts/top_movers_2026-10-27.svg)
+
+### top_movers_2026-10-26.svg (2026-10-26)
+
+![top_movers_2026-10-26.svg](charts/top_movers_2026-10-26.svg)
+
+### top_movers_2026-10-25.svg (2026-10-25)
+
+![top_movers_2026-10-25.svg](charts/top_movers_2026-10-25.svg)
 
 ### top_movers_2026-10-24.svg (2026-10-24)
 
@@ -181,3 +293,103 @@ newest first within each family. Regenerate with
 ### coverage_matrix_2026-10-12.svg (2026-10-12)
 
 ![coverage_matrix_2026-10-12.svg](charts/coverage_matrix_2026-10-12.svg)
+
+## Lag / rolling features (Day 15)
+
+### rolling_features_2026-10-25.svg (2026-10-25)
+
+![rolling_features_2026-10-25.svg](charts/rolling_features_2026-10-25.svg)
+
+## Naive forecast baselines (Day 16)
+
+### naive_baselines_2026-10-26.svg (2026-10-26)
+
+![naive_baselines_2026-10-26.svg](charts/naive_baselines_2026-10-26.svg)
+
+## Linear regression on lags (Day 17)
+
+### linear_regression_2026-10-27.svg (2026-10-27)
+
+![linear_regression_2026-10-27.svg](charts/linear_regression_2026-10-27.svg)
+
+## Train/test split evaluation (Day 18)
+
+### train_test_split_2026-10-28.svg (2026-10-28)
+
+![train_test_split_2026-10-28.svg](charts/train_test_split_2026-10-28.svg)
+
+## Random forest regressor (Day 19)
+
+### random_forest_2026-10-29.svg (2026-10-29)
+
+![random_forest_2026-10-29.svg](charts/random_forest_2026-10-29.svg)
+
+## Forecast vs actual tracking (Day 20)
+
+### forecast_tracking_2026-10-30.svg (2026-10-30)
+
+![forecast_tracking_2026-10-30.svg](charts/forecast_tracking_2026-10-30.svg)
+
+## Forecast bias (Day 20)
+
+### forecast_bias_2026-10-30.svg (2026-10-30)
+
+![forecast_bias_2026-10-30.svg](charts/forecast_bias_2026-10-30.svg)
+
+## Week-3 model comparison (Day 21)
+
+### week3_model_comparison_2026-10-31.svg (2026-10-31)
+
+![week3_model_comparison_2026-10-31.svg](charts/week3_model_comparison_2026-10-31.svg)
+
+## Hyperparameter search (Day 22)
+
+### hyperparameter_search_2026-11-01.svg (2026-11-01)
+
+![hyperparameter_search_2026-11-01.svg](charts/hyperparameter_search_2026-11-01.svg)
+
+## 7-day forecast charts (Day 23)
+
+### forecast_7day_2026-11-07.svg (2026-11-07)
+
+![forecast_7day_2026-11-07.svg](charts/forecast_7day_2026-11-07.svg)
+
+### forecast_7day_2026-11-06.svg (2026-11-06)
+
+![forecast_7day_2026-11-06.svg](charts/forecast_7day_2026-11-06.svg)
+
+### forecast_7day_2026-11-05.svg (2026-11-05)
+
+![forecast_7day_2026-11-05.svg](charts/forecast_7day_2026-11-05.svg)
+
+### forecast_7day_2026-11-04.svg (2026-11-04)
+
+![forecast_7day_2026-11-04.svg](charts/forecast_7day_2026-11-04.svg)
+
+### forecast_7day_2026-11-03.svg (2026-11-03)
+
+![forecast_7day_2026-11-03.svg](charts/forecast_7day_2026-11-03.svg)
+
+### forecast_7day_2026-11-02.svg (2026-11-02)
+
+![forecast_7day_2026-11-02.svg](charts/forecast_7day_2026-11-02.svg)
+
+## Forecast accuracy dashboard (Day 24)
+
+### forecast_accuracy_2026-11-03.svg (2026-11-03)
+
+![forecast_accuracy_2026-11-03.svg](charts/forecast_accuracy_2026-11-03.svg)
+
+## Data-quality badge (Day 26)
+
+### data_quality_badge_2026-11-07.svg (2026-11-07)
+
+![data_quality_badge_2026-11-07.svg](charts/data_quality_badge_2026-11-07.svg)
+
+### data_quality_badge_2026-11-06.svg (2026-11-06)
+
+![data_quality_badge_2026-11-06.svg](charts/data_quality_badge_2026-11-06.svg)
+
+### data_quality_badge_2026-11-05.svg (2026-11-05)
+
+![data_quality_badge_2026-11-05.svg](charts/data_quality_badge_2026-11-05.svg)
