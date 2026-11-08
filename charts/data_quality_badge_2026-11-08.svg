@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="176" font-family="sans-serif">
+<rect x="0" y="0" width="640" height="176" fill="#fdfefe" stroke="#d5dbdb"/>
+<rect x="12" y="10" width="118" height="24" rx="4" fill="#e67e22"/>
+<text x="71" y="27" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">STALE</text>
+<text x="142" y="27" font-size="13" font-weight="bold">Data quality — 2026-11-08  ·  mode: portal</text>
+<text x="12" y="56" font-size="12" fill="#333">Latest data 2026-11-06 — 2 day(s) old</text>
+<text x="12" y="78" font-size="12" fill="#333">Mandi feed: 2026-10-29 (10 day(s) old)  ·  Portal feed: 2026-11-06 (2 day(s) old)</text>
+<text x="12" y="100" font-size="12" fill="#333">Calendar coverage 97.4% (38/39 days)  ·  longest gap 1 day(s)</text>
+<text x="12" y="122" font-size="12" fill="#333">Latest day completeness 24/24 commodities priced (100.0%)</text>
+</svg>

@@ -94,4 +94,4 @@ fresh 7-day table automatically. Day 24's rolling-MAE
 dashboard will start tracking these forecasts against
 realised prices as they arrive.
 
-![7-day forecast](../charts/forecast_7day_2026-11-07.svg)
+![7-day forecast](../charts/forecast_7day_2026-11-08.svg)
