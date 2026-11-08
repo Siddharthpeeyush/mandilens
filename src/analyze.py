@@ -36,12 +36,14 @@ def main():
     latest = days[-1]
     prev = days[-2] if len(days) > 1 else None
     # Output files are named for the RUN date (argv) so the README links always
-    # resolve, even when the data's latest date lags behind.
+    # resolve, even when the data's latest date lags behind. The Day number
+    # follows the same run date (so it matches the README); the header date
+    # stays the latest data date, so a lagging portal feed is visible.
     date_s = (sys.argv[1] if len(sys.argv) > 1
               else pd.Timestamp(latest).strftime("%Y-%m-%d"))
 
     cur = _median_by_day(df, latest)
-    day_n = (pd.Timestamp(latest).date() - DAY_ONE).days + 1
+    day_n = (pd.Timestamp(date_s).date() - DAY_ONE).days + 1
     lines = [f"# MandiLens daily log — Day {day_n} · {pd.Timestamp(latest):%d %b %Y}",
              "",
              f"- Rows analysed: **{len(df):,}** "

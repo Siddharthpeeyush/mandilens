@@ -1,5 +1,5 @@
 pandas>=2.0
-matplotlib>=3.7
+matplotlib>=3.6  # Day 29 check: daily run verified on 3.6.3; only basic pyplot calls used
 numpy>=1.24
 scikit-learn>=1.3
 streamlit>=1.66
