@@ -18,24 +18,24 @@ Vashi, Koyambedu, Sealdah, Yeshwanthpur, Bowenpally, Naroda, Muhana) plus the
 National benchmark from the government's portal tables (the portal itself
 publishes 24 commodities across 5 groups — cereals, fibre crops, oil seeds,
 pulses, and vegetables, including Onion, Potato, Tomato) — with daily prices,
-arrival volumes, and MSP. **Dataset:** 978 rows, 29 Sep – 05 Nov 2026
-(updated 07 Nov 2026).
+arrival volumes, and MSP. **Dataset:** 1,026 rows, 29 Sep – 07 Nov 2026
+(updated 09 Nov 2026).
 
 **Data freshness:** the portal feed is currently 2 days behind (latest
-05 Nov) and the per-mandi sample feed stopped at 29 Oct — see the
-[data-quality badge](charts/data_quality_badge_2026-11-07.svg) in each daily
+07 Nov) and the per-mandi sample feed stopped at 29 Oct — see the
+[data-quality badge](charts/data_quality_badge_2026-11-09.svg) in each daily
 log. Every report states its source, so portal vs sample data is never
 ambiguous.
 
 <!-- DAILY-UPDATE:START -->
-*Day 28 — 08 Nov 2026*  
+*Day 29 — 09 Nov 2026*  
 *Prices taken from the government's published Agmarknet portal tables — no API key involved.*
 
-![Price trends](charts/price_trends_2026-11-08.svg)
+![Price trends](charts/price_trends_2026-11-09.svg)
 
-![Top movers](charts/top_movers_2026-11-08.svg)
+![Top movers](charts/top_movers_2026-11-09.svg)
 
-📄 [Full daily log](reports/daily/2026-11-08.md)
+📄 [Full daily log](reports/daily/2026-11-09.md)
 <!-- DAILY-UPDATE:END -->
 
 ## 📁 Project structure
