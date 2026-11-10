@@ -9,9 +9,13 @@ latest verified numbers. Re-run after src/run_daily.py:
 
 Honesty rules baked in:
 - "today" = the latest date in the National (real Agmarknet portal) feed.
-- Per-mandi Onion/Potato/Tomato history is SEEDED SAMPLE data (tools/
+- Per-mandi Onion/Potato/Tomato history was SEEDED SAMPLE data (tools/
   make_sample.py) ending 29 Oct 2026 — flagged `sample: true` everywhere
-  and badged on the site. Never presented as real mandi prices.
+  and badged on the site. Never presented as real mandi prices. From
+  10 Nov 2026 (Day 31) real portal per-mandi rows land in
+  data/raw/mandi_prices_YYYY-MM-DD-mandi.csv; build_site.py marks the
+  latest-date mandi rows `mandiReal: true` only when their source_file
+  ends "-mandi.csv", and the note says which it is.
 - Forecasts were fit on data to 29 Oct 2026 for 30 Oct-05 Nov 2026 —
   dates are carried verbatim, never relabelled as "next 7 days".
 """
@@ -119,7 +123,12 @@ def main():
     risers = sorted(with_chg, key=lambda t: -t["changePct"])[:5]
     fallers = sorted(with_chg, key=lambda t: t["changePct"])[:5]
 
-    # --- Per-mandi sample history (SEEDED SAMPLE, ends 29 Oct 2026) ---
+    # --- Per-mandi rows at the latest date ---
+    # Before Day 31 these were SEEDED SAMPLE (tools/make_sample.py, ends
+    # 29 Oct 2026). From 10 Nov 2026 the per-mandi pull lands real portal
+    # rows in data/raw/mandi_prices_YYYY-MM-DD-mandi.csv, so a latest-date
+    # row whose source_file ends "-mandi.csv" is REAL — never label it
+    # sample, and never label sample rows real. The note says which.
     mandi = [r for r in rows if r["market"] != "National"]
     mandi_latest = max(r["arrival_date"] for r in mandi)
     mandi_today = []
@@ -133,6 +142,16 @@ def main():
                 "price": p, "perKg": round(p / 100, 2),
                 "min": num(r["min_price"]), "max": num(r["max_price"]),
             })
+    mandi_real = any(
+        r.get("source_file", "").endswith("-mandi.csv")
+        for r in mandi if r["arrival_date"] == mandi_latest)
+    mandi_note = (
+        "Per-mandi Onion/Potato/Tomato prices are real Agmarknet portal "
+        "prices for the mandis that reported on this date; mandis that did "
+        "not report show no row."
+        if mandi_real else
+        "Per-mandi Onion/Potato/Tomato prices are seeded sample data "
+        "(tools/make_sample.py), not real mandi prices.")
 
     # --- Forecast (OLS champion, fit to 29 Oct; window 30 Oct-05 Nov) ---
     fc_paths = sorted(glob.glob(os.path.join(
@@ -161,9 +180,8 @@ def main():
             "todayCount": len(today),
             "nationalSeriesStart": nat_dates[0],
             "mandiSampleLatest": mandi_latest,
-            "mandiSampleNote": ("Per-mandi Onion/Potato/Tomato prices are "
-                                 "seeded sample data (tools/make_sample.py), "
-                                 "not real mandi prices."),
+            "mandiReal": mandi_real,
+            "mandiSampleNote": mandi_note,
             "forecast": fc_meta,
             "mae": {"Onion": 208, "Potato": 144, "Tomato": 266},
             "source": "Agmarknet portal (agmarknet.gov.in), Government of India",
@@ -190,7 +208,8 @@ def main():
         fh.write(";\n")
     print(f"wrote {out}: {len(today)} commodities on {latest}, "
           f"{len(series)} series, {len(mandi_today)} mandi rows "
-          f"(sample, {mandi_latest}), forecast {len(forecast)} keys")
+          f"({'real' if mandi_real else 'sample'}, {mandi_latest}), "
+          f"forecast {len(forecast)} keys")
 
 
 if __name__ == "__main__":
