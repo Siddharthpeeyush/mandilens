@@ -125,7 +125,11 @@ def make_chart(df, forecasts, maes, latest, fdates, path):
                           for mkt in fc_markets(comm, forecasts)])
             for d in fdates])
         mae = maes[comm]
-        ax.plot(x_hist, hist_med.loc[x_hist].to_numpy(), "o-",
+        # Reindex, don't .loc: real portal rows are sparse (a commodity may
+        # have no row on a date another one does — e.g. no Onion anywhere on
+        # 08 Nov 2026 while Sealdah Tomato reported). Missing dates stay NaN
+        # so the line honestly breaks instead of crashing the daily run.
+        ax.plot(x_hist, hist_med.reindex(x_hist).to_numpy(), "o-",
                 color=COLORS[comm], linewidth=1.8, markersize=4,
                 label="Actual (cross-mandi median)")
         ax.plot(x_fc, fc_med, "s--", color="#2c3e50", linewidth=1.8,

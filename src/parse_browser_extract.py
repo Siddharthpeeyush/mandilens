@@ -42,12 +42,27 @@ def parse_date(text):
                                 "%d %b %Y").strftime("%d/%m/%Y")
 
 
+def normalize_market(name):
+    """Strip the portal's APMC affix so per-mandi rows join the existing
+    series: 'APMC Azadpur' -> 'Azadpur', 'Bowenpally APMC' -> 'Bowenpally',
+    'Sealdah Koley Market APMC' -> 'Sealdah Koley Market'. Names that only
+    match by affix-stripping (e.g. 'APMC Mumbai' -> 'Mumbai') are kept as
+    the stripped name and recorded as-is — they are NOT mapped onto a
+    different tracked mandi (Vashi/Yeshwanthpur are not the same market)."""
+    name = name.strip()
+    if name.upper().startswith("APMC "):
+        name = name[5:].strip()
+    if name.upper().endswith(" APMC"):
+        name = name[:-5].strip()
+    return name
+
+
 def parse_block(block):
     """Return (meta, rows) for one MARKET block, or None."""
     lines = [ln.strip() for ln in block.strip().splitlines() if ln.strip()]
     if not lines or not lines[0].upper().startswith("MARKET:"):
         return None
-    market = lines[0].split(":", 1)[1].strip()
+    market = normalize_market(lines[0].split(":", 1)[1].strip())
     if market.upper().startswith("NOT_FOUND"):
         return None
     meta = {"market": market, "state": "", "district": "", "dates": []}
