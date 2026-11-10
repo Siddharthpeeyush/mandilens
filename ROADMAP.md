@@ -43,3 +43,35 @@ analysis, and commit. Each week adds a new layer.
 
 > Every day: fresh data → new analysis → charts → commit, then the next unchecked
 > roadmap item.
+
+## Week 5 — Fix the data gap (Days 31–35)
+- [x] Day 31: per-mandi portal pull — the portal's market-wise tables exist per state/district/market; extend the browser brief to capture the 8 tracked mandis directly instead of the National aggregate, so forecasts finally get real actuals to score against. — 2026-11-10: Part B added to the brief; first pull landed 14 real rows across 3 markets (Azadpur 6, Bowenpally 5, Sealdah Koley Market 3; 06–08 Nov); Koyambedu + Muhana NOT_FOUND, Naroda no data, APMC Mumbai / Bengaluru APMC tables have no vegetable rows; mandi feed lag 12 → 2 days. Fixed two real-data bugs the pull exposed: forecast chart KeyError on sparse dates (reindex, not .loc) and site mislabelling real mandi rows as sample (mandiReal flag). Parser normalises APMC affixes so rows join existing series; brief now carries the exact portal market names (src/BROWSER_FETCH_BRIEF.md, src/parse_browser_extract.py, src/forecast_table.py, site/build_site.py, data/raw/mandi_prices_2026-11-10-mandi.csv, reports/day31_per_mandi_portal_pull.md)
+- [ ] Day 32: backfill check — how many of the 11 missing per-mandi days are recoverable from the portal's 3-day window vs permanently lost; mark the loss honestly in the dataset README.
+- [ ] Day 33: first scored forecast — re-run the accuracy dashboard once real per-mandi actuals land; report the first real MAE, however bad.
+- [ ] Day 34: arrival data quality — the portal's arrival figures are in tonnes with Indian-format commas; audit the parser against a second source day.
+- [ ] Day 35: week-5 summary — data-gap status, first scored forecast.
+
+## Week 6 — Make the forecasts earn their keep (Days 36–42)
+- [ ] Day 36: expand the champion — add arrival + weekday features to the OLS and re-score on the same time split; keep only if out-of-sample MAE improves.
+- [ ] Day 37: per-mandi forecast table on the website (today the site shows National only; the 7-day table lives only in the daily log).
+- [ ] Day 38: forecast confidence bands — prediction intervals from walk-forward residuals, shown on the site chart.
+- [ ] Day 39: alert rule — flag any commodity moving >10% day-over-day in the daily log (Jowar's +57.6% on 09 Nov would have tripped it).
+- [ ] Day 40: model comparison refresh — re-score all 5 methods on the longer window now that real portal rows exist.
+- [ ] Day 41: seasonality check — 40+ days of data; test for weekly cycles in the National series.
+- [ ] Day 42: week-6 summary.
+
+## Week 7 — Product: the website becomes the point (Days 43–48)
+- [ ] Day 43: mandi-compare restored on the site with real data (hidden since 07 Nov because it was seeded sample — unhide only when real per-mandi rows exist).
+- [ ] Day 44: 7-day forecast restored on the site with real data (same rule).
+- [ ] Day 45: Hindi-first polish — full Hindi labels alongside English on the site's main views.
+- [ ] Day 46: shareable commodity view — deep link per commodity (`?c=Onion`) for the daily log.
+- [ ] Day 47: performance pass — data.js is 34KB and growing; split by commodity or compress before it slows the phone load.
+- [ ] Day 48: week-7 summary + user test — one real user (him) taps through every screen on his phone and lists what breaks.
+
+## Week 8 — Close-out: v2.0 (Days 49–60)
+- [ ] Day 49: MSP coverage extension — add one mandated crop with a real MSP (Tur/Arhar or Wheat) and activate the Day-10 gap module for real.
+- [ ] Day 50: data-quality badge v2 — separate portal vs mandi freshness, and a "days since last real per-mandi row" counter.
+- [ ] Day 51: error audit — every "expected null on sample data" re-tested on whatever real data exists by then; nulls that survive become findings.
+- [ ] Day 52: cost/ops note — the whole stack is $0 (GitHub + Netlify free); document the running cost and the manual steps (browser extract) so anyone can take over the daily run.
+- [ ] Day 53: v2.0 release notes + Days 61–90 sketch.
+- [ ] Day 54–60: buffer — the portal bot-wall has already eaten ~18 days once; buffer absorbs the next outage without breaking the streak.
