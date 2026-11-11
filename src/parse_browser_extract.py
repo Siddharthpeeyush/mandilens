@@ -128,13 +128,22 @@ def main():
         print("PARSE: zero usable rows", file=sys.stderr)
         return 1
     os.makedirs(RAW_DIR, exist_ok=True)
-    out_path = os.path.join(RAW_DIR, f"mandi_prices_{tag}.csv")
+    # Day 31 convention: National aggregate and per-mandi rows live in
+    # separate files — the site builder and backfill check detect real
+    # per-mandi rows by the "-mandi.csv" source_file suffix.
+    nat_rows = [r for r in out_rows if r["market"] == "National"]
+    mandi_rows = [r for r in out_rows if r["market"] != "National"]
     import csv
-    with open(out_path, "w", newline="", encoding="utf-8") as f:
-        w = csv.DictWriter(f, fieldnames=COLUMNS)
-        w.writeheader()
-        w.writerows(out_rows)
-    print(f"PARSE: {len(out_rows)} rows, {len(markets_seen)} markets -> {out_path}")
+    for suffix, subset in (("", nat_rows), ("-mandi", mandi_rows)):
+        if not subset:
+            continue
+        out_path = os.path.join(RAW_DIR, f"mandi_prices_{tag}{suffix}.csv")
+        with open(out_path, "w", newline="", encoding="utf-8") as f:
+            w = csv.DictWriter(f, fieldnames=COLUMNS)
+            w.writeheader()
+            w.writerows(subset)
+        print(f"PARSE: {len(subset)} rows -> {out_path}")
+    print(f"PARSE: {len(out_rows)} rows, {len(markets_seen)} markets total")
     return 0
 
 
