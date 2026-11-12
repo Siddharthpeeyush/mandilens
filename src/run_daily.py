@@ -22,7 +22,7 @@ README = os.path.join(BASE_DIR, "README.md")
 
 START = "<!-- DAILY-UPDATE:START -->"
 END = "<!-- DAILY-UPDATE:END -->"
-DAY_ONE = dt.date(2026, 10, 12)  # Day 1 of the build log
+DAY_ONE = dt.date(2026, 10, 11)  # Day 1 of the build log (roadmap: Day 3 = 13 Oct)
 
 
 def run(script, args=()):

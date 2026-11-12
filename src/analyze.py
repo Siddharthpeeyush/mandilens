@@ -11,7 +11,7 @@ import sys
 
 import pandas as pd
 
-DAY_ONE = dt.date(2026, 10, 12)  # Day 1 of the build log
+DAY_ONE = dt.date(2026, 10, 11)  # Day 1 of the build log (roadmap: Day 3 = 13 Oct)
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PROCESSED = os.path.join(BASE_DIR, "data", "processed",
