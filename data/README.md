@@ -51,10 +51,10 @@ classifies all 88 market-days in the hole:
   publishes them. They are gone, not delayed — forecasts for those
   dates train on the sample feed, and the gap is visible in every
   per-mandi series.
-- **Still in the window: 2 market-days** — Azadpur 08 Nov (portal
-  showed no price on both the 10 and 11 Nov pulls — likely never
-  reported) and Bowenpally 09 Nov (no price on the 11 Nov pull; one
-  more chance in the 12 Nov window).
+- **Still in the window: 0 market-days — resolved 13 Nov 2026** — Azadpur
+  08 Nov has no rows in any of the 10/11/12 Nov pulls, and Bowenpally
+  09 Nov was EMPTY on the 11, 12 and 13 Nov pulls: both are confirmed
+  never reported, not delayed. The 11-day hole is now fully classified.
 - **Never obtainable: 55 market-days, 165 rows** — the other 5 mandis
   (Vashi/APMC Mumbai, Koyambedu, Yeshwanthpur/Bengaluru APMC, Naroda,
   Muhana) yield no vegetable rows from this portal at all (not listed,
@@ -63,7 +63,22 @@ classifies all 88 market-days in the hole:
 
 Net: of the 264 commodity rows the 8-mandi × 11-day hole could in
 principle hold, 63 are permanently lost, 165 were never obtainable,
-18 are recovered, and 6 are still in play.
+18 are recovered, and 6 never reported (2 market-days × 3 commodities).
+
+## Known behaviour — first-seen dedup vs portal revisions (Day 34)
+
+The portal revises its National figures as late market reports arrive
+(price median |Δ| 0.21%, arrival median 3.02% between pulls; worst
+case Jowar 09/11 arrival 69.4 → 34.9 t). But `clean.py`'s
+`drop_duplicates` keeps the FIRST pull's value for each (market,
+commodity, date), so **146 of 354 clean rows on overlapping keys (41%,
+13 Nov 2026) differ from the latest published figure** — the clean
+dataset records values as first published, not as finally published.
+Per-mandi rows are unaffected (18/18 exact across pulls). Switching
+to keep-latest would rewrite 146 historical values; that is a data
+decision for a follow-up, not a bug fix. Audit:
+`src/arrival_audit.py`, `data/processed/arrival_audit_2026-11-13.csv`,
+`reports/day34_arrival_data_quality.md`.
 
 ## Layout
 
