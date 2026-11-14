@@ -1139,3 +1139,59 @@ Nct Of Delhi,Delhi,Azadpur,Tomato,Aggregate,Faq,2026-11-10,,,2186.0,398.1,mandi_
 Telangana,Hyderabad,Bowenpally,Potato,Aggregate,Faq,2026-11-10,,,1400.0,629.9,mandi_prices_2026-11-12-mandi.csv,
 Telangana,Hyderabad,Bowenpally,Tomato,Aggregate,Faq,2026-11-10,,,1600.0,421.8,mandi_prices_2026-11-12-mandi.csv,
 West Bengal,Kolkata,Sealdah Koley Market,Tomato,Aggregate,Faq,2026-11-10,,,2800.0,12.6,mandi_prices_2026-11-12-mandi.csv,
+All India,All Districts,National,Bajra(Pearl Millet/Cumbu),Aggregate,Faq,2026-11-11,,,2571.79,2132.27,mandi_prices_2026-11-13.csv,2900.0
+All India,All Districts,National,Barley(Jau),Aggregate,Faq,2026-11-11,,,2820.73,11.68,mandi_prices_2026-11-13.csv,2150.0
+All India,All Districts,National,Bengal Gram(Gram)(Whole),Aggregate,Faq,2026-11-11,,,7385.16,1427.66,mandi_prices_2026-11-13.csv,5875.0
+All India,All Districts,National,Black Gram(Urd Beans)(Whole),Aggregate,Faq,2026-11-11,,,8120.01,834.93,mandi_prices_2026-11-13.csv,8200.0
+All India,All Districts,National,Copra,Aggregate,Faq,2026-11-11,,,25902.81,57.0,mandi_prices_2026-11-13.csv,12100.0
+All India,All Districts,National,Cotton,Aggregate,Faq,2026-11-11,,,9177.92,7038.92,mandi_prices_2026-11-13.csv,8267.0
+All India,All Districts,National,Green Gram(Moong)(Whole),Aggregate,Faq,2026-11-11,,,8032.49,3989.55,mandi_prices_2026-11-13.csv,8780.0
+All India,All Districts,National,Groundnut,Aggregate,Faq,2026-11-11,,,6626.87,366.84,mandi_prices_2026-11-13.csv,7517.0
+All India,All Districts,National,Jowar(Sorghum),Aggregate,Faq,2026-11-11,,,5395.95,232.6,mandi_prices_2026-11-13.csv,4023.0
+All India,All Districts,National,Lentil(Masur)(Whole),Aggregate,Faq,2026-11-11,,,8587.87,393.18,mandi_prices_2026-11-13.csv,7000.0
+All India,All Districts,National,Maize,Aggregate,Faq,2026-11-11,,,2744.03,28965.27,mandi_prices_2026-11-13.csv,2410.0
+All India,All Districts,National,Mustard,Aggregate,Faq,2026-11-11,,,8001.74,268.96,mandi_prices_2026-11-13.csv,6200.0
+All India,All Districts,National,Onion,Aggregate,Faq,2026-11-11,,,3961.29,3425.29,mandi_prices_2026-11-13.csv,
+All India,All Districts,National,Paddy(Common),Aggregate,Faq,2026-11-11,,,2918.78,72601.07,mandi_prices_2026-11-13.csv,2441.0
+All India,All Districts,National,Paddy(Fine/Superfine/Grade A),Aggregate,Faq,2026-11-11,,,2562.63,7892.6,mandi_prices_2026-11-13.csv,2461.0
+All India,All Districts,National,Potato,Aggregate,Faq,2026-11-11,,,918.99,8051.9,mandi_prices_2026-11-13.csv,
+All India,All Districts,National,Ragi(Finger Millet),Aggregate,Faq,2026-11-11,,,4004.44,306.1,mandi_prices_2026-11-13.csv,5205.0
+All India,All Districts,National,Red Gram/Arhar/Tur(Whole),Aggregate,Faq,2026-11-11,,,9445.01,879.5,mandi_prices_2026-11-13.csv,8450.0
+All India,All Districts,National,Safflower,Aggregate,Faq,2026-11-11,,,6317.25,20.8,mandi_prices_2026-11-13.csv,6540.0
+All India,All Districts,National,"Sesamum(Sesame,Gingelly,Til)",Aggregate,Faq,2026-11-11,,,13015.65,79.46,mandi_prices_2026-11-13.csv,10346.0
+All India,All Districts,National,Soyabean,Aggregate,Faq,2026-11-11,,,6881.06,3617.47,mandi_prices_2026-11-13.csv,5708.0
+All India,All Districts,National,Tomato,Aggregate,Faq,2026-11-11,,,1838.14,3197.92,mandi_prices_2026-11-13.csv,
+All India,All Districts,National,Wheat,Aggregate,Faq,2026-11-11,,,2740.2,5396.04,mandi_prices_2026-11-13.csv,2585.0
+Nct Of Delhi,Delhi,Azadpur,Onion,Aggregate,Faq,2026-11-11,,,4206.0,462.1,mandi_prices_2026-11-13-mandi.csv,
+Nct Of Delhi,Delhi,Azadpur,Potato,Aggregate,Faq,2026-11-11,,,1160.0,1155.5,mandi_prices_2026-11-13-mandi.csv,
+Nct Of Delhi,Delhi,Azadpur,Tomato,Aggregate,Faq,2026-11-11,,,2204.0,415.1,mandi_prices_2026-11-13-mandi.csv,
+Telangana,Hyderabad,Bowenpally,Potato,Aggregate,Faq,2026-11-11,,,1400.0,418.1,mandi_prices_2026-11-13-mandi.csv,
+Telangana,Hyderabad,Bowenpally,Tomato,Aggregate,Faq,2026-11-11,,,1600.0,322.3,mandi_prices_2026-11-13-mandi.csv,
+West Bengal,Kolkata,Sealdah Koley Market,Tomato,Aggregate,Faq,2026-11-11,,,2800.0,12.7,mandi_prices_2026-11-13-mandi.csv,
+All India,All Districts,National,Bajra(Pearl Millet/Cumbu),Aggregate,Faq,2026-11-12,,,2647.2,2777.4,mandi_prices_2026-11-14.csv,2900.0
+All India,All Districts,National,Barley(Jau),Aggregate,Faq,2026-11-12,,,2528.8,84.16,mandi_prices_2026-11-14.csv,2150.0
+All India,All Districts,National,Bengal Gram(Gram)(Whole),Aggregate,Faq,2026-11-12,,,7237.97,2179.45,mandi_prices_2026-11-14.csv,5875.0
+All India,All Districts,National,Black Gram(Urd Beans)(Whole),Aggregate,Faq,2026-11-12,,,8163.98,1384.73,mandi_prices_2026-11-14.csv,8200.0
+All India,All Districts,National,Copra,Aggregate,Faq,2026-11-12,,,20829.0,110.7,mandi_prices_2026-11-14.csv,12100.0
+All India,All Districts,National,Cotton,Aggregate,Faq,2026-11-12,,,9076.86,9736.67,mandi_prices_2026-11-14.csv,8267.0
+All India,All Districts,National,Green Gram(Moong)(Whole),Aggregate,Faq,2026-11-12,,,8372.24,1189.85,mandi_prices_2026-11-14.csv,8780.0
+All India,All Districts,National,Groundnut,Aggregate,Faq,2026-11-12,,,6810.22,816.4,mandi_prices_2026-11-14.csv,7517.0
+All India,All Districts,National,Jowar(Sorghum),Aggregate,Faq,2026-11-12,,,4059.01,508.22,mandi_prices_2026-11-14.csv,4023.0
+All India,All Districts,National,Lentil(Masur)(Whole),Aggregate,Faq,2026-11-12,,,8299.69,437.56,mandi_prices_2026-11-14.csv,7000.0
+All India,All Districts,National,Maize,Aggregate,Faq,2026-11-12,,,2748.99,61308.32,mandi_prices_2026-11-14.csv,2410.0
+All India,All Districts,National,Mustard,Aggregate,Faq,2026-11-12,,,8488.7,791.63,mandi_prices_2026-11-14.csv,6200.0
+All India,All Districts,National,Onion,Aggregate,Faq,2026-11-12,,,4001.66,7557.67,mandi_prices_2026-11-14.csv,
+All India,All Districts,National,Paddy(Common),Aggregate,Faq,2026-11-12,,,3305.99,102003.29,mandi_prices_2026-11-14.csv,2441.0
+All India,All Districts,National,Paddy(Fine/Superfine/Grade A),Aggregate,Faq,2026-11-12,,,2465.25,5810.0,mandi_prices_2026-11-14.csv,2461.0
+All India,All Districts,National,Potato,Aggregate,Faq,2026-11-12,,,770.33,9571.27,mandi_prices_2026-11-14.csv,
+All India,All Districts,National,Ragi(Finger Millet),Aggregate,Faq,2026-11-12,,,3629.69,203.6,mandi_prices_2026-11-14.csv,5205.0
+All India,All Districts,National,Red Gram/Arhar/Tur(Whole),Aggregate,Faq,2026-11-12,,,9595.73,903.02,mandi_prices_2026-11-14.csv,8450.0
+All India,All Districts,National,Safflower,Aggregate,Faq,2026-11-12,,,6176.4,35.4,mandi_prices_2026-11-14.csv,6540.0
+All India,All Districts,National,"Sesamum(Sesame,Gingelly,Til)",Aggregate,Faq,2026-11-12,,,14678.98,196.2,mandi_prices_2026-11-14.csv,10346.0
+All India,All Districts,National,Soyabean,Aggregate,Faq,2026-11-12,,,7068.1,17052.05,mandi_prices_2026-11-14.csv,5708.0
+All India,All Districts,National,Sunflower/Sunflower Seed,Aggregate,Faq,2026-11-12,,,7774.13,16.0,mandi_prices_2026-11-14.csv,8343.0
+All India,All Districts,National,Tomato,Aggregate,Faq,2026-11-12,,,1880.13,4054.85,mandi_prices_2026-11-14.csv,
+All India,All Districts,National,Wheat,Aggregate,Faq,2026-11-12,,,2849.58,14263.45,mandi_prices_2026-11-14.csv,2585.0
+Telangana,Hyderabad,Bowenpally,Potato,Aggregate,Faq,2026-11-12,,,1500.0,450.9,mandi_prices_2026-11-14-mandi.csv,
+Telangana,Hyderabad,Bowenpally,Tomato,Aggregate,Faq,2026-11-12,,,1500.0,513.9,mandi_prices_2026-11-14-mandi.csv,
+West Bengal,Kolkata,Sealdah Koley Market,Tomato,Aggregate,Faq,2026-11-12,,,2800.0,12.7,mandi_prices_2026-11-14-mandi.csv,
