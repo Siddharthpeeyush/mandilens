@@ -28,14 +28,14 @@ log. Every report states its source, so portal vs sample data is never
 ambiguous.
 
 <!-- DAILY-UPDATE:START -->
-*Day 35 — 14 Nov 2026*  
+*Day 36 — 15 Nov 2026*  
 *Prices taken from the government's published Agmarknet portal tables — no API key involved.*
 
-![Price trends](charts/price_trends_2026-11-14.svg)
+![Price trends](charts/price_trends_2026-11-15.svg)
 
-![Top movers](charts/top_movers_2026-11-14.svg)
+![Top movers](charts/top_movers_2026-11-15.svg)
 
-📄 [Full daily log](reports/daily/2026-11-14.md)
+📄 [Full daily log](reports/daily/2026-11-15.md)
 <!-- DAILY-UPDATE:END -->
 
 ## 📁 Project structure
