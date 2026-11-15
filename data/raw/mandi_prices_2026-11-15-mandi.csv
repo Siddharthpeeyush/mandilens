@@ -1,0 +1,13 @@
+state,district,market,commodity,variety,grade,arrival_date,min_price,max_price,modal_price,arrival_tonnes,msp_rs
+NCT of Delhi,Delhi,Azadpur,Onion,Aggregate,FAQ,11/11/2026,,,4206,462.1,
+NCT of Delhi,Delhi,Azadpur,Potato,Aggregate,FAQ,11/11/2026,,,1160,1155.5,
+NCT of Delhi,Delhi,Azadpur,Tomato,Aggregate,FAQ,11/11/2026,,,2204,415.1,
+West Bengal,Kolkata,Sealdah Koley Market,Tomato,Aggregate,FAQ,13/11/2026,,,2800,12.7,
+West Bengal,Kolkata,Sealdah Koley Market,Tomato,Aggregate,FAQ,12/11/2026,,,2800,12.7,
+West Bengal,Kolkata,Sealdah Koley Market,Tomato,Aggregate,FAQ,11/11/2026,,,2800,12.7,
+Telangana,Hyderabad,Bowenpally,Potato,Aggregate,FAQ,13/11/2026,,,1400,480.4,
+Telangana,Hyderabad,Bowenpally,Potato,Aggregate,FAQ,12/11/2026,,,1500,450.9,
+Telangana,Hyderabad,Bowenpally,Potato,Aggregate,FAQ,11/11/2026,,,1400,418.1,
+Telangana,Hyderabad,Bowenpally,Tomato,Aggregate,FAQ,13/11/2026,,,1400,408.7,
+Telangana,Hyderabad,Bowenpally,Tomato,Aggregate,FAQ,12/11/2026,,,1500,513.9,
+Telangana,Hyderabad,Bowenpally,Tomato,Aggregate,FAQ,11/11/2026,,,1600,322.3,
