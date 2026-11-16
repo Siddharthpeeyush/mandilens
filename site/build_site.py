@@ -16,8 +16,12 @@ Honesty rules baked in:
   data/raw/mandi_prices_YYYY-MM-DD-mandi.csv; build_site.py marks the
   latest-date mandi rows `mandiReal: true` only when their source_file
   ends "-mandi.csv", and the note says which it is.
-- Forecasts were fit on data to 29 Oct 2026 for 30 Oct-05 Nov 2026 —
-  dates are carried verbatim, never relabelled as "next 7 days".
+- Forecasts are the per-mandi 7-day OLS table (data/processed/
+  forecast_table_YYYY-MM-DD.csv, refit daily on all history; window =
+  latest per-mandi date +1..+7) — carried verbatim, never relabelled.
+  Day 37: the site now SHOWS that table (forecast section restored);
+  the typical 1-day error in meta.mae comes from the matching
+  forecast_mae_YYYY-MM-DD.json sidecar, not a hardcoded value.
 """
 import csv
 import glob
@@ -154,6 +158,18 @@ def main():
         "(tools/make_sample.py), not real mandi prices.")
 
     # --- Forecast (OLS champion, fit to 29 Oct; window 30 Oct-05 Nov) ---
+    # Day 37: meta.mae now comes from the latest forecast_mae_*.json
+    # sidecar written by forecast_table.py (walk-forward 1-day MAE on the
+    # current history); the Day-23 values below are only a fallback for
+    # runs before any sidecar exists.
+    fc_mae_paths = sorted(glob.glob(os.path.join(
+        BASE, "data", "processed", "forecast_mae_*.json")))
+    if fc_mae_paths:
+        with open(fc_mae_paths[-1]) as fh:
+            _mae = json.load(fh)
+        mae = {c: int(round(_mae[c]["mae"])) for c in _mae}
+    else:
+        mae = {"Onion": 208, "Potato": 144, "Tomato": 266}
     fc_paths = sorted(glob.glob(os.path.join(
         BASE, "data", "processed", "forecast_table_*.csv")))
     forecast, fc_meta = {}, {}
@@ -183,7 +199,7 @@ def main():
             "mandiReal": mandi_real,
             "mandiSampleNote": mandi_note,
             "forecast": fc_meta,
-            "mae": {"Onion": 208, "Potato": 144, "Tomato": 266},
+            "mae": mae,
             "source": "Agmarknet portal (agmarknet.gov.in), Government of India",
         },
         "today": today,

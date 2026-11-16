@@ -201,6 +201,17 @@ def main():
                             f"forecast_table_{TODAY}.csv")
     out.to_csv(out_path, index=False)
 
+    # Day 37: sidecar the walk-forward MAEs so the website (build_site.py)
+    # shows the CURRENT typical 1-day error instead of the Day-23 values
+    # that were hardcoded there. One small JSON per run, same date stamp.
+    mae_path = os.path.join(BASE_DIR, "data", "processed",
+                            f"forecast_mae_{TODAY}.json")
+    import json as _json
+    with open(mae_path, "w", encoding="utf-8") as f:
+        _json.dump({c: {"mae": round(maes[c], 2), "n": wf_n[c]}
+                    for c in COMMS}, f)
+    print(f"FORECAST_TABLE: walk-forward MAE sidecar -> {mae_path}")
+
     h1, h2 = hand_check(df, betas, latest)
 
     chart_name = f"forecast_7day_{TODAY}.svg"
