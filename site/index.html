@@ -15,7 +15,8 @@
     <div class="tagline">Daily mandi prices, made readable</div>
     <nav class="main" aria-label="Sections">
       <a href="#prices">Today's prices</a>
-      <!-- HIDDEN 2026-11-07 (sample data): <a href="#mandis">Mandi compare</a> <a href="#forecast">Forecast</a> — restore together with those sections -->
+      <a href="#forecast">Forecast</a>
+      <!-- HIDDEN 2026-11-07 (sample data): <a href="#mandis">Mandi compare</a> — restore with that section -->
       <a href="#calculator">Calculator</a>
       <a href="#about">About the data</a>
     </nav>
@@ -102,8 +103,12 @@
       once the portal publishes them again.</div>
   </section>
 
-  <!-- HIDDEN 2026-11-07 by user choice: forecast is built on the per-mandi SAMPLE series (fit to 29 Oct 2026). To restore, remove `hidden` from this section and the nav links above. -->
-  <section class="block" id="forecast" hidden>
+  <!-- RESTORED 2026-11-16 (Day 37): per-mandi 7-day forecast table, same
+       data as the daily log. Forecast is fit on per-mandi history — seeded
+       sample 29 Sep–29 Oct 2026 + real Agmarknet portal rows from 10 Nov —
+       so the caveat in the note below stays until the sample history ages out.
+       Mandi compare stays hidden until Day 43 (real-data rule). -->
+  <section class="block" id="forecast">
     <h2>7-day price outlook</h2>
     <p class="sub" id="forecastSub"></p>
     <div class="tabs" id="forecastTabs" role="tablist" aria-label="Vegetable forecast"></div>
@@ -152,12 +157,8 @@
         <li><strong>Freshness:</strong> the portal feed runs about 2 days behind —
           the latest prices here are dated <span id="aboutLatest"></span>. The
           site is rebuilt every evening from the daily pipeline.</li>
-        <!-- HIDDEN 2026-11-07 with the forecast section (sample data). Restore together with it.
-        <li><strong>Forecasts:</strong> plain OLS regression on the last 3 days'
-          prices (lag1/lag2/lag3), refit daily. Typical 1-day error:
-          onion ₹208, potato ₹144, tomato ₹266 per quintal. Treat days 5–7 as
-          directional only.</li>
-        -->
+        <!-- Restored 2026-11-16 (Day 37) with the forecast section; text filled by app.js from data.js. -->
+        <li id="aboutForecast"><strong>Forecasts:</strong> <span id="aboutForecastText">Loading…</span></li>
         <li><strong>Open data, open code:</strong> the full dataset (978 rows),
           daily reports and analysis live at
           <a href="https://github.com/Siddharthpeeyush/mandilens">github.com/Siddharthpeeyush/mandilens</a>.

@@ -255,17 +255,35 @@
   renderMandiTabs();
   renderMandiTable();
 
-  /* ---------- forecast ---------- */
+  /* ---------- forecast (Day 37: per-mandi 7-day table on the site) ---------- */
   var fcTab = "Onion";
+  var fcDates = D.meta.forecast.dates || [];
+  var fcFirst = fcDates.length ? fmtDate(fcDates[0]) : "—";
+  var fcLast = fcDates.length ? fmtDate(fcDates[fcDates.length - 1]) : "—";
+  var fcMae = D.meta.mae || {};
   el("forecastSub").textContent =
-    "Model outlook for 30 Oct – 5 Nov 2026, generated " + fmtDate(D.meta.generated) +
-    " from data to 29 Oct 2026. These are model estimates, not mandi announcements.";
+    "Model outlook for " + fcFirst + " – " + fcLast + ", generated " +
+    fmtDate(D.meta.generated) + " from per-mandi prices to " +
+    fmtDate(D.meta.mandiSampleLatest) + ". These are model estimates, " +
+    "not mandi announcements. Per-mandi actuals are still sparse — " +
+    "only the mandis that reported show real prices; empty cells mean " +
+    "no forecast for that mandi.";
   el("forecastNote").innerHTML =
     "<strong>How to read it:</strong> plain OLS regression on the last 3 days' prices, " +
     "refit daily — the same model that won the Day-21 comparison (overall MAE ₹207/quintal). " +
-    "Typical 1-day error: onion ₹208, potato ₹144, tomato ₹266. Error compounds with horizon, " +
-    "so treat the later days as directional. Forecasts are built on the per-mandi sample series, " +
-    "so they carry the same sample-data caveat as the mandi table above.";
+    "Typical 1-day error: onion ₹" + (fcMae.Onion || "—") + ", potato ₹" + (fcMae.Potato || "—") +
+    ", tomato ₹" + (fcMae.Tomato || "—") + " per quintal. Error compounds with horizon, " +
+    "so treat the later days as directional. The model is fit on per-mandi history that mixes " +
+    "seeded sample (29 Sep – 29 Oct 2026) with real Agmarknet portal rows from 10 Nov 2026 — " +
+    "the sample share shrinks as real rows accumulate.";
+  var aboutFc = el("aboutForecastText");
+  if (aboutFc) {
+    aboutFc.textContent = "plain OLS regression on the last 3 days' prices " +
+      "(lag1/lag2/lag3), refit daily on the per-mandi series. Typical 1-day error: " +
+      "onion ₹" + (fcMae.Onion || "—") + ", potato ₹" + (fcMae.Potato || "—") +
+      ", tomato ₹" + (fcMae.Tomato || "—") + " per quintal. Treat days 5–7 as directional only. " +
+      "Forecast window " + fcFirst + " – " + fcLast + ".";
+  }
   function renderForecastTabs() {
     var box = el("forecastTabs");
     box.innerHTML = "";
