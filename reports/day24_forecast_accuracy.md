@@ -1,32 +1,32 @@
 # Day 24 — Forecast accuracy dashboard (rolling MAE)
 
-Date: 2026-11-14. Every stored 7-day forecast is scored against
+Date: 2026-11-17. Every stored 7-day forecast is scored against
 actual modal prices. Origin = forecast_date − horizon_days,
 exactly the base date the recursive model ran from.
 
 ## Coverage
 
-- Forecast origins: 6 (2026-10-29, 2026-11-08, 2026-11-09, 2026-11-10, 2026-11-11, 2026-11-12)
-- Forecast cells: 1008; scored: 46; pending: 962
+- Forecast origins: 9 (2026-10-29, 2026-11-08, 2026-11-09, 2026-11-10, 2026-11-11, 2026-11-12, 2026-11-13, 2026-11-14, 2026-11-15)
+- Forecast cells: 1512; scored: 100; pending: 1412
 - Of scored rows, 0 scored against actuals dated on sample-mode days (seeded data — see Limits)
 
 ## MAE by horizon (Rs/quintal, scored rows only)
 
 | Horizon | Onion | Potato | Tomato |
 |---:|---:|---:|---:|
-| h=1 | 526.14 | 118.99 | 178.87 |
-| h=2 | 881.21 | 112.76 | 280.78 |
-| h=3 | 1135.26 | 122.11 | 358.21 |
-| h=4 | pending | 78.44 | 506.04 |
-| h=5 | pending | pending | pending |
-| h=6 | pending | pending | pending |
-| h=7 | pending | pending | pending |
+| h=1 | 526.14 | 131.60 | 245.66 |
+| h=2 | 881.21 | 124.73 | 378.94 |
+| h=3 | 1135.26 | 122.46 | 475.20 |
+| h=4 | pending | 120.81 | 595.49 |
+| h=5 | pending | 143.03 | 667.18 |
+| h=6 | pending | 201.88 | 729.37 |
+| h=7 | pending | 349.36 | 651.39 |
 
 ## OLS vs persistence (same scored rows)
 
 - Onion: OLS MAE 746.02 vs persistence 124.67 (n=6)
-- Potato: OLS MAE 113.69 vs persistence 40.00 (n=15)
-- Tomato: OLS MAE 278.03 vs persistence 36.50 (n=25)
+- Potato: OLS MAE 140.98 vs persistence 135.29 (n=33)
+- Tomato: OLS MAE 459.39 vs persistence 82.68 (n=61)
 
 ## Rolling 1-day-ahead MAE
 
@@ -37,10 +37,16 @@ exactly the base date the recursive model ran from.
 - Potato @ 2026-11-09: 140.94 (from 2 origin(s), 3 scored rows)
 - Potato @ 2026-11-10: 117.11 (from 3 origin(s), 5 scored rows)
 - Potato @ 2026-11-11: 118.99 (from 4 origin(s), 6 scored rows)
+- Potato @ 2026-11-12: 108.31 (from 5 origin(s), 7 scored rows)
+- Potato @ 2026-11-13: 95.71 (from 6 origin(s), 8 scored rows)
+- Potato @ 2026-11-14: 131.60 (from 7 origin(s), 9 scored rows)
 - Tomato @ 2026-11-08: 90.24 (from 1 origin(s), 2 scored rows)
 - Tomato @ 2026-11-09: 122.46 (from 2 origin(s), 5 scored rows)
 - Tomato @ 2026-11-10: 140.57 (from 3 origin(s), 8 scored rows)
 - Tomato @ 2026-11-11: 178.87 (from 4 origin(s), 10 scored rows)
+- Tomato @ 2026-11-12: 208.85 (from 5 origin(s), 12 scored rows)
+- Tomato @ 2026-11-13: 256.09 (from 6 origin(s), 14 scored rows)
+- Tomato @ 2026-11-14: 245.66 (from 7 origin(s), 16 scored rows)
 
 ## Hand check
 
@@ -77,37 +83,19 @@ exactly the base date the recursive model ran from.
 - 2026-10-29 Tomato h=7: targets 2026-11-05 (8 series)
 - 2026-11-08 Onion h=4: targets 2026-11-12 (8 series)
 - 2026-11-08 Onion h=5: targets 2026-11-13 (8 series)
-- 2026-11-08 Potato h=5: targets 2026-11-13 (8 series)
-- 2026-11-08 Tomato h=5: targets 2026-11-13 (8 series)
 - 2026-11-08 Onion h=6: targets 2026-11-14 (8 series)
-- 2026-11-08 Potato h=6: targets 2026-11-14 (8 series)
-- 2026-11-08 Tomato h=6: targets 2026-11-14 (8 series)
 - 2026-11-08 Onion h=7: targets 2026-11-15 (8 series)
-- 2026-11-08 Potato h=7: targets 2026-11-15 (8 series)
-- 2026-11-08 Tomato h=7: targets 2026-11-15 (8 series)
 - 2026-11-09 Onion h=3: targets 2026-11-12 (8 series)
 - 2026-11-09 Onion h=4: targets 2026-11-13 (8 series)
-- 2026-11-09 Potato h=4: targets 2026-11-13 (8 series)
-- 2026-11-09 Tomato h=4: targets 2026-11-13 (8 series)
 - 2026-11-09 Onion h=5: targets 2026-11-14 (8 series)
-- 2026-11-09 Potato h=5: targets 2026-11-14 (8 series)
-- 2026-11-09 Tomato h=5: targets 2026-11-14 (8 series)
 - 2026-11-09 Onion h=6: targets 2026-11-15 (8 series)
-- 2026-11-09 Potato h=6: targets 2026-11-15 (8 series)
-- 2026-11-09 Tomato h=6: targets 2026-11-15 (8 series)
 - 2026-11-09 Onion h=7: targets 2026-11-16 (8 series)
 - 2026-11-09 Potato h=7: targets 2026-11-16 (8 series)
 - 2026-11-09 Tomato h=7: targets 2026-11-16 (8 series)
 - 2026-11-10 Onion h=2: targets 2026-11-12 (8 series)
 - 2026-11-10 Onion h=3: targets 2026-11-13 (8 series)
-- 2026-11-10 Potato h=3: targets 2026-11-13 (8 series)
-- 2026-11-10 Tomato h=3: targets 2026-11-13 (8 series)
 - 2026-11-10 Onion h=4: targets 2026-11-14 (8 series)
-- 2026-11-10 Potato h=4: targets 2026-11-14 (8 series)
-- 2026-11-10 Tomato h=4: targets 2026-11-14 (8 series)
 - 2026-11-10 Onion h=5: targets 2026-11-15 (8 series)
-- 2026-11-10 Potato h=5: targets 2026-11-15 (8 series)
-- 2026-11-10 Tomato h=5: targets 2026-11-15 (8 series)
 - 2026-11-10 Onion h=6: targets 2026-11-16 (8 series)
 - 2026-11-10 Potato h=6: targets 2026-11-16 (8 series)
 - 2026-11-10 Tomato h=6: targets 2026-11-16 (8 series)
@@ -116,14 +104,8 @@ exactly the base date the recursive model ran from.
 - 2026-11-10 Tomato h=7: targets 2026-11-17 (8 series)
 - 2026-11-11 Onion h=1: targets 2026-11-12 (8 series)
 - 2026-11-11 Onion h=2: targets 2026-11-13 (8 series)
-- 2026-11-11 Potato h=2: targets 2026-11-13 (8 series)
-- 2026-11-11 Tomato h=2: targets 2026-11-13 (8 series)
 - 2026-11-11 Onion h=3: targets 2026-11-14 (8 series)
-- 2026-11-11 Potato h=3: targets 2026-11-14 (8 series)
-- 2026-11-11 Tomato h=3: targets 2026-11-14 (8 series)
 - 2026-11-11 Onion h=4: targets 2026-11-15 (8 series)
-- 2026-11-11 Potato h=4: targets 2026-11-15 (8 series)
-- 2026-11-11 Tomato h=4: targets 2026-11-15 (8 series)
 - 2026-11-11 Onion h=5: targets 2026-11-16 (8 series)
 - 2026-11-11 Potato h=5: targets 2026-11-16 (8 series)
 - 2026-11-11 Tomato h=5: targets 2026-11-16 (8 series)
@@ -134,14 +116,8 @@ exactly the base date the recursive model ran from.
 - 2026-11-11 Potato h=7: targets 2026-11-18 (8 series)
 - 2026-11-11 Tomato h=7: targets 2026-11-18 (8 series)
 - 2026-11-12 Onion h=1: targets 2026-11-13 (8 series)
-- 2026-11-12 Potato h=1: targets 2026-11-13 (8 series)
-- 2026-11-12 Tomato h=1: targets 2026-11-13 (8 series)
 - 2026-11-12 Onion h=2: targets 2026-11-14 (8 series)
-- 2026-11-12 Potato h=2: targets 2026-11-14 (8 series)
-- 2026-11-12 Tomato h=2: targets 2026-11-14 (8 series)
 - 2026-11-12 Onion h=3: targets 2026-11-15 (8 series)
-- 2026-11-12 Potato h=3: targets 2026-11-15 (8 series)
-- 2026-11-12 Tomato h=3: targets 2026-11-15 (8 series)
 - 2026-11-12 Onion h=4: targets 2026-11-16 (8 series)
 - 2026-11-12 Potato h=4: targets 2026-11-16 (8 series)
 - 2026-11-12 Tomato h=4: targets 2026-11-16 (8 series)
@@ -154,3 +130,60 @@ exactly the base date the recursive model ran from.
 - 2026-11-12 Onion h=7: targets 2026-11-19 (8 series)
 - 2026-11-12 Potato h=7: targets 2026-11-19 (8 series)
 - 2026-11-12 Tomato h=7: targets 2026-11-19 (8 series)
+- 2026-11-13 Onion h=1: targets 2026-11-14 (8 series)
+- 2026-11-13 Onion h=2: targets 2026-11-15 (8 series)
+- 2026-11-13 Onion h=3: targets 2026-11-16 (8 series)
+- 2026-11-13 Potato h=3: targets 2026-11-16 (8 series)
+- 2026-11-13 Tomato h=3: targets 2026-11-16 (8 series)
+- 2026-11-13 Onion h=4: targets 2026-11-17 (8 series)
+- 2026-11-13 Potato h=4: targets 2026-11-17 (8 series)
+- 2026-11-13 Tomato h=4: targets 2026-11-17 (8 series)
+- 2026-11-13 Onion h=5: targets 2026-11-18 (8 series)
+- 2026-11-13 Potato h=5: targets 2026-11-18 (8 series)
+- 2026-11-13 Tomato h=5: targets 2026-11-18 (8 series)
+- 2026-11-13 Onion h=6: targets 2026-11-19 (8 series)
+- 2026-11-13 Potato h=6: targets 2026-11-19 (8 series)
+- 2026-11-13 Tomato h=6: targets 2026-11-19 (8 series)
+- 2026-11-13 Onion h=7: targets 2026-11-20 (8 series)
+- 2026-11-13 Potato h=7: targets 2026-11-20 (8 series)
+- 2026-11-13 Tomato h=7: targets 2026-11-20 (8 series)
+- 2026-11-14 Onion h=1: targets 2026-11-15 (8 series)
+- 2026-11-14 Onion h=2: targets 2026-11-16 (8 series)
+- 2026-11-14 Potato h=2: targets 2026-11-16 (8 series)
+- 2026-11-14 Tomato h=2: targets 2026-11-16 (8 series)
+- 2026-11-14 Onion h=3: targets 2026-11-17 (8 series)
+- 2026-11-14 Potato h=3: targets 2026-11-17 (8 series)
+- 2026-11-14 Tomato h=3: targets 2026-11-17 (8 series)
+- 2026-11-14 Onion h=4: targets 2026-11-18 (8 series)
+- 2026-11-14 Potato h=4: targets 2026-11-18 (8 series)
+- 2026-11-14 Tomato h=4: targets 2026-11-18 (8 series)
+- 2026-11-14 Onion h=5: targets 2026-11-19 (8 series)
+- 2026-11-14 Potato h=5: targets 2026-11-19 (8 series)
+- 2026-11-14 Tomato h=5: targets 2026-11-19 (8 series)
+- 2026-11-14 Onion h=6: targets 2026-11-20 (8 series)
+- 2026-11-14 Potato h=6: targets 2026-11-20 (8 series)
+- 2026-11-14 Tomato h=6: targets 2026-11-20 (8 series)
+- 2026-11-14 Onion h=7: targets 2026-11-21 (8 series)
+- 2026-11-14 Potato h=7: targets 2026-11-21 (8 series)
+- 2026-11-14 Tomato h=7: targets 2026-11-21 (8 series)
+- 2026-11-15 Onion h=1: targets 2026-11-16 (8 series)
+- 2026-11-15 Potato h=1: targets 2026-11-16 (8 series)
+- 2026-11-15 Tomato h=1: targets 2026-11-16 (8 series)
+- 2026-11-15 Onion h=2: targets 2026-11-17 (8 series)
+- 2026-11-15 Potato h=2: targets 2026-11-17 (8 series)
+- 2026-11-15 Tomato h=2: targets 2026-11-17 (8 series)
+- 2026-11-15 Onion h=3: targets 2026-11-18 (8 series)
+- 2026-11-15 Potato h=3: targets 2026-11-18 (8 series)
+- 2026-11-15 Tomato h=3: targets 2026-11-18 (8 series)
+- 2026-11-15 Onion h=4: targets 2026-11-19 (8 series)
+- 2026-11-15 Potato h=4: targets 2026-11-19 (8 series)
+- 2026-11-15 Tomato h=4: targets 2026-11-19 (8 series)
+- 2026-11-15 Onion h=5: targets 2026-11-20 (8 series)
+- 2026-11-15 Potato h=5: targets 2026-11-20 (8 series)
+- 2026-11-15 Tomato h=5: targets 2026-11-20 (8 series)
+- 2026-11-15 Onion h=6: targets 2026-11-21 (8 series)
+- 2026-11-15 Potato h=6: targets 2026-11-21 (8 series)
+- 2026-11-15 Tomato h=6: targets 2026-11-21 (8 series)
+- 2026-11-15 Onion h=7: targets 2026-11-22 (8 series)
+- 2026-11-15 Potato h=7: targets 2026-11-22 (8 series)
+- 2026-11-15 Tomato h=7: targets 2026-11-22 (8 series)
