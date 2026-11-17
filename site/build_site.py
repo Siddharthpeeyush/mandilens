@@ -162,6 +162,22 @@ def main():
     # sidecar written by forecast_table.py (walk-forward 1-day MAE on the
     # current history); the Day-23 values below are only a fallback for
     # runs before any sidecar exists.
+    # Day 38: confidence bands — the latest confidence_bands_*.json
+    # sidecar (per-commodity, per-horizon 80% interval offsets from
+    # walk-forward residuals) is carried verbatim as `bands`, so the
+    # site shows the interval under every forecast cell.
+    bands = {}
+    band_meta = {}
+    band_paths = sorted(glob.glob(os.path.join(
+        BASE, "data", "processed", "confidence_bands_*.json")))
+    if band_paths:
+        with open(band_paths[-1]) as fh:
+            _bands = json.load(fh)
+        bands = {c: {h: [v["lo"], v["hi"]]
+                     for h, v in _bands[c]["offsets"].items()}
+                 for c in _bands}
+        band_meta = {c: {"n": _bands[c]["n"], "method": _bands[c]["method"]}
+                     for c in _bands}
     fc_mae_paths = sorted(glob.glob(os.path.join(
         BASE, "data", "processed", "forecast_mae_*.json")))
     if fc_mae_paths:
@@ -200,6 +216,7 @@ def main():
             "mandiSampleNote": mandi_note,
             "forecast": fc_meta,
             "mae": mae,
+            "bands": band_meta,
             "source": "Agmarknet portal (agmarknet.gov.in), Government of India",
         },
         "today": today,
@@ -208,6 +225,7 @@ def main():
         "fallers": fallers,
         "mandiToday": mandi_today,
         "forecast": forecast,
+        "bands": bands,
         "mandis": [{"market": m, "short": s, "city": c}
                    for m, (s, c) in MANDI_META.items()],
         "categories": ["Vegetables", "Cereals", "Pulses", "Oilseeds",
@@ -225,7 +243,8 @@ def main():
     print(f"wrote {out}: {len(today)} commodities on {latest}, "
           f"{len(series)} series, {len(mandi_today)} mandi rows "
           f"({'real' if mandi_real else 'sample'}, {mandi_latest}), "
-          f"forecast {len(forecast)} keys")
+          f"forecast {len(forecast)} keys, bands "
+          f"{({c: band_meta[c]['n'] for c in band_meta}) if band_meta else 'none'}")
 
 
 if __name__ == "__main__":
