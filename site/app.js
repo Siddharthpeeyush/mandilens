@@ -272,10 +272,19 @@
     "<strong>How to read it:</strong> plain OLS regression on the last 3 days' prices, " +
     "refit daily — the same model that won the Day-21 comparison (overall MAE ₹207/quintal). " +
     "Typical 1-day error: onion ₹" + (fcMae.Onion || "—") + ", potato ₹" + (fcMae.Potato || "—") +
-    ", tomato ₹" + (fcMae.Tomato || "—") + " per quintal. Error compounds with horizon, " +
-    "so treat the later days as directional. The model is fit on per-mandi history that mixes " +
+    ", tomato ₹" + (fcMae.Tomato || "—") + " per quintal. The small range under each value is the " +
+    "80% prediction interval, built from the model's own past errors (walk-forward residuals" +
+    bandNoteText() + "); it widens with horizon because multi-step errors compound. " +
+    "Treat the later days as directional. The model is fit on per-mandi history that mixes " +
     "seeded sample (29 Sep – 29 Oct 2026) with real Agmarknet portal rows from 10 Nov 2026 — " +
     "the sample share shrinks as real rows accumulate.";
+  function bandNoteText() {
+    var b = D.meta.bands || {};
+    var parts = ["Onion", "Potato", "Tomato"].map(function (c) {
+      return b[c] ? c.toLowerCase() + " " + b[c].n + " scored" : null;
+    }).filter(function (x) { return x; });
+    return parts.length ? " — " + parts.join(", ") + " forecasts scored" : "";
+  }
   var aboutFc = el("aboutForecastText");
   if (aboutFc) {
     aboutFc.textContent = "plain OLS regression on the last 3 days' prices " +
@@ -308,7 +317,15 @@
       var fc = (D.forecast[key] || []).slice().sort(function (a, b) { return a.h - b.h; });
       var cells = dates.map(function (d) {
         var row = fc.filter(function (x) { return x.d === d; })[0];
-        return "<td>" + (row ? rs(row.p) : "—") + "</td>";
+        if (!row) return "<td>—</td>";
+        var band = "";
+        var offs = (D.bands && D.bands[fcTab] && D.bands[fcTab][String(row.h)]);
+        if (offs) {
+          var lo = Math.max(0, Math.round(row.p + offs[0]));
+          var hi = Math.round(row.p + offs[1]);
+          band = "<br><small class=\"fc-band\">" + rs(lo) + "–" + rs(hi) + "</small>";
+        }
+        return "<td><strong>" + rs(row.p) + "</strong>" + band + "</td>";
       }).join("");
       return "<tr><td><strong>" + esc(m.short) + "</strong> · " + esc(m.city) + "</td>" + cells + "</tr>";
     }).join("");
