@@ -1,0 +1,10 @@
+state,district,market,commodity,variety,grade,arrival_date,min_price,max_price,modal_price,arrival_tonnes,msp_rs
+West Bengal,Kolkata,Sealdah Koley Market,Tomato,Aggregate,FAQ,15/11/2026,,,2800,12.8,
+West Bengal,Kolkata,Sealdah Koley Market,Tomato,Aggregate,FAQ,14/11/2026,,,2800,12.8,
+West Bengal,Kolkata,Sealdah Koley Market,Tomato,Aggregate,FAQ,13/11/2026,,,2800,12.7,
+Telangana,Hyderabad,Bowenpally,Potato,Aggregate,FAQ,15/11/2026,,,1800,476,
+Telangana,Hyderabad,Bowenpally,Potato,Aggregate,FAQ,14/11/2026,,,1400,329.9,
+Telangana,Hyderabad,Bowenpally,Potato,Aggregate,FAQ,13/11/2026,,,1400,480.4,
+Telangana,Hyderabad,Bowenpally,Tomato,Aggregate,FAQ,15/11/2026,,,1400,175.3,
+Telangana,Hyderabad,Bowenpally,Tomato,Aggregate,FAQ,14/11/2026,,,1000,370,
+Telangana,Hyderabad,Bowenpally,Tomato,Aggregate,FAQ,13/11/2026,,,1400,408.7,

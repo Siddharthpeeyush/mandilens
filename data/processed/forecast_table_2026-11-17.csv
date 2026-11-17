@@ -1,0 +1,169 @@
+market,commodity,forecast_date,horizon_days,forecast_price,model
+Azadpur,Onion,2026-11-16,1,3975.61,ols_lag123_recursive
+Azadpur,Onion,2026-11-17,2,3867.08,ols_lag123_recursive
+Azadpur,Onion,2026-11-18,3,3764.6,ols_lag123_recursive
+Azadpur,Onion,2026-11-19,4,3654.97,ols_lag123_recursive
+Azadpur,Onion,2026-11-20,5,3558.87,ols_lag123_recursive
+Azadpur,Onion,2026-11-21,6,3470.24,ols_lag123_recursive
+Azadpur,Onion,2026-11-22,7,3387.3,ols_lag123_recursive
+Azadpur,Potato,2026-11-16,1,1268.2,ols_lag123_recursive
+Azadpur,Potato,2026-11-17,2,1308.25,ols_lag123_recursive
+Azadpur,Potato,2026-11-18,3,1327.76,ols_lag123_recursive
+Azadpur,Potato,2026-11-19,4,1364.71,ols_lag123_recursive
+Azadpur,Potato,2026-11-20,5,1389.59,ols_lag123_recursive
+Azadpur,Potato,2026-11-21,6,1405.45,ols_lag123_recursive
+Azadpur,Potato,2026-11-22,7,1421.95,ols_lag123_recursive
+Azadpur,Tomato,2026-11-16,1,2231.84,ols_lag123_recursive
+Azadpur,Tomato,2026-11-17,2,2244.2,ols_lag123_recursive
+Azadpur,Tomato,2026-11-18,3,2255.28,ols_lag123_recursive
+Azadpur,Tomato,2026-11-19,4,2265.68,ols_lag123_recursive
+Azadpur,Tomato,2026-11-20,5,2272.99,ols_lag123_recursive
+Azadpur,Tomato,2026-11-21,6,2278.86,ols_lag123_recursive
+Azadpur,Tomato,2026-11-22,7,2283.71,ols_lag123_recursive
+Bowenpally,Onion,2026-11-16,1,2267.09,ols_lag123_recursive
+Bowenpally,Onion,2026-11-17,2,2282.15,ols_lag123_recursive
+Bowenpally,Onion,2026-11-18,3,2313.62,ols_lag123_recursive
+Bowenpally,Onion,2026-11-19,4,2306.8,ols_lag123_recursive
+Bowenpally,Onion,2026-11-20,5,2310.26,ols_lag123_recursive
+Bowenpally,Onion,2026-11-21,6,2315.41,ols_lag123_recursive
+Bowenpally,Onion,2026-11-22,7,2318.07,ols_lag123_recursive
+Bowenpally,Potato,2026-11-16,1,1577.54,ols_lag123_recursive
+Bowenpally,Potato,2026-11-17,2,1512.58,ols_lag123_recursive
+Bowenpally,Potato,2026-11-18,3,1582.37,ols_lag123_recursive
+Bowenpally,Potato,2026-11-19,4,1547.82,ols_lag123_recursive
+Bowenpally,Potato,2026-11-20,5,1521.26,ols_lag123_recursive
+Bowenpally,Potato,2026-11-21,6,1527.99,ols_lag123_recursive
+Bowenpally,Potato,2026-11-22,7,1520.39,ols_lag123_recursive
+Bowenpally,Tomato,2026-11-16,1,1655.44,ols_lag123_recursive
+Bowenpally,Tomato,2026-11-17,2,1728.68,ols_lag123_recursive
+Bowenpally,Tomato,2026-11-18,3,1856.55,ols_lag123_recursive
+Bowenpally,Tomato,2026-11-19,4,1956.49,ols_lag123_recursive
+Bowenpally,Tomato,2026-11-20,5,2021.46,ols_lag123_recursive
+Bowenpally,Tomato,2026-11-21,6,2079.71,ols_lag123_recursive
+Bowenpally,Tomato,2026-11-22,7,2126.33,ols_lag123_recursive
+Koyambedu,Onion,2026-11-16,1,2401.05,ols_lag123_recursive
+Koyambedu,Onion,2026-11-17,2,2395.95,ols_lag123_recursive
+Koyambedu,Onion,2026-11-18,3,2415.0,ols_lag123_recursive
+Koyambedu,Onion,2026-11-19,4,2403.51,ols_lag123_recursive
+Koyambedu,Onion,2026-11-20,5,2399.38,ols_lag123_recursive
+Koyambedu,Onion,2026-11-21,6,2397.62,ols_lag123_recursive
+Koyambedu,Onion,2026-11-22,7,2394.32,ols_lag123_recursive
+Koyambedu,Potato,2026-11-16,1,1597.81,ols_lag123_recursive
+Koyambedu,Potato,2026-11-17,2,1563.64,ols_lag123_recursive
+Koyambedu,Potato,2026-11-18,3,1615.08,ols_lag123_recursive
+Koyambedu,Potato,2026-11-19,4,1567.39,ols_lag123_recursive
+Koyambedu,Potato,2026-11-20,5,1543.13,ols_lag123_recursive
+Koyambedu,Potato,2026-11-21,6,1545.39,ols_lag123_recursive
+Koyambedu,Potato,2026-11-22,7,1532.84,ols_lag123_recursive
+Koyambedu,Tomato,2026-11-16,1,2459.65,ols_lag123_recursive
+Koyambedu,Tomato,2026-11-17,2,2368.47,ols_lag123_recursive
+Koyambedu,Tomato,2026-11-18,3,2434.01,ols_lag123_recursive
+Koyambedu,Tomato,2026-11-19,4,2385.67,ols_lag123_recursive
+Koyambedu,Tomato,2026-11-20,5,2360.43,ols_lag123_recursive
+Koyambedu,Tomato,2026-11-21,6,2356.61,ols_lag123_recursive
+Koyambedu,Tomato,2026-11-22,7,2343.69,ols_lag123_recursive
+Muhana,Onion,2026-11-16,1,2119.43,ols_lag123_recursive
+Muhana,Onion,2026-11-17,2,2131.7,ols_lag123_recursive
+Muhana,Onion,2026-11-18,3,2155.81,ols_lag123_recursive
+Muhana,Onion,2026-11-19,4,2169.13,ols_lag123_recursive
+Muhana,Onion,2026-11-20,5,2182.67,ols_lag123_recursive
+Muhana,Onion,2026-11-21,6,2196.11,ols_lag123_recursive
+Muhana,Onion,2026-11-22,7,2208.07,ols_lag123_recursive
+Muhana,Potato,2026-11-16,1,1431.15,ols_lag123_recursive
+Muhana,Potato,2026-11-17,2,1416.9,ols_lag123_recursive
+Muhana,Potato,2026-11-18,3,1431.95,ols_lag123_recursive
+Muhana,Potato,2026-11-19,4,1450.14,ols_lag123_recursive
+Muhana,Potato,2026-11-20,5,1453.83,ols_lag123_recursive
+Muhana,Potato,2026-11-21,6,1459.88,ols_lag123_recursive
+Muhana,Potato,2026-11-22,7,1466.99,ols_lag123_recursive
+Muhana,Tomato,2026-11-16,1,2131.34,ols_lag123_recursive
+Muhana,Tomato,2026-11-17,2,2181.13,ols_lag123_recursive
+Muhana,Tomato,2026-11-18,3,2160.13,ols_lag123_recursive
+Muhana,Tomato,2026-11-19,4,2205.8,ols_lag123_recursive
+Muhana,Tomato,2026-11-20,5,2228.42,ols_lag123_recursive
+Muhana,Tomato,2026-11-21,6,2238.69,ols_lag123_recursive
+Muhana,Tomato,2026-11-22,7,2253.17,ols_lag123_recursive
+Naroda,Onion,2026-11-16,1,2502.33,ols_lag123_recursive
+Naroda,Onion,2026-11-17,2,2460.01,ols_lag123_recursive
+Naroda,Onion,2026-11-18,3,2490.05,ols_lag123_recursive
+Naroda,Onion,2026-11-19,4,2471.95,ols_lag123_recursive
+Naroda,Onion,2026-11-20,5,2460.76,ols_lag123_recursive
+Naroda,Onion,2026-11-21,6,2455.27,ols_lag123_recursive
+Naroda,Onion,2026-11-22,7,2447.69,ols_lag123_recursive
+Naroda,Potato,2026-11-16,1,1552.83,ols_lag123_recursive
+Naroda,Potato,2026-11-17,2,1501.66,ols_lag123_recursive
+Naroda,Potato,2026-11-18,3,1535.86,ols_lag123_recursive
+Naroda,Potato,2026-11-19,4,1523.75,ols_lag123_recursive
+Naroda,Potato,2026-11-20,5,1507.51,ols_lag123_recursive
+Naroda,Potato,2026-11-21,6,1509.82,ols_lag123_recursive
+Naroda,Potato,2026-11-22,7,1506.84,ols_lag123_recursive
+Naroda,Tomato,2026-11-16,1,2638.46,ols_lag123_recursive
+Naroda,Tomato,2026-11-17,2,2514.86,ols_lag123_recursive
+Naroda,Tomato,2026-11-18,3,2528.59,ols_lag123_recursive
+Naroda,Tomato,2026-11-19,4,2469.32,ols_lag123_recursive
+Naroda,Tomato,2026-11-20,5,2428.03,ols_lag123_recursive
+Naroda,Tomato,2026-11-21,6,2408.02,ols_lag123_recursive
+Naroda,Tomato,2026-11-22,7,2385.32,ols_lag123_recursive
+Sealdah Koley Market,Onion,2026-11-16,1,2294.13,ols_lag123_recursive
+Sealdah Koley Market,Onion,2026-11-17,2,2330.31,ols_lag123_recursive
+Sealdah Koley Market,Onion,2026-11-18,3,2323.05,ols_lag123_recursive
+Sealdah Koley Market,Onion,2026-11-19,4,2324.2,ols_lag123_recursive
+Sealdah Koley Market,Onion,2026-11-20,5,2328.58,ols_lag123_recursive
+Sealdah Koley Market,Onion,2026-11-21,6,2330.32,ols_lag123_recursive
+Sealdah Koley Market,Onion,2026-11-22,7,2332.25,ols_lag123_recursive
+Sealdah Koley Market,Potato,2026-11-16,1,1444.57,ols_lag123_recursive
+Sealdah Koley Market,Potato,2026-11-17,2,1547.79,ols_lag123_recursive
+Sealdah Koley Market,Potato,2026-11-18,3,1506.84,ols_lag123_recursive
+Sealdah Koley Market,Potato,2026-11-19,4,1487.0,ols_lag123_recursive
+Sealdah Koley Market,Potato,2026-11-20,5,1504.59,ols_lag123_recursive
+Sealdah Koley Market,Potato,2026-11-21,6,1499.64,ols_lag123_recursive
+Sealdah Koley Market,Potato,2026-11-22,7,1493.44,ols_lag123_recursive
+Sealdah Koley Market,Tomato,2026-11-16,1,2631.53,ols_lag123_recursive
+Sealdah Koley Market,Tomato,2026-11-17,2,2570.29,ols_lag123_recursive
+Sealdah Koley Market,Tomato,2026-11-18,3,2527.04,ols_lag123_recursive
+Sealdah Koley Market,Tomato,2026-11-19,4,2474.46,ols_lag123_recursive
+Sealdah Koley Market,Tomato,2026-11-20,5,2439.33,ols_lag123_recursive
+Sealdah Koley Market,Tomato,2026-11-21,6,2412.5,ols_lag123_recursive
+Sealdah Koley Market,Tomato,2026-11-22,7,2389.24,ols_lag123_recursive
+Vashi,Onion,2026-11-16,1,2141.51,ols_lag123_recursive
+Vashi,Onion,2026-11-17,2,2154.45,ols_lag123_recursive
+Vashi,Onion,2026-11-18,3,2163.26,ols_lag123_recursive
+Vashi,Onion,2026-11-19,4,2180.36,ols_lag123_recursive
+Vashi,Onion,2026-11-20,5,2193.58,ols_lag123_recursive
+Vashi,Onion,2026-11-21,6,2205.4,ols_lag123_recursive
+Vashi,Onion,2026-11-22,7,2216.86,ols_lag123_recursive
+Vashi,Potato,2026-11-16,1,1462.34,ols_lag123_recursive
+Vashi,Potato,2026-11-17,2,1491.36,ols_lag123_recursive
+Vashi,Potato,2026-11-18,3,1434.99,ols_lag123_recursive
+Vashi,Potato,2026-11-19,4,1462.56,ols_lag123_recursive
+Vashi,Potato,2026-11-20,5,1477.83,ols_lag123_recursive
+Vashi,Potato,2026-11-21,6,1470.09,ols_lag123_recursive
+Vashi,Potato,2026-11-22,7,1475.02,ols_lag123_recursive
+Vashi,Tomato,2026-11-16,1,2436.65,ols_lag123_recursive
+Vashi,Tomato,2026-11-17,2,2409.71,ols_lag123_recursive
+Vashi,Tomato,2026-11-18,3,2374.97,ols_lag123_recursive
+Vashi,Tomato,2026-11-19,4,2365.35,ols_lag123_recursive
+Vashi,Tomato,2026-11-20,5,2352.85,ols_lag123_recursive
+Vashi,Tomato,2026-11-21,6,2341.08,ols_lag123_recursive
+Vashi,Tomato,2026-11-22,7,2333.58,ols_lag123_recursive
+Yeshwanthpur,Onion,2026-11-16,1,2107.38,ols_lag123_recursive
+Yeshwanthpur,Onion,2026-11-17,2,2140.05,ols_lag123_recursive
+Yeshwanthpur,Onion,2026-11-18,3,2149.05,ols_lag123_recursive
+Yeshwanthpur,Onion,2026-11-19,4,2164.97,ols_lag123_recursive
+Yeshwanthpur,Onion,2026-11-20,5,2180.23,ols_lag123_recursive
+Yeshwanthpur,Onion,2026-11-21,6,2193.06,ols_lag123_recursive
+Yeshwanthpur,Onion,2026-11-22,7,2205.31,ols_lag123_recursive
+Yeshwanthpur,Potato,2026-11-16,1,1433.95,ols_lag123_recursive
+Yeshwanthpur,Potato,2026-11-17,2,1486.93,ols_lag123_recursive
+Yeshwanthpur,Potato,2026-11-18,3,1468.34,ols_lag123_recursive
+Yeshwanthpur,Potato,2026-11-19,4,1467.36,ols_lag123_recursive
+Yeshwanthpur,Potato,2026-11-20,5,1479.9,ols_lag123_recursive
+Yeshwanthpur,Potato,2026-11-21,6,1479.69,ols_lag123_recursive
+Yeshwanthpur,Potato,2026-11-22,7,1479.91,ols_lag123_recursive
+Yeshwanthpur,Tomato,2026-11-16,1,2200.15,ols_lag123_recursive
+Yeshwanthpur,Tomato,2026-11-17,2,2257.44,ols_lag123_recursive
+Yeshwanthpur,Tomato,2026-11-18,3,2260.66,ols_lag123_recursive
+Yeshwanthpur,Tomato,2026-11-19,4,2263.79,ols_lag123_recursive
+Yeshwanthpur,Tomato,2026-11-20,5,2275.27,ols_lag123_recursive
+Yeshwanthpur,Tomato,2026-11-21,6,2280.39,ols_lag123_recursive
+Yeshwanthpur,Tomato,2026-11-22,7,2284.22,ols_lag123_recursive
