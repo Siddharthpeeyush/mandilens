@@ -1,0 +1,169 @@
+market,commodity,forecast_date,horizon_days,forecast_price,lo80,hi80,method
+Azadpur,Onion,2026-11-17,1,3975.61,4312.22,4808.62,empirical_q10_q90
+Azadpur,Onion,2026-11-18,2,3867.08,4343.12,5045.14,empirical_q10_q90
+Azadpur,Onion,2026-11-19,3,3764.6,4347.62,5207.42,empirical_q10_q90
+Azadpur,Onion,2026-11-20,4,3654.97,4328.19,5321.0,empirical_q10_q90
+Azadpur,Onion,2026-11-21,5,3558.87,4311.55,5421.54,empirical_q10_q90
+Azadpur,Onion,2026-11-22,6,3470.24,4294.76,5510.7,empirical_q10_q90
+Azadpur,Onion,2026-11-23,7,3387.3,4277.88,5591.24,empirical_q10_q90
+Azadpur,Potato,2026-11-17,1,1268.11,1179.54,1467.74,empirical_q10_q90
+Azadpur,Potato,2026-11-18,2,1306.76,1181.5,1589.08,empirical_q10_q90
+Azadpur,Potato,2026-11-19,3,1325.99,1172.58,1671.76,empirical_q10_q90
+Azadpur,Potato,2026-11-20,4,1363.18,1186.03,1762.44,empirical_q10_q90
+Azadpur,Potato,2026-11-21,5,1387.59,1189.54,1833.98,empirical_q10_q90
+Azadpur,Potato,2026-11-22,6,1403.23,1186.27,1892.22,empirical_q10_q90
+Azadpur,Potato,2026-11-23,7,1419.8,1185.46,1947.97,empirical_q10_q90
+Azadpur,Tomato,2026-11-17,1,2230.88,1780.97,2461.44,empirical_q10_q90
+Azadpur,Tomato,2026-11-18,2,2243.06,1606.78,2569.13,empirical_q10_q90
+Azadpur,Tomato,2026-11-19,3,2254.17,1474.89,2653.52,empirical_q10_q90
+Azadpur,Tomato,2026-11-20,4,2264.57,1364.74,2725.7,empirical_q10_q90
+Azadpur,Tomato,2026-11-21,5,2271.96,1265.92,2787.52,empirical_q10_q90
+Azadpur,Tomato,2026-11-22,6,2277.98,1175.92,2842.74,empirical_q10_q90
+Azadpur,Tomato,2026-11-23,7,2282.97,1092.61,2892.98,empirical_q10_q90
+Bowenpally,Onion,2026-11-17,1,2267.09,2603.7,3100.1,empirical_q10_q90
+Bowenpally,Onion,2026-11-18,2,2282.15,2758.19,3460.21,empirical_q10_q90
+Bowenpally,Onion,2026-11-19,3,2313.62,2896.64,3756.44,empirical_q10_q90
+Bowenpally,Onion,2026-11-20,4,2306.8,2980.02,3972.83,empirical_q10_q90
+Bowenpally,Onion,2026-11-21,5,2310.26,3062.94,4172.93,empirical_q10_q90
+Bowenpally,Onion,2026-11-22,6,2315.41,3139.93,4355.87,empirical_q10_q90
+Bowenpally,Onion,2026-11-23,7,2318.07,3208.65,4522.01,empirical_q10_q90
+Bowenpally,Potato,2026-11-17,1,1448.97,1360.4,1648.6,empirical_q10_q90
+Bowenpally,Potato,2026-11-18,2,1551.46,1426.2,1833.78,empirical_q10_q90
+Bowenpally,Potato,2026-11-19,3,1485.54,1332.13,1831.31,empirical_q10_q90
+Bowenpally,Potato,2026-11-20,4,1479.96,1302.81,1879.22,empirical_q10_q90
+Bowenpally,Potato,2026-11-21,5,1501.57,1303.52,1947.96,empirical_q10_q90
+Bowenpally,Potato,2026-11-22,6,1491.71,1274.75,1980.7,empirical_q10_q90
+Bowenpally,Potato,2026-11-23,7,1487.81,1253.47,2015.98,empirical_q10_q90
+Bowenpally,Tomato,2026-11-17,1,1661.97,1212.06,1892.53,empirical_q10_q90
+Bowenpally,Tomato,2026-11-18,2,1804.82,1168.54,2130.89,empirical_q10_q90
+Bowenpally,Tomato,2026-11-19,3,1895.76,1116.48,2295.11,empirical_q10_q90
+Bowenpally,Tomato,2026-11-20,4,1976.15,1076.32,2437.28,empirical_q10_q90
+Bowenpally,Tomato,2026-11-21,5,2042.58,1036.54,2558.14,empirical_q10_q90
+Bowenpally,Tomato,2026-11-22,6,2093.37,991.31,2658.13,empirical_q10_q90
+Bowenpally,Tomato,2026-11-23,7,2134.76,944.4,2744.77,empirical_q10_q90
+Koyambedu,Onion,2026-11-17,1,2401.05,2737.66,3234.06,empirical_q10_q90
+Koyambedu,Onion,2026-11-18,2,2395.95,2871.99,3574.01,empirical_q10_q90
+Koyambedu,Onion,2026-11-19,3,2415.0,2998.02,3857.82,empirical_q10_q90
+Koyambedu,Onion,2026-11-20,4,2403.51,3076.73,4069.54,empirical_q10_q90
+Koyambedu,Onion,2026-11-21,5,2399.38,3152.06,4262.05,empirical_q10_q90
+Koyambedu,Onion,2026-11-22,6,2397.62,3222.14,4438.08,empirical_q10_q90
+Koyambedu,Onion,2026-11-23,7,2394.32,3284.9,4598.26,empirical_q10_q90
+Koyambedu,Potato,2026-11-17,1,1592.58,1504.01,1792.21,empirical_q10_q90
+Koyambedu,Potato,2026-11-18,2,1562.33,1437.07,1844.65,empirical_q10_q90
+Koyambedu,Potato,2026-11-19,3,1614.76,1461.35,1960.53,empirical_q10_q90
+Koyambedu,Potato,2026-11-20,4,1564.41,1387.26,1963.67,empirical_q10_q90
+Koyambedu,Potato,2026-11-21,5,1541.09,1343.04,1987.48,empirical_q10_q90
+Koyambedu,Potato,2026-11-22,6,1544.0,1327.04,2032.99,empirical_q10_q90
+Koyambedu,Potato,2026-11-23,7,1530.65,1296.31,2058.82,empirical_q10_q90
+Koyambedu,Tomato,2026-11-17,1,2459.75,2009.84,2690.31,empirical_q10_q90
+Koyambedu,Tomato,2026-11-18,2,2370.78,1734.5,2696.85,empirical_q10_q90
+Koyambedu,Tomato,2026-11-19,3,2437.56,1658.28,2836.91,empirical_q10_q90
+Koyambedu,Tomato,2026-11-20,4,2388.64,1488.81,2849.77,empirical_q10_q90
+Koyambedu,Tomato,2026-11-21,5,2363.69,1357.65,2879.25,empirical_q10_q90
+Koyambedu,Tomato,2026-11-22,6,2360.01,1257.95,2924.77,empirical_q10_q90
+Koyambedu,Tomato,2026-11-23,7,2346.79,1156.43,2956.8,empirical_q10_q90
+Muhana,Onion,2026-11-17,1,2119.43,2456.04,2952.44,empirical_q10_q90
+Muhana,Onion,2026-11-18,2,2131.7,2607.74,3309.76,empirical_q10_q90
+Muhana,Onion,2026-11-19,3,2155.81,2738.83,3598.63,empirical_q10_q90
+Muhana,Onion,2026-11-20,4,2169.13,2842.35,3835.16,empirical_q10_q90
+Muhana,Onion,2026-11-21,5,2182.67,2935.35,4045.34,empirical_q10_q90
+Muhana,Onion,2026-11-22,6,2196.11,3020.63,4236.57,empirical_q10_q90
+Muhana,Onion,2026-11-23,7,2208.07,3098.65,4412.01,empirical_q10_q90
+Muhana,Potato,2026-11-17,1,1430.41,1341.84,1630.04,empirical_q10_q90
+Muhana,Potato,2026-11-18,2,1415.18,1289.92,1697.5,empirical_q10_q90
+Muhana,Potato,2026-11-19,3,1430.64,1277.23,1776.41,empirical_q10_q90
+Muhana,Potato,2026-11-20,4,1448.63,1271.48,1847.89,empirical_q10_q90
+Muhana,Potato,2026-11-21,5,1451.85,1253.8,1898.24,empirical_q10_q90
+Muhana,Potato,2026-11-22,6,1457.95,1240.99,1946.94,empirical_q10_q90
+Muhana,Potato,2026-11-23,7,1465.02,1230.68,1993.19,empirical_q10_q90
+Muhana,Tomato,2026-11-17,1,2130.23,1680.32,2360.79,empirical_q10_q90
+Muhana,Tomato,2026-11-18,2,2178.22,1541.94,2504.29,empirical_q10_q90
+Muhana,Tomato,2026-11-19,3,2156.67,1377.39,2556.02,empirical_q10_q90
+Muhana,Tomato,2026-11-20,4,2202.71,1302.88,2663.84,empirical_q10_q90
+Muhana,Tomato,2026-11-21,5,2225.23,1219.19,2740.79,empirical_q10_q90
+Muhana,Tomato,2026-11-22,6,2235.64,1133.58,2800.4,empirical_q10_q90
+Muhana,Tomato,2026-11-23,7,2250.5,1060.14,2860.51,empirical_q10_q90
+Naroda,Onion,2026-11-17,1,2502.33,2838.94,3335.34,empirical_q10_q90
+Naroda,Onion,2026-11-18,2,2460.01,2936.05,3638.07,empirical_q10_q90
+Naroda,Onion,2026-11-19,3,2490.05,3073.07,3932.87,empirical_q10_q90
+Naroda,Onion,2026-11-20,4,2471.95,3145.17,4137.98,empirical_q10_q90
+Naroda,Onion,2026-11-21,5,2460.76,3213.44,4323.43,empirical_q10_q90
+Naroda,Onion,2026-11-22,6,2455.27,3279.79,4495.73,empirical_q10_q90
+Naroda,Onion,2026-11-23,7,2447.69,3338.27,4651.63,empirical_q10_q90
+Naroda,Potato,2026-11-17,1,1549.88,1461.31,1749.51,empirical_q10_q90
+Naroda,Potato,2026-11-18,2,1499.79,1374.53,1782.11,empirical_q10_q90
+Naroda,Potato,2026-11-19,3,1535.13,1381.72,1880.9,empirical_q10_q90
+Naroda,Potato,2026-11-20,4,1521.59,1344.44,1920.85,empirical_q10_q90
+Naroda,Potato,2026-11-21,5,1505.38,1307.33,1951.77,empirical_q10_q90
+Naroda,Potato,2026-11-22,6,1508.18,1291.22,1997.17,empirical_q10_q90
+Naroda,Potato,2026-11-23,7,1504.81,1270.47,2032.98,empirical_q10_q90
+Naroda,Tomato,2026-11-17,1,2642.36,2192.45,2872.92,empirical_q10_q90
+Naroda,Tomato,2026-11-18,2,2520.72,1884.44,2846.79,empirical_q10_q90
+Naroda,Tomato,2026-11-19,3,2535.53,1756.25,2934.88,empirical_q10_q90
+Naroda,Tomato,2026-11-20,4,2476.17,1576.34,2937.3,empirical_q10_q90
+Naroda,Tomato,2026-11-21,5,2434.89,1428.85,2950.45,empirical_q10_q90
+Naroda,Tomato,2026-11-22,6,2414.71,1312.65,2979.47,empirical_q10_q90
+Naroda,Tomato,2026-11-23,7,2391.49,1201.13,3001.5,empirical_q10_q90
+Sealdah Koley Market,Onion,2026-11-17,1,2294.13,2630.74,3127.14,empirical_q10_q90
+Sealdah Koley Market,Onion,2026-11-18,2,2330.31,2806.35,3508.37,empirical_q10_q90
+Sealdah Koley Market,Onion,2026-11-19,3,2323.05,2906.07,3765.87,empirical_q10_q90
+Sealdah Koley Market,Onion,2026-11-20,4,2324.2,2997.42,3990.23,empirical_q10_q90
+Sealdah Koley Market,Onion,2026-11-21,5,2328.58,3081.26,4191.25,empirical_q10_q90
+Sealdah Koley Market,Onion,2026-11-22,6,2330.32,3154.84,4370.78,empirical_q10_q90
+Sealdah Koley Market,Onion,2026-11-23,7,2332.25,3222.83,4536.19,empirical_q10_q90
+Sealdah Koley Market,Potato,2026-11-17,1,1445.06,1356.49,1644.69,empirical_q10_q90
+Sealdah Koley Market,Potato,2026-11-18,2,1548.82,1423.56,1831.14,empirical_q10_q90
+Sealdah Koley Market,Potato,2026-11-19,3,1505.4,1351.99,1851.17,empirical_q10_q90
+Sealdah Koley Market,Potato,2026-11-20,4,1485.9,1308.75,1885.16,empirical_q10_q90
+Sealdah Koley Market,Potato,2026-11-21,5,1504.0,1305.95,1950.39,empirical_q10_q90
+Sealdah Koley Market,Potato,2026-11-22,6,1498.09,1281.13,1987.08,empirical_q10_q90
+Sealdah Koley Market,Potato,2026-11-23,7,1491.77,1257.43,2019.94,empirical_q10_q90
+Sealdah Koley Market,Tomato,2026-11-17,1,2637.0,2187.09,2867.56,empirical_q10_q90
+Sealdah Koley Market,Tomato,2026-11-18,2,2577.34,1941.06,2903.41,empirical_q10_q90
+Sealdah Koley Market,Tomato,2026-11-19,3,2534.38,1755.1,2933.73,empirical_q10_q90
+Sealdah Koley Market,Tomato,2026-11-20,4,2482.14,1582.31,2943.27,empirical_q10_q90
+Sealdah Koley Market,Tomato,2026-11-21,5,2446.93,1440.89,2962.49,empirical_q10_q90
+Sealdah Koley Market,Tomato,2026-11-22,6,2419.68,1317.62,2984.44,empirical_q10_q90
+Sealdah Koley Market,Tomato,2026-11-23,7,2395.92,1205.56,3005.93,empirical_q10_q90
+Vashi,Onion,2026-11-17,1,2141.51,2478.12,2974.52,empirical_q10_q90
+Vashi,Onion,2026-11-18,2,2154.45,2630.49,3332.51,empirical_q10_q90
+Vashi,Onion,2026-11-19,3,2163.26,2746.28,3606.08,empirical_q10_q90
+Vashi,Onion,2026-11-20,4,2180.36,2853.58,3846.39,empirical_q10_q90
+Vashi,Onion,2026-11-21,5,2193.58,2946.26,4056.25,empirical_q10_q90
+Vashi,Onion,2026-11-22,6,2205.4,3029.92,4245.86,empirical_q10_q90
+Vashi,Onion,2026-11-23,7,2216.86,3107.44,4420.8,empirical_q10_q90
+Vashi,Potato,2026-11-17,1,1465.43,1376.86,1665.06,empirical_q10_q90
+Vashi,Potato,2026-11-18,2,1490.95,1365.69,1773.27,empirical_q10_q90
+Vashi,Potato,2026-11-19,3,1433.23,1279.82,1779.0,empirical_q10_q90
+Vashi,Potato,2026-11-20,4,1462.55,1285.4,1861.81,empirical_q10_q90
+Vashi,Potato,2026-11-21,5,1476.84,1278.79,1923.23,empirical_q10_q90
+Vashi,Potato,2026-11-22,6,1468.27,1251.31,1957.26,empirical_q10_q90
+Vashi,Potato,2026-11-23,7,1473.61,1239.27,2001.78,empirical_q10_q90
+Vashi,Tomato,2026-11-17,1,2439.6,1989.69,2670.16,empirical_q10_q90
+Vashi,Tomato,2026-11-18,2,2412.64,1776.36,2738.71,empirical_q10_q90
+Vashi,Tomato,2026-11-19,3,2377.9,1598.62,2777.25,empirical_q10_q90
+Vashi,Tomato,2026-11-20,4,2368.68,1468.85,2829.81,empirical_q10_q90
+Vashi,Tomato,2026-11-21,5,2356.04,1350.0,2871.6,empirical_q10_q90
+Vashi,Tomato,2026-11-22,6,2344.08,1242.02,2908.84,empirical_q10_q90
+Vashi,Tomato,2026-11-23,7,2336.44,1146.08,2946.45,empirical_q10_q90
+Yeshwanthpur,Onion,2026-11-17,1,2107.38,2443.99,2940.39,empirical_q10_q90
+Yeshwanthpur,Onion,2026-11-18,2,2140.05,2616.09,3318.11,empirical_q10_q90
+Yeshwanthpur,Onion,2026-11-19,3,2149.05,2732.07,3591.87,empirical_q10_q90
+Yeshwanthpur,Onion,2026-11-20,4,2164.97,2838.19,3831.0,empirical_q10_q90
+Yeshwanthpur,Onion,2026-11-21,5,2180.23,2932.91,4042.9,empirical_q10_q90
+Yeshwanthpur,Onion,2026-11-22,6,2193.06,3017.58,4233.52,empirical_q10_q90
+Yeshwanthpur,Onion,2026-11-23,7,2205.31,3095.89,4409.25,empirical_q10_q90
+Yeshwanthpur,Potato,2026-11-17,1,1434.1,1345.53,1633.73,empirical_q10_q90
+Yeshwanthpur,Potato,2026-11-18,2,1486.76,1361.5,1769.08,empirical_q10_q90
+Yeshwanthpur,Potato,2026-11-19,3,1466.92,1313.51,1812.69,empirical_q10_q90
+Yeshwanthpur,Potato,2026-11-20,4,1466.16,1289.01,1865.42,empirical_q10_q90
+Yeshwanthpur,Potato,2026-11-21,5,1478.72,1280.67,1925.11,empirical_q10_q90
+Yeshwanthpur,Potato,2026-11-22,6,1477.96,1261.0,1966.95,empirical_q10_q90
+Yeshwanthpur,Potato,2026-11-23,7,1478.12,1243.78,2006.29,empirical_q10_q90
+Yeshwanthpur,Tomato,2026-11-17,1,2198.93,1749.02,2429.49,empirical_q10_q90
+Yeshwanthpur,Tomato,2026-11-18,2,2256.62,1620.34,2582.69,empirical_q10_q90
+Yeshwanthpur,Tomato,2026-11-19,3,2259.58,1480.3,2658.93,empirical_q10_q90
+Yeshwanthpur,Tomato,2026-11-20,4,2262.66,1362.83,2723.79,empirical_q10_q90
+Yeshwanthpur,Tomato,2026-11-21,5,2274.36,1268.32,2789.92,empirical_q10_q90
+Yeshwanthpur,Tomato,2026-11-22,6,2279.56,1177.5,2844.32,empirical_q10_q90
+Yeshwanthpur,Tomato,2026-11-23,7,2283.53,1093.17,2893.54,empirical_q10_q90

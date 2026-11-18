@@ -1,0 +1,28 @@
+market,commodity,prev_date,prev_price,latest_date,latest_price,gap_days,pct_change,alert,direction
+National,Jowar(Sorghum),2026-11-15,2438.36,2026-11-16,3568.22,1,46.3,True,up
+National,Potato,2026-11-15,1122.26,2026-11-16,612.23,1,-45.4,True,down
+National,Lentil(Masur)(Whole),2026-11-15,5973.43,2026-11-16,7487.27,1,25.3,True,up
+Bowenpally,Potato,2026-11-15,1800.0,2026-11-16,1400.0,1,-22.2,True,down
+National,Onion,2026-11-15,4276.28,2026-11-16,3397.79,1,-20.5,True,down
+National,Black Gram(Urd Beans)(Whole),2026-11-15,9189.57,2026-11-16,7347.07,1,-20.0,True,down
+National,Copra,2026-11-15,27852.72,2026-11-16,22816.5,1,-18.1,True,down
+National,Paddy(Common),2026-11-15,2766.12,2026-11-16,3173.05,1,14.7,True,up
+National,"Sesamum(Sesame,Gingelly,Til)",2026-11-15,13755.32,2026-11-16,15624.47,1,13.6,True,up
+National,Green Gram(Moong)(Whole),2026-11-15,7541.13,2026-11-16,8424.11,1,11.7,True,up
+National,Barley(Jau),2026-11-15,3000.0,2026-11-16,2663.64,1,-11.2,True,down
+National,Ragi(Finger Millet),2026-11-15,3407.98,2026-11-16,3662.75,1,7.5,False,up
+Bowenpally,Tomato,2026-11-15,1400.0,2026-11-16,1500.0,1,7.1,False,up
+National,Tomato,2026-11-15,1635.56,2026-11-16,1520.45,1,-7.0,False,down
+National,Paddy(Fine/Superfine/Grade A),2026-11-15,2480.94,2026-11-16,2634.72,1,6.2,False,up
+National,Groundnut,2026-11-15,6575.57,2026-11-16,6968.08,1,6.0,False,up
+National,Wheat,2026-11-15,2670.95,2026-11-16,2800.62,1,4.9,False,up
+National,Bengal Gram(Gram)(Whole),2026-11-15,6969.53,2026-11-16,7290.18,1,4.6,False,up
+National,Soyabean,2026-11-15,6951.29,2026-11-16,7254.56,1,4.4,False,up
+National,Sunflower/Sunflower Seed,2026-11-15,7700.0,2026-11-16,7488.39,1,-2.7,False,down
+National,Mustard,2026-11-15,8546.13,2026-11-16,8335.54,1,-2.5,False,down
+National,Bajra(Pearl Millet/Cumbu),2026-11-15,2612.16,2026-11-16,2549.15,1,-2.4,False,down
+National,Safflower,2026-11-14,6206.72,2026-11-16,6295.72,2,1.4,False,up
+National,Maize,2026-11-15,2754.49,2026-11-16,2789.1,1,1.3,False,up
+National,Red Gram/Arhar/Tur(Whole),2026-11-15,9532.92,2026-11-16,9626.5,1,1.0,False,up
+National,Cotton,2026-11-15,9017.7,2026-11-16,9089.03,1,0.8,False,up
+Sealdah Koley Market,Tomato,2026-11-15,2800.0,2026-11-16,2800.0,1,0.0,False,down
