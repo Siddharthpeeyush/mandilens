@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="358" font-family="sans-serif">
+<rect x="0" y="0" width="640" height="358" fill="#fdfefe" stroke="#d5dbdb"/>
+<text x="12" y="27" font-size="13" font-weight="bold">Price alerts — 2026-11-16  ·  |move| &gt; 10% day-over-day (11 of 27 series)</text>
+<text x="12" y="56" font-size="12" fill="#333">Jowar(Sorghum) · National</text>
+<rect x="400" y="45" width="220" height="14" fill="#c0392b"/>
+<text x="630" y="56" font-size="12" font-weight="bold" fill="#c0392b">+46.3%</text>
+<text x="12" y="82" font-size="12" fill="#333">Potato · National</text>
+<rect x="400" y="71" width="215" height="14" fill="#2471a3"/>
+<text x="625" y="82" font-size="12" font-weight="bold" fill="#2471a3">-45.4%</text>
+<text x="12" y="108" font-size="12" fill="#333">Lentil(Masur)(Whole) · National</text>
+<rect x="400" y="97" width="120" height="14" fill="#c0392b"/>
+<text x="530" y="108" font-size="12" font-weight="bold" fill="#c0392b">+25.3%</text>
+<text x="12" y="134" font-size="12" fill="#333">Potato · Bowenpally</text>
+<rect x="400" y="123" width="105" height="14" fill="#2471a3"/>
+<text x="515" y="134" font-size="12" font-weight="bold" fill="#2471a3">-22.2%</text>
+<text x="12" y="160" font-size="12" fill="#333">Onion · National</text>
+<rect x="400" y="149" width="97" height="14" fill="#2471a3"/>
+<text x="507" y="160" font-size="12" font-weight="bold" fill="#2471a3">-20.5%</text>
+<text x="12" y="186" font-size="12" fill="#333">Black Gram(Urd Beans)(Whole) · National</text>
+<rect x="400" y="175" width="95" height="14" fill="#2471a3"/>
+<text x="505" y="186" font-size="12" font-weight="bold" fill="#2471a3">-20.0%</text>
+<text x="12" y="212" font-size="12" fill="#333">Copra · National</text>
+<rect x="400" y="201" width="86" height="14" fill="#2471a3"/>
+<text x="496" y="212" font-size="12" font-weight="bold" fill="#2471a3">-18.1%</text>
+<text x="12" y="238" font-size="12" fill="#333">Paddy(Common) · National</text>
+<rect x="400" y="227" width="69" height="14" fill="#c0392b"/>
+<text x="479" y="238" font-size="12" font-weight="bold" fill="#c0392b">+14.7%</text>
+<text x="12" y="264" font-size="12" fill="#333">Sesamum(Sesame,Gingelly,Til) · National</text>
+<rect x="400" y="253" width="64" height="14" fill="#c0392b"/>
+<text x="474" y="264" font-size="12" font-weight="bold" fill="#c0392b">+13.6%</text>
+<text x="12" y="290" font-size="12" fill="#333">Green Gram(Moong)(Whole) · National</text>
+<rect x="400" y="279" width="55" height="14" fill="#c0392b"/>
+<text x="465" y="290" font-size="12" font-weight="bold" fill="#c0392b">+11.7%</text>
+<text x="12" y="316" font-size="12" fill="#333">Barley(Jau) · National</text>
+<rect x="400" y="305" width="53" height="14" fill="#2471a3"/>
+<text x="463" y="316" font-size="12" font-weight="bold" fill="#2471a3">-11.2%</text>
+</svg>
