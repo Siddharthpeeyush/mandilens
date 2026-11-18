@@ -94,6 +94,8 @@ def main():
         return 1
     if run("confidence_bands.py", (date_s,)) != 0:
         return 1
+    if run("price_alerts.py", (date_s,)) != 0:
+        return 1
     if run("visualize.py", (date_s,)) != 0:
         return 1
     update_readme(date_s, source)
