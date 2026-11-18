@@ -19,15 +19,15 @@ residuals gets no empirical quantiles: its band is
 
 ## Residual base (all scored rows to date)
 
-All 100 scored residuals rest on
+All 121 scored residuals rest on
 real Agmarknet portal actuals (0 scored against seeded
 sample-mode actuals — zero). Origins: 08–13 Nov 2026.
 
 | Commodity | Scored residuals (n) | Mean horizon h_bar | q10 (₹/qtl) | q90 (₹/qtl) | Method |
 |---|---|---|---|---|---|
 | Onion | 6 | 1.67 | 434.56 | 1075.42 | empirical_q10_q90 |
-| Potato | 33 | 2.82 | -143.82 | 348.88 | empirical_q10_q90 |
-| Tomato | 61 | 2.90 | -821.24 | 384.48 | empirical_q10_q90 |
+| Potato | 40 | 3.02 | -154.05 | 347.21 | empirical_q10_q90 |
+| Tomato | 75 | 3.11 | -793.01 | 406.39 | empirical_q10_q90 |
 
 ## In-sample coverage (sanity check, not an out-of-sample claim)
 
@@ -37,16 +37,16 @@ horizon; per-horizon numbers will drift as more scored rows
 arrive.
 
 - Onion: 83.3% inside (n=6)
-- Potato: 75.8% inside (n=33)
-- Tomato: 90.2% inside (n=61)
+- Potato: 77.5% inside (n=40)
+- Tomato: 90.7% inside (n=75)
 
 ## Today's bands (cross-mandi median, ₹/qtl)
 
-| Commodity | 16 Nov | 17 Nov | 18 Nov | 19 Nov | 20 Nov | 21 Nov | 22 Nov |
+| Commodity | 17 Nov | 18 Nov | 19 Nov | 20 Nov | 21 Nov | 22 Nov | 23 Nov |
 |---|---|---|---|---|---|---|---|
 | Onion | 2,281 (2,617–3,114) | 2,306 (2,782–3,484) | 2,318 (2,901–3,761) | 2,316 (2,989–3,982) | 2,319 (3,072–4,182) | 2,323 (3,147–4,363) | 2,325 (3,216–4,529) |
-| Potato | 1,453 (1,368–1,661) | 1,497 (1,375–1,790) | 1,488 (1,339–1,848) | 1,477 (1,306–1,893) | 1,492 (1,301–1,957) | 1,490 (1,280–1,999) | 1,487 (1,260–2,037) |
-| Tomato | 2,334 (1,852–2,560) | 2,313 (1,631–2,632) | 2,318 (1,483–2,709) | 2,316 (1,351–2,767) | 2,314 (1,236–2,819) | 2,311 (1,130–2,864) | 2,309 (1,033–2,906) |
+| Potato | 1,447 (1,358–1,647) | 1,495 (1,370–1,778) | 1,476 (1,323–1,822) | 1,473 (1,296–1,872) | 1,490 (1,292–1,937) | 1,485 (1,268–1,974) | 1,483 (1,249–2,011) |
+| Tomato | 2,335 (1,885–2,566) | 2,314 (1,677–2,640) | 2,319 (1,539–2,718) | 2,317 (1,417–2,778) | 2,315 (1,309–2,831) | 2,312 (1,210–2,877) | 2,310 (1,120–2,920) |
 
 ## Hand check
 
@@ -80,4 +80,4 @@ arrive.
   real bias, not a symmetric error. A bias correction is a
   follow-up, not today's change.
 
-![Forecast with 80% bands](../charts/confidence_bands_2026-11-17.svg)
+![Forecast with 80% bands](../charts/confidence_bands_2026-11-18.svg)
