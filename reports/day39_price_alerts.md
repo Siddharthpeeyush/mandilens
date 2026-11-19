@@ -10,27 +10,19 @@ direction is printed with the move.
 
 ## Today
 
-- Latest data date: **2026-11-16** (run 2026-11-18, lag 2 day(s)).
-- Series evaluated: **27**; alerts fired: **11**.
-- Not evaluated (first price in the dataset, no previous day to compare): Jute (National).
+- Latest data date: **2026-11-17** (run 2026-11-19, lag 2 day(s)).
+- Series evaluated: **30**; alerts fired: **4**.
 
 | Commodity | Market | Previous | Latest | Change |
 |---|---|---|---|---|
-| Jowar(Sorghum) | National | ₹2,438 (2026-11-15) | ₹3,568 | 🔺 +46.3% |
-| Potato | National | ₹1,122 (2026-11-15) | ₹612 | 🔻 -45.4% |
-| Lentil(Masur)(Whole) | National | ₹5,973 (2026-11-15) | ₹7,487 | 🔺 +25.3% |
-| Potato | Bowenpally | ₹1,800 (2026-11-15) | ₹1,400 | 🔻 -22.2% |
-| Onion | National | ₹4,276 (2026-11-15) | ₹3,398 | 🔻 -20.5% |
-| Black Gram(Urd Beans)(Whole) | National | ₹9,190 (2026-11-15) | ₹7,347 | 🔻 -20.0% |
-| Copra | National | ₹27,853 (2026-11-15) | ₹22,816 | 🔻 -18.1% |
-| Paddy(Common) | National | ₹2,766 (2026-11-15) | ₹3,173 | 🔺 +14.7% |
-| Sesamum(Sesame,Gingelly,Til) | National | ₹13,755 (2026-11-15) | ₹15,624 | 🔺 +13.6% |
-| Green Gram(Moong)(Whole) | National | ₹7,541 (2026-11-15) | ₹8,424 | 🔺 +11.7% |
-| Barley(Jau) | National | ₹3,000 (2026-11-15) | ₹2,664 | 🔻 -11.2% |
+| Jowar(Sorghum) | National | ₹3,568 (2026-11-16) | ₹5,081 | 🔺 +42.4% |
+| Niger Seed(Ramtil) | National | ₹11,505 (2026-11-01) | ₹14,495 | 🔺 +26.0% |
+| Tomato | National | ₹1,520 (2026-11-16) | ₹1,769 | 🔺 +16.4% |
+| Tomato | Sealdah Koley Market | ₹2,800 (2026-11-16) | ₹3,200 | 🔺 +14.3% |
 
 ## Backtest — does the rule fire on the motivating example?
 
-- Same rule run over every date in the dataset: **415 alerts** across 47 trading days (18 on the busiest day).
+- Same rule run over every date in the dataset: **419 alerts** across 48 trading days (18 on the busiest day).
 - Jowar(Sorghum) at National, 07 Nov 2026 (the move the 09 Nov daily log reported): **+57.6% — ALERT FIRED** ✓ (the move that motivated this rule).
 - The +57.6% itself is a revision artefact, not a real
   one-day market move (Day 34): the portal's first publication
@@ -57,4 +49,4 @@ direction is printed with the move.
   future daily report carries the alerts section
   automatically.
 
-![price alerts](../charts/price_alerts_2026-11-18.svg)
+![price alerts](../charts/price_alerts_2026-11-19.svg)

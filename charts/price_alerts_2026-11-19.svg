@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="176" font-family="sans-serif">
+<rect x="0" y="0" width="640" height="176" fill="#fdfefe" stroke="#d5dbdb"/>
+<text x="12" y="27" font-size="13" font-weight="bold">Price alerts — 2026-11-17  ·  |move| &gt; 10% day-over-day (4 of 30 series)</text>
+<text x="12" y="56" font-size="12" fill="#333">Jowar(Sorghum) · National</text>
+<rect x="400" y="45" width="220" height="14" fill="#c0392b"/>
+<text x="630" y="56" font-size="12" font-weight="bold" fill="#c0392b">+42.4%</text>
+<text x="12" y="82" font-size="12" fill="#333">Niger Seed(Ramtil) · National</text>
+<rect x="400" y="71" width="134" height="14" fill="#c0392b"/>
+<text x="544" y="82" font-size="12" font-weight="bold" fill="#c0392b">+26.0%</text>
+<text x="12" y="108" font-size="12" fill="#333">Tomato · National</text>
+<rect x="400" y="97" width="85" height="14" fill="#c0392b"/>
+<text x="495" y="108" font-size="12" font-weight="bold" fill="#c0392b">+16.4%</text>
+<text x="12" y="134" font-size="12" fill="#333">Tomato · Sealdah Koley Market</text>
+<rect x="400" y="123" width="74" height="14" fill="#c0392b"/>
+<text x="484" y="134" font-size="12" font-weight="bold" fill="#c0392b">+14.3%</text>
+</svg>
