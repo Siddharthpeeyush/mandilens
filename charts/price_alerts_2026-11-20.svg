@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="150" font-family="sans-serif">
+<rect x="0" y="0" width="640" height="150" fill="#fdfefe" stroke="#d5dbdb"/>
+<text x="12" y="27" font-size="13" font-weight="bold">Price alerts — 2026-11-18  ·  |move| &gt; 10% day-over-day (3 of 29 series)</text>
+<text x="12" y="56" font-size="12" fill="#333">Copra · National</text>
+<rect x="400" y="45" width="220" height="14" fill="#2471a3"/>
+<text x="630" y="56" font-size="12" font-weight="bold" fill="#2471a3">-38.9%</text>
+<text x="12" y="82" font-size="12" fill="#333">Jowar(Sorghum) · National</text>
+<rect x="400" y="71" width="123" height="14" fill="#2471a3"/>
+<text x="533" y="82" font-size="12" font-weight="bold" fill="#2471a3">-21.8%</text>
+<text x="12" y="108" font-size="12" fill="#333">Potato · Bowenpally</text>
+<rect x="400" y="97" width="80" height="14" fill="#2471a3"/>
+<text x="490" y="108" font-size="12" font-weight="bold" fill="#2471a3">-14.3%</text>
+</svg>

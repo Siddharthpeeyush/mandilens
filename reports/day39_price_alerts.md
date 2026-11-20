@@ -10,19 +10,18 @@ direction is printed with the move.
 
 ## Today
 
-- Latest data date: **2026-11-17** (run 2026-11-19, lag 2 day(s)).
-- Series evaluated: **30**; alerts fired: **4**.
+- Latest data date: **2026-11-18** (run 2026-11-20, lag 2 day(s)).
+- Series evaluated: **29**; alerts fired: **3**.
 
 | Commodity | Market | Previous | Latest | Change |
 |---|---|---|---|---|
-| Jowar(Sorghum) | National | ₹3,568 (2026-11-16) | ₹5,081 | 🔺 +42.4% |
-| Niger Seed(Ramtil) | National | ₹11,505 (2026-11-01) | ₹14,495 | 🔺 +26.0% |
-| Tomato | National | ₹1,520 (2026-11-16) | ₹1,769 | 🔺 +16.4% |
-| Tomato | Sealdah Koley Market | ₹2,800 (2026-11-16) | ₹3,200 | 🔺 +14.3% |
+| Copra | National | ₹24,987 (2026-11-17) | ₹15,257 | 🔻 -38.9% |
+| Jowar(Sorghum) | National | ₹5,081 (2026-11-17) | ₹3,972 | 🔻 -21.8% |
+| Potato | Bowenpally | ₹1,400 (2026-11-16) | ₹1,200 | 🔻 -14.3% |
 
 ## Backtest — does the rule fire on the motivating example?
 
-- Same rule run over every date in the dataset: **419 alerts** across 48 trading days (18 on the busiest day).
+- Same rule run over every date in the dataset: **422 alerts** across 49 trading days (18 on the busiest day).
 - Jowar(Sorghum) at National, 07 Nov 2026 (the move the 09 Nov daily log reported): **+57.6% — ALERT FIRED** ✓ (the move that motivated this rule).
 - The +57.6% itself is a revision artefact, not a real
   one-day market move (Day 34): the portal's first publication
@@ -49,4 +48,4 @@ direction is printed with the move.
   future daily report carries the alerts section
   automatically.
 
-![price alerts](../charts/price_alerts_2026-11-19.svg)
+![price alerts](../charts/price_alerts_2026-11-20.svg)

@@ -1,0 +1,30 @@
+market,commodity,prev_date,prev_price,latest_date,latest_price,gap_days,pct_change,alert,direction
+National,Copra,2026-11-17,24986.81,2026-11-18,15256.58,1,-38.9,True,down
+National,Jowar(Sorghum),2026-11-17,5080.58,2026-11-18,3971.58,1,-21.8,True,down
+Bowenpally,Potato,2026-11-16,1400.0,2026-11-18,1200.0,2,-14.3,True,down
+National,Barley(Jau),2026-11-17,2709.55,2026-11-18,2469.68,1,-8.9,False,down
+National,Lentil(Masur)(Whole),2026-11-17,7554.53,2026-11-18,7110.67,1,-5.9,False,down
+National,Onion,2026-11-17,3402.81,2026-11-18,3576.18,1,5.1,False,up
+National,Ragi(Finger Millet),2026-11-17,3607.91,2026-11-18,3454.27,1,-4.3,False,down
+National,Safflower,2026-11-17,6364.76,2026-11-18,6121.7,1,-3.8,False,down
+National,Mustard,2026-11-17,8250.1,2026-11-18,8509.04,1,3.1,False,up
+National,Green Gram(Moong)(Whole),2026-11-17,8462.48,2026-11-18,8203.68,1,-3.1,False,down
+National,Potato,2026-11-17,635.86,2026-11-18,617.21,1,-2.9,False,down
+National,Paddy(Common),2026-11-17,3138.88,2026-11-18,3226.86,1,2.8,False,up
+National,Red Gram/Arhar/Tur(Whole),2026-11-17,9850.01,2026-11-18,9685.24,1,-1.7,False,down
+National,Tomato,2026-11-17,1769.35,2026-11-18,1794.77,1,1.4,False,up
+National,Sunflower/Sunflower Seed,2026-11-17,7899.8,2026-11-18,7792.0,1,-1.4,False,down
+National,Black Gram(Urd Beans)(Whole),2026-11-17,7578.43,2026-11-18,7684.07,1,1.4,False,up
+National,Groundnut,2026-11-17,7359.5,2026-11-18,7253.67,1,-1.4,False,down
+National,Paddy(Fine/Superfine/Grade A),2026-11-17,2663.58,2026-11-18,2628.98,1,-1.3,False,down
+National,"Sesamum(Sesame,Gingelly,Til)",2026-11-17,15025.07,2026-11-18,14873.53,1,-1.0,False,down
+National,Bajra(Pearl Millet/Cumbu),2026-11-17,2561.17,2026-11-18,2552.47,1,-0.3,False,down
+National,Bengal Gram(Gram)(Whole),2026-11-17,7305.18,2026-11-18,7324.05,1,0.3,False,up
+National,Maize,2026-11-17,2768.76,2026-11-18,2760.84,1,-0.3,False,down
+National,Wheat,2026-11-17,2791.74,2026-11-18,2799.89,1,0.3,False,up
+National,Cotton,2026-11-17,9077.04,2026-11-18,9083.75,1,0.1,False,up
+Bowenpally,Tomato,2026-11-17,1500.0,2026-11-18,1500.0,1,0.0,False,down
+Azadpur,Potato,2026-11-17,1074.0,2026-11-18,1074.0,1,0.0,False,down
+Azadpur,Onion,2026-11-17,4206.0,2026-11-18,4206.0,1,0.0,False,down
+National,Soyabean,2026-11-17,7332.01,2026-11-18,7334.84,1,0.0,False,up
+Sealdah Koley Market,Tomato,2026-11-17,3200.0,2026-11-18,3200.0,1,0.0,False,down
