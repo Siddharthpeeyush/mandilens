@@ -10,18 +10,16 @@ direction is printed with the move.
 
 ## Today
 
-- Latest data date: **2026-11-18** (run 2026-11-20, lag 2 day(s)).
-- Series evaluated: **29**; alerts fired: **3**.
+- Latest data date: **2026-11-19** (run 2026-11-21, lag 2 day(s)).
+- Series evaluated: **30**; alerts fired: **1**.
 
 | Commodity | Market | Previous | Latest | Change |
 |---|---|---|---|---|
-| Copra | National | ₹24,987 (2026-11-17) | ₹15,257 | 🔻 -38.9% |
-| Jowar(Sorghum) | National | ₹5,081 (2026-11-17) | ₹3,972 | 🔻 -21.8% |
-| Potato | Bowenpally | ₹1,400 (2026-11-16) | ₹1,200 | 🔻 -14.3% |
+| Copra | National | ₹15,257 (2026-11-18) | ₹26,058 | 🔺 +70.8% |
 
 ## Backtest — does the rule fire on the motivating example?
 
-- Same rule run over every date in the dataset: **422 alerts** across 49 trading days (18 on the busiest day).
+- Same rule run over every date in the dataset: **423 alerts** across 50 trading days (18 on the busiest day).
 - Jowar(Sorghum) at National, 07 Nov 2026 (the move the 09 Nov daily log reported): **+57.6% — ALERT FIRED** ✓ (the move that motivated this rule).
 - The +57.6% itself is a revision artefact, not a real
   one-day market move (Day 34): the portal's first publication
@@ -48,4 +46,4 @@ direction is printed with the move.
   future daily report carries the alerts section
   automatically.
 
-![price alerts](../charts/price_alerts_2026-11-20.svg)
+![price alerts](../charts/price_alerts_2026-11-21.svg)
