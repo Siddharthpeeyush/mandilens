@@ -16,7 +16,7 @@
     <nav class="main" aria-label="Sections">
       <a href="#prices">Today's prices</a>
       <a href="#forecast">Forecast</a>
-      <!-- HIDDEN 2026-11-07 (sample data): <a href="#mandis">Mandi compare</a> — restore with that section -->
+      <a href="#mandis">Mandi compare</a>
       <a href="#calculator">Calculator</a>
       <a href="#about">About the data</a>
     </nav>
@@ -84,30 +84,28 @@
     </div>
   </section>
 
-  <!-- HIDDEN 2026-11-07 by user choice: mandi compare rests on seeded SAMPLE data (ends 29 Oct 2026). To restore, remove `hidden` from this section and the nav links above. -->
-  <section class="block" id="mandis" hidden>
+  <!-- RESTORED 2026-11-22 (Day 43): mandi compare is back on REAL per-mandi
+       portal rows (10 Nov 2026 onwards) — the sample-data hold from 07 Nov
+       is lifted. The note below is filled by app.js from data.js
+       (meta.mandiSampleNote + latest per-mandi date + reporting mandis). -->
+  <section class="block" id="mandis">
     <h2>Mandi compare — onion, potato, tomato</h2>
     <p class="sub">Cheapest vs costliest mandi for the three vegetables, across
       Azadpur (Delhi), Vashi (Mumbai), Koyambedu (Chennai), Sealdah (Kolkata),
       Yeshwanthpur (Bengaluru), Bowenpally (Hyderabad), Naroda (Ahmedabad) and
-      Muhana (Jaipur). <span class="badge-sample">Sample data</span></p>
+      Muhana (Jaipur). <span class="badge-real">Real portal data</span></p>
     <div class="tabs" id="mandiTabs" role="tablist" aria-label="Vegetable"></div>
     <div class="card table-scroll">
       <table class="data" id="mandiTable"></table>
     </div>
-    <div class="note"><strong>Read this before using these mandi prices:</strong>
-      the per-mandi series is seeded sample data from the project's early days
-      (29 Sep – 29 Oct 2026), kept to show how the comparison works — it is
-      <strong>not</strong> real mandi prices. The National prices above are the
-      real, current Agmarknet data. Real per-mandi prices return to this page
-      once the portal publishes them again.</div>
+    <div class="note" id="mandiNote"></div>
   </section>
 
   <!-- RESTORED 2026-11-16 (Day 37): per-mandi 7-day forecast table, same
        data as the daily log. Forecast is fit on per-mandi history — seeded
        sample 29 Sep–29 Oct 2026 + real Agmarknet portal rows from 10 Nov —
        so the caveat in the note below stays until the sample history ages out.
-       Mandi compare stays hidden until Day 43 (real-data rule). -->
+       Mandi compare restored 2026-11-22 (Day 43) on real per-mandi rows. -->
   <section class="block" id="forecast">
     <h2>7-day price outlook</h2>
     <p class="sub" id="forecastSub"></p>

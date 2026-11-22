@@ -32,16 +32,16 @@ with the daily run — the HTML/JS never needs to change for a data update.
   portal data), with ₹/kg, day-on-day change and vs-MSP.
 - **Trend detail** — tap any row for an 11-day trend chart, range and MSP.
 - **Mandi compare** — Onion/Potato/Tomato across 8 mandis, cheapest vs
-  costliest. **Sample data** (29 Sep–29 Oct 2026), clearly badged — not real
-  mandi prices.
+  costliest. **Real portal data** — latest per-mandi prices for the mandis
+  that reported; mandis that did not report show no row.
 - **7-day outlook** — OLS forecasts, dates labelled as generated.
 - **Calculator** — quintal/kg/tonne cost at today's modal price.
 - **Search + category filter + sort** across all 26 commodities (Hindi names
   included).
 
-> **Hidden for now (7 Nov 2026, user's call):** the Mandi compare and
-> 7-day outlook sections rest on the seeded sample series, so they are
-> hidden with the `hidden` attribute on their `<section>` tags (plus their
-> nav links and the Forecasts bullet in About). The code and data stay in
-> place — to restore, remove `hidden` from those sections, un-comment the
-> nav links and the Forecasts bullet.
+> **Restored (Day 37, 16 Nov 2026; Day 43, 22 Nov 2026):** the 7-day outlook
+> and Mandi compare sections are back — the outlook on the per-mandi
+> forecast table, the compare on real per-mandi portal rows (10 Nov 2026
+> onwards). The forecast model is still fit on per-mandi history that mixes
+> seeded sample (29 Sep–29 Oct 2026) with real rows; the sample share
+> shrinks as real rows accumulate.

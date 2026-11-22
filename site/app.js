@@ -223,7 +223,7 @@
   }
   window.addEventListener("resize", drawChart);
 
-  /* ---------- mandi compare (SAMPLE data) ---------- */
+  /* ---------- mandi compare (Day 43: real portal rows) ---------- */
   var VEG = ["Onion", "Potato", "Tomato"];
   var mandiTab = "Onion";
   function renderMandiTabs() {
@@ -246,14 +246,36 @@
     rows.forEach(function (r, i) {
       var cls = i === 0 ? ' class="cheapest"' : (i === rows.length - 1 ? ' class="costliest"' : "");
       var m = D.mandis.filter(function (x) { return x.market === r.market; })[0] || {};
+      /* Day 43: the portal publishes one modal price per mandi-day, no
+         min/max — show "—" instead of the ₹0 that rs(null) would print. */
+      var range = (r.min == null || r.max == null) ? "—" : rs(r.min) + " – " + rs(r.max);
       html += "<tr" + cls + "><td><strong>" + esc(m.short || r.market) + "</strong> · " +
         esc(m.city || "") + "</td><td><strong>" + rs(r.price) + "</strong></td><td>" +
-        rs2(r.perKg) + "</td><td>" + rs(r.min) + " – " + rs(r.max) + "</td></tr>";
+        rs2(r.perKg) + "</td><td>" + range + "</td></tr>";
     });
     el("mandiTable").innerHTML = html + "</tbody>";
   }
   renderMandiTabs();
   renderMandiTable();
+  /* Day 43: note names the mandis that actually reported on the latest
+     per-mandi date, so a sparse day reads as sparse, not broken. */
+  var mandiNote = el("mandiNote");
+  if (mandiNote) {
+    var reported = [];
+    D.mandiToday.forEach(function (r) {
+      var m = D.mandis.filter(function (x) { return x.market === r.market; })[0];
+      var s = (m && m.short) || r.market;
+      if (reported.indexOf(s) === -1) reported.push(s);
+    });
+    var missing = D.mandis.filter(function (m) {
+      return D.mandiToday.filter(function (r) { return r.market === m.market; }).length === 0;
+    }).map(function (m) { return m.short; });
+    mandiNote.innerHTML = "<strong>Read this before using these mandi prices:</strong> " +
+      "real Agmarknet portal prices for the mandis that reported on " +
+      fmtDate(D.meta.mandiSampleLatest) + " — " + esc(reported.join(", ")) + ". " +
+      (missing.length ? esc(missing.join(", ")) + " did not report, so they show no row. " : "") +
+      "Prices are the portal's modal price (₹/quintal) for that mandi and day.";
+  }
 
   /* ---------- forecast (Day 37: per-mandi 7-day table on the site) ---------- */
   var fcTab = "Onion";
