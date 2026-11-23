@@ -102,10 +102,13 @@
   </section>
 
   <!-- RESTORED 2026-11-16 (Day 37): per-mandi 7-day forecast table, same
-       data as the daily log. Forecast is fit on per-mandi history — seeded
-       sample 29 Sep–29 Oct 2026 + real Agmarknet portal rows from 10 Nov —
-       so the caveat in the note below stays until the sample history ages out.
-       Mandi compare restored 2026-11-22 (Day 43) on real per-mandi rows. -->
+       data as the daily log. Day 44 (2026-11-23): the table shows ONLY
+       series whose latest price is a real Agmarknet row on the latest
+       per-mandi date — 6 of 24 today (Azadpur x3, Bowenpally Potato/Tomato,
+       Sealdah Tomato). The other 18 series are sample-anchored (last actual
+       29 Oct 2026) and render as "—"; build_site.py drops them, app.js
+       names the shown ones in the note. Mandi compare restored 2026-11-22
+       (Day 43) on real per-mandi rows. -->
   <section class="block" id="forecast">
     <h2>7-day price outlook</h2>
     <p class="sub" id="forecastSub"></p>
@@ -157,7 +160,7 @@
           site is rebuilt every evening from the daily pipeline.</li>
         <!-- Restored 2026-11-16 (Day 37) with the forecast section; text filled by app.js from data.js. -->
         <li id="aboutForecast"><strong>Forecasts:</strong> <span id="aboutForecastText">Loading…</span></li>
-        <li><strong>Open data, open code:</strong> the full dataset (978 rows),
+        <li><strong>Open data, open code:</strong> the full dataset (<span id="aboutRows">…</span> rows),
           daily reports and analysis live at
           <a href="https://github.com/Siddharthpeeyush/mandilens">github.com/Siddharthpeeyush/mandilens</a>.
           Data © Government of India (Open Government Data License); site code MIT.</li>

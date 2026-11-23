@@ -290,16 +290,27 @@
     "not mandi announcements. Per-mandi actuals are still sparse — " +
     "only the mandis that reported show real prices; empty cells mean " +
     "no forecast for that mandi.";
+  /* Day 44: the note names the real-backed series (from data.js) — the
+     table shows ONLY those; every other mandi renders "—". */
+  var fcReal = D.meta.forecastReal || {};
+  var fcRealText = Object.keys(fcReal).map(function (m) {
+    var short = (D.mandis.filter(function (x) { return x.market === m; })[0] || {}).short || m;
+    return short + " (" + fcReal[m].join(", ") + ")";
+  }).join(", ");
   el("forecastNote").innerHTML =
     "<strong>How to read it:</strong> plain OLS regression on the last 3 days' prices, " +
-    "refit daily — the same model that won the Day-21 comparison (overall MAE ₹207/quintal). " +
+    "refit daily — the OLS model from the Day-21 comparison. " +
     "Typical 1-day error: onion ₹" + (fcMae.Onion || "—") + ", potato ₹" + (fcMae.Potato || "—") +
     ", tomato ₹" + (fcMae.Tomato || "—") + " per quintal. The small range under each value is the " +
     "80% prediction interval, built from the model's own past errors (walk-forward residuals" +
     bandNoteText() + "); it widens with horizon because multi-step errors compound. " +
-    "Treat the later days as directional. The model is fit on per-mandi history that mixes " +
-    "seeded sample (29 Sep – 29 Oct 2026) with real Agmarknet portal rows from 10 Nov 2026 — " +
-    "the sample share shrinks as real rows accumulate.";
+    "Treat the later days as directional. " +
+    (fcRealText ?
+      "Shown only where a mandi's latest price is a real Agmarknet row — " + fcRealText +
+      ". Other mandis show —: they have not reported real prices. The shared model is fit " +
+      "on all per-mandi history (seeded sample 29 Sep – 29 Oct 2026 + real portal rows from " +
+      "10 Nov 2026); each shown forecast starts from that mandi's latest real price."
+    : "No mandi reported real prices on the latest date, so no forecasts are shown today.");
   function bandNoteText() {
     var b = D.meta.bands || {};
     var parts = ["Onion", "Potato", "Tomato"].map(function (c) {
@@ -315,6 +326,9 @@
       ", tomato ₹" + (fcMae.Tomato || "—") + " per quintal. Treat days 5–7 as directional only. " +
       "Forecast window " + fcFirst + " – " + fcLast + ".";
   }
+  /* Day 44: dataset row count filled from data.js — the hardcoded 978 went stale. */
+  var aboutRows = el("aboutRows");
+  if (aboutRows) aboutRows.textContent = inr0.format(D.meta.rows);
   function renderForecastTabs() {
     var box = el("forecastTabs");
     box.innerHTML = "";

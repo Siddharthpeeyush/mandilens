@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="228" font-family="sans-serif">
+<rect x="0" y="0" width="640" height="228" fill="#fdfefe" stroke="#d5dbdb"/>
+<text x="12" y="27" font-size="13" font-weight="bold">Price alerts — 2026-11-21  ·  |move| &gt; 10% day-over-day (6 of 30 series)</text>
+<text x="12" y="56" font-size="12" fill="#333">Copra · National</text>
+<rect x="400" y="45" width="220" height="14" fill="#2471a3"/>
+<text x="630" y="56" font-size="12" font-weight="bold" fill="#2471a3">-23.2%</text>
+<text x="12" y="82" font-size="12" fill="#333">Potato · National</text>
+<rect x="400" y="71" width="196" height="14" fill="#c0392b"/>
+<text x="606" y="82" font-size="12" font-weight="bold" fill="#c0392b">+20.7%</text>
+<text x="12" y="108" font-size="12" fill="#333">Onion · Azadpur</text>
+<rect x="400" y="97" width="145" height="14" fill="#2471a3"/>
+<text x="555" y="108" font-size="12" font-weight="bold" fill="#2471a3">-15.3%</text>
+<text x="12" y="134" font-size="12" fill="#333">Sesamum · National</text>
+<rect x="400" y="123" width="133" height="14" fill="#2471a3"/>
+<text x="543" y="134" font-size="12" font-weight="bold" fill="#2471a3">-14.1%</text>
+<text x="12" y="160" font-size="12" fill="#333">Jowar · National</text>
+<rect x="400" y="149" width="115" height="14" fill="#2471a3"/>
+<text x="525" y="160" font-size="12" font-weight="bold" fill="#2471a3">-12.2%</text>
+<text x="12" y="186" font-size="12" fill="#333">Tomato · National</text>
+<rect x="400" y="175" width="113" height="14" fill="#c0392b"/>
+<text x="523" y="186" font-size="12" font-weight="bold" fill="#c0392b">+12.0%</text>
+</svg>

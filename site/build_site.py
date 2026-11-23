@@ -22,6 +22,12 @@ Honesty rules baked in:
   Day 37: the site now SHOWS that table (forecast section restored);
   the typical 1-day error in meta.mae comes from the matching
   forecast_mae_YYYY-MM-DD.json sidecar, not a hardcoded value.
+  Day 44: only REAL-BACKED series reach the site — a series is shown
+  only when its latest actual price is a real portal row dated the
+  latest per-mandi date. Sample-anchored series (the 5 never-reporting
+  mandis, Sealdah Onion/Potato, Bowenpally Onion — last actual 29 Oct
+  2026 sample) are dropped here; the pipeline CSV keeps all 24.
+  meta.forecastReal lists what is shown, so the site note can name it.
 """
 import csv
 import glob
@@ -157,6 +163,21 @@ def main():
         "Per-mandi Onion/Potato/Tomato prices are seeded sample data "
         "(tools/make_sample.py), not real mandi prices.")
 
+    # Day 44: a forecast series is real-backed only when its latest
+    # actual price is a real portal row dated mandi_latest (the forecast
+    # window's base date). Anything else — sample rows from 29 Oct 2026,
+    # or a real row older than mandi_latest — is dropped from the SITE
+    # table below (the pipeline CSV keeps all 24 series).
+    real_series = set()
+    for r in mandi:
+        if (r["arrival_date"] == mandi_latest
+                and r.get("source_file", "").endswith("-mandi.csv")
+                and r["commodity"] in ("Onion", "Potato", "Tomato")):
+            real_series.add((r["market"], r["commodity"]))
+    forecast_real = {}
+    for mkt, comm in sorted(real_series):
+        forecast_real.setdefault(mkt, []).append(comm)
+
     # --- Forecast (OLS champion, fit to 29 Oct; window 30 Oct-05 Nov) ---
     # Day 37: meta.mae now comes from the latest forecast_mae_*.json
     # sidecar written by forecast_table.py (walk-forward 1-day MAE on the
@@ -195,6 +216,8 @@ def main():
                    "dates": sorted({r["forecast_date"] for r in fc_rows}),
                    "model": fc_rows[0]["model"] if fc_rows else ""}
         for r in fc_rows:
+            if (r["market"], r["commodity"]) not in real_series:
+                continue  # Day 44: sample-anchored series never reach data.js
             key = f"{r['market']}||{r['commodity']}"
             forecast.setdefault(key, []).append(
                 {"d": r["forecast_date"], "p": round(num(r["forecast_price"]), 2),
@@ -215,6 +238,7 @@ def main():
             "mandiReal": mandi_real,
             "mandiSampleNote": mandi_note,
             "forecast": fc_meta,
+            "forecastReal": forecast_real,
             "mae": mae,
             "bands": band_meta,
             "source": "Agmarknet portal (agmarknet.gov.in), Government of India",

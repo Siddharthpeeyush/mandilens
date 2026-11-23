@@ -39,9 +39,11 @@ with the daily run — the HTML/JS never needs to change for a data update.
 - **Search + category filter + sort** across all 26 commodities (Hindi names
   included).
 
-> **Restored (Day 37, 16 Nov 2026; Day 43, 22 Nov 2026):** the 7-day outlook
+> **Restored (Day 37, 16 Nov 2026; Day 43, 22 Nov 2026; Day 44, 23 Nov 2026):** the 7-day outlook
 > and Mandi compare sections are back — the outlook on the per-mandi
 > forecast table, the compare on real per-mandi portal rows (10 Nov 2026
-> onwards). The forecast model is still fit on per-mandi history that mixes
+> onwards). From Day 44 the outlook shows ONLY series whose latest price
+> is a real portal row (6 of 24 today); the rest render as "—". The
+> forecast model is still fit on per-mandi history that mixes
 > seeded sample (29 Sep–29 Oct 2026) with real rows; the sample share
 > shrinks as real rows accumulate.
