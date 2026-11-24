@@ -14,11 +14,11 @@
     <div class="logo">🥬 Mandi<span>Lens</span></div>
     <div class="tagline">Daily mandi prices, made readable</div>
     <nav class="main" aria-label="Sections">
-      <a href="#prices">Today's prices</a>
-      <a href="#forecast">Forecast</a>
-      <a href="#mandis">Mandi compare</a>
-      <a href="#calculator">Calculator</a>
-      <a href="#about">About the data</a>
+      <a href="#prices">आज के भाव <span class="hi">Today's prices</span></a>
+      <a href="#forecast">अनुमान <span class="hi">Forecast</span></a>
+      <a href="#mandis">मंडी तुलना <span class="hi">Mandi compare</span></a>
+      <a href="#calculator">कैलकुलेटर <span class="hi">Calculator</span></a>
+      <a href="#about">जानकारी <span class="hi">About the data</span></a>
     </nav>
   </div>
 </header>
@@ -26,47 +26,49 @@
 <main class="wrap">
 
   <div class="hero">
-    <h1>Aaj ke mandi bhav — today's wholesale prices</h1>
+    <h1>आज के मंडी भाव <span class="hi">— today's wholesale prices</span></h1>
     <p class="lede">Modal (most common) wholesale prices from the Government of India's
       Agmarknet portal, plus trends and MSP comparison.
-      Prices are ₹ per quintal (100&nbsp;kg).</p>
-    <div class="fresh" id="freshBadge">Loading latest prices…</div>
+      Prices are ₹ per quintal (100&nbsp;kg).
+      सरकारी Agmarknet पोर्टल से थोक भाव, रुझान और MSP तुलना — ₹ प्रति क्विंटल।</p>
+    <div class="fresh" id="freshBadge">ताज़ा भाव लोड हो रहे हैं… · Loading latest prices…</div>
     <div class="hero-cards" id="heroCards"></div>
   </div>
 
   <section class="block" aria-label="Biggest movers">
-    <h2>Biggest movers today</h2>
+    <h2>आज सबसे ज़्यादा बदले भाव <span class="hi">Biggest movers today</span></h2>
     <p class="sub" id="moversSub"></p>
     <div class="movers">
       <div class="card">
-        <strong>⬆ Biggest rises</strong>
+        <strong>⬆ सबसे ज़्यादा बढ़े <span class="hi">Biggest rises</span></strong>
         <div id="risers"></div>
       </div>
       <div class="card">
-        <strong>⬇ Biggest falls</strong>
+        <strong>⬇ सबसे ज़्यादा गिरे <span class="hi">Biggest falls</span></strong>
         <div id="fallers"></div>
       </div>
     </div>
   </section>
 
   <section class="block" id="prices">
-    <h2>Today's prices — all commodities</h2>
+    <h2>आज के भाव — सभी वस्तुएँ <span class="hi">Today's prices — all commodities</span></h2>
     <p class="sub">National benchmark from Agmarknet. Tap any row for its price trend,
-      MSP comparison and arrivals. <span class="badge-real">Real portal data</span></p>
+      MSP comparison and arrivals. राष्ट्रीय बेंचमार्क — किसी पंक्ति पर टैप करें,
+      रुझान, MSP तुलना और आवक देखें। <span class="badge-real">Real portal data</span></p>
     <div class="controls">
       <input type="search" id="search" placeholder="Search — e.g. onion, प्याज, wheat…" aria-label="Search commodities">
       <select id="sort" aria-label="Sort prices">
-        <option value="name">Sort: Name A–Z</option>
-        <option value="priceDesc">Sort: Price, high to low</option>
-        <option value="priceAsc">Sort: Price, low to high</option>
-        <option value="chgDesc">Sort: Biggest rise first</option>
-        <option value="chgAsc">Sort: Biggest fall first</option>
+        <option value="name">नाम A–Z · Sort: Name A–Z</option>
+        <option value="priceDesc">भाव ज़्यादा से कम · Sort: Price, high to low</option>
+        <option value="priceAsc">भाव कम से ज़्यादा · Sort: Price, low to high</option>
+        <option value="chgDesc">सबसे ज़्यादा बढ़त पहले · Sort: Biggest rise first</option>
+        <option value="chgAsc">सबसे ज़्यादा गिरावट पहले · Sort: Biggest fall first</option>
       </select>
     </div>
     <div class="chips" id="chips" role="group" aria-label="Filter by category"></div>
     <div class="card" style="padding:6px 12px;">
       <div class="price-head" aria-hidden="true">
-        <span>Commodity</span><span>₹ / quintal</span><span>₹ / kg</span><span>Change</span><span>vs MSP</span>
+        <span>वस्तु · Commodity</span><span>₹ / क्विंटल · quintal</span><span>₹ / किलो · kg</span><span>बदलाव · Change</span><span>MSP से · vs MSP</span>
       </div>
       <div id="priceList"></div>
     </div>
@@ -89,11 +91,11 @@
        is lifted. The note below is filled by app.js from data.js
        (meta.mandiSampleNote + latest per-mandi date + reporting mandis). -->
   <section class="block" id="mandis">
-    <h2>Mandi compare — onion, potato, tomato</h2>
+    <h2>मंडी तुलना — प्याज, आलू, टमाटर <span class="hi">Mandi compare — onion, potato, tomato</span></h2>
     <p class="sub">Cheapest vs costliest mandi for the three vegetables, across
       Azadpur (Delhi), Vashi (Mumbai), Koyambedu (Chennai), Sealdah (Kolkata),
       Yeshwanthpur (Bengaluru), Bowenpally (Hyderabad), Naroda (Ahmedabad) and
-      Muhana (Jaipur). <span class="badge-real">Real portal data</span></p>
+      Muhana (Jaipur). तीन सब्जियों के लिए सबसे सस्ती बनाम सबसे महंगी मंडी। <span class="badge-real">Real portal data</span></p>
     <div class="tabs" id="mandiTabs" role="tablist" aria-label="Vegetable"></div>
     <div class="card table-scroll">
       <table class="data" id="mandiTable"></table>
@@ -110,7 +112,7 @@
        names the shown ones in the note. Mandi compare restored 2026-11-22
        (Day 43) on real per-mandi rows. -->
   <section class="block" id="forecast">
-    <h2>7-day price outlook</h2>
+    <h2>7 दिन का भाव अनुमान <span class="hi">7-day price outlook</span></h2>
     <p class="sub" id="forecastSub"></p>
     <div class="tabs" id="forecastTabs" role="tablist" aria-label="Vegetable forecast"></div>
     <div class="card table-scroll">
@@ -120,24 +122,25 @@
   </section>
 
   <section class="block" id="calculator">
-    <h2>Price calculator</h2>
-    <p class="sub">How much will your quantity cost at today's modal price?</p>
+    <h2>भाव कैलकुलेटर <span class="hi">Price calculator</span></h2>
+    <p class="sub">How much will your quantity cost at today's modal price?
+      आज के भाव पर आपकी मात्रा की कीमत कितनी होगी?</p>
     <div class="card">
       <div class="calc-grid">
         <div>
-          <label for="calcCommodity">Commodity</label>
+          <label for="calcCommodity">वस्तु · Commodity</label>
           <select id="calcCommodity"></select>
         </div>
         <div>
-          <label for="calcQty">Quantity</label>
+          <label for="calcQty">मात्रा · Quantity</label>
           <input type="number" id="calcQty" value="10" min="0" step="any" inputmode="decimal">
         </div>
         <div>
-          <label for="calcUnit">Unit</label>
+          <label for="calcUnit">इकाई · Unit</label>
           <select id="calcUnit">
-            <option value="qtl">Quintal (100 kg)</option>
-            <option value="kg">Kilogram</option>
-            <option value="tonne">Tonne (1,000 kg)</option>
+            <option value="qtl">क्विंटल (100 किलो) · Quintal (100 kg)</option>
+            <option value="kg">किलोग्राम · Kilogram</option>
+            <option value="tonne">टन (1,000 किलो) · Tonne (1,000 kg)</option>
           </select>
         </div>
       </div>
@@ -146,7 +149,7 @@
   </section>
 
   <section class="block" id="about">
-    <h2>About the data</h2>
+    <h2>जानकारी <span class="hi">About the data</span></h2>
     <div class="card">
       <ul class="about-list">
         <li><strong>Source:</strong> Agmarknet portal (agmarknet.gov.in), Government of
@@ -175,10 +178,11 @@
     MandiLens — a daily data-science project by Siddharth Peeyush.
     Prices are wholesale modal prices, not retail. Always confirm with your
     local mandi before buying or selling.
+    ये थोक भाव हैं, खुदरा नहीं। खरीदने या बेचने से पहले अपनी स्थानीय मंडी से पुष्टि करें।
   </div>
 </footer>
 
-<noscript><p style="padding:20px;text-align:center;">MandiLens needs JavaScript to show prices.</p></noscript>
+<noscript><p style="padding:20px;text-align:center;">MandiLens needs JavaScript to show prices. · कीमतें देखने के लिए JavaScript चाहिए।</p></noscript>
 <script src="data.js"></script>
 <script src="app.js"></script>
 </body>

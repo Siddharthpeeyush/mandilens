@@ -365,3 +365,8 @@ footer.site {
 
 /* Day 38: 80% prediction interval shown under each forecast cell. */
 .fc-band { display: block; font-size: 11px; font-weight: 400; color: var(--muted); white-space: nowrap; }
+
+/* Day 45: Hindi-first labels — Hindi leads, English follows in .hi. */
+section.block h2 .hi, .hero h1 .hi { font-size: 0.62em; color: var(--muted); font-weight: 600; }
+nav.main a .hi { font-size: 12px; opacity: 0.8; }
+.movers .card strong .hi { font-size: 0.85em; color: var(--muted); font-weight: 600; }

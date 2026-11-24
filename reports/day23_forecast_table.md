@@ -13,7 +13,7 @@ information enters at any step. The portal's National rows
 are an all-India aggregate with a 3-day series, so they never
 clear the 3-lag requirement and are excluded — the forecasts
 run on the 8 mandi series (latest actual date
-21 Nov 2026), exactly like the earlier scoring days.
+22 Nov 2026), exactly like the earlier scoring days.
 
 ## Empirical error scale
 
@@ -23,8 +23,8 @@ one-step-ahead on the last 7 days, per commodity:
 | Commodity | Walk-forward 1-day MAE (₹/qtl) | n |
 |---|---|---|
 | Onion | 406.27 | 7 |
-| Potato | 166.92 | 11 |
-| Tomato | 262.47 | 18 |
+| Potato | 146.47 | 11 |
+| Tomato | 266.79 | 18 |
 
 The table below shows **point forecasts**. A fair mental
 band is ±(1-day MAE × horizon): error compounds because each
@@ -34,9 +34,9 @@ carried — a 7-day OLS forecast cannot predict a shock.
 
 ## 7-day forecast table
 
-### Onion — latest actual 21 Nov 2026
+### Onion — latest actual 22 Nov 2026
 
-| Market | 22 Nov | 23 Nov | 24 Nov | 25 Nov | 26 Nov | 27 Nov | 28 Nov |
+| Market | 23 Nov | 24 Nov | 25 Nov | 26 Nov | 27 Nov | 28 Nov | 29 Nov |
 |---|---|---|---|---|---|---|---|
 | Azadpur | 3,665 | 3,610 | 3,504 | 3,446 | 3,385 | 3,324 | 3,269 |
 | Bowenpally | 2,264 | 2,282 | 2,317 | 2,311 | 2,317 | 2,324 | 2,328 |
@@ -47,31 +47,31 @@ carried — a 7-day OLS forecast cannot predict a shock.
 | Vashi | 2,142 | 2,154 | 2,163 | 2,180 | 2,194 | 2,206 | 2,218 |
 | Yeshwanthpur | 2,106 | 2,139 | 2,147 | 2,163 | 2,179 | 2,192 | 2,205 |
 
-### Potato — latest actual 21 Nov 2026
+### Potato — latest actual 22 Nov 2026
 
-| Market | 22 Nov | 23 Nov | 24 Nov | 25 Nov | 26 Nov | 27 Nov | 28 Nov |
+| Market | 23 Nov | 24 Nov | 25 Nov | 26 Nov | 27 Nov | 28 Nov | 29 Nov |
 |---|---|---|---|---|---|---|---|
-| Azadpur | 1,249 | 1,284 | 1,302 | 1,334 | 1,357 | 1,373 | 1,389 |
-| Bowenpally | 1,276 | 1,306 | 1,322 | 1,350 | 1,370 | 1,384 | 1,398 |
-| Koyambedu | 1,603 | 1,566 | 1,616 | 1,568 | 1,542 | 1,542 | 1,528 |
-| Muhana | 1,420 | 1,402 | 1,416 | 1,431 | 1,433 | 1,438 | 1,445 |
-| Naroda | 1,551 | 1,498 | 1,530 | 1,517 | 1,499 | 1,499 | 1,495 |
-| Sealdah Koley Market | 1,439 | 1,540 | 1,499 | 1,476 | 1,492 | 1,486 | 1,479 |
-| Vashi | 1,451 | 1,479 | 1,422 | 1,446 | 1,460 | 1,451 | 1,455 |
-| Yeshwanthpur | 1,425 | 1,476 | 1,456 | 1,452 | 1,463 | 1,462 | 1,462 |
+| Azadpur | 1,248 | 1,282 | 1,300 | 1,331 | 1,354 | 1,370 | 1,386 |
+| Bowenpally | 1,274 | 1,304 | 1,320 | 1,348 | 1,368 | 1,382 | 1,396 |
+| Koyambedu | 1,603 | 1,567 | 1,617 | 1,569 | 1,542 | 1,543 | 1,529 |
+| Muhana | 1,419 | 1,401 | 1,415 | 1,430 | 1,432 | 1,437 | 1,443 |
+| Naroda | 1,551 | 1,497 | 1,530 | 1,516 | 1,498 | 1,499 | 1,495 |
+| Sealdah Koley Market | 1,439 | 1,540 | 1,498 | 1,476 | 1,492 | 1,486 | 1,478 |
+| Vashi | 1,451 | 1,478 | 1,421 | 1,445 | 1,459 | 1,450 | 1,454 |
+| Yeshwanthpur | 1,425 | 1,475 | 1,456 | 1,452 | 1,462 | 1,461 | 1,460 |
 
-### Tomato — latest actual 21 Nov 2026
+### Tomato — latest actual 22 Nov 2026
 
-| Market | 22 Nov | 23 Nov | 24 Nov | 25 Nov | 26 Nov | 27 Nov | 28 Nov |
+| Market | 23 Nov | 24 Nov | 25 Nov | 26 Nov | 27 Nov | 28 Nov | 29 Nov |
 |---|---|---|---|---|---|---|---|
-| Azadpur | 2,051 | 2,072 | 2,098 | 2,136 | 2,160 | 2,181 | 2,200 |
-| Bowenpally | 1,698 | 1,777 | 1,839 | 1,916 | 1,972 | 2,019 | 2,062 |
-| Koyambedu | 2,475 | 2,386 | 2,468 | 2,419 | 2,393 | 2,392 | 2,378 |
-| Muhana | 2,115 | 2,158 | 2,128 | 2,174 | 2,197 | 2,207 | 2,224 |
-| Naroda | 2,684 | 2,566 | 2,594 | 2,539 | 2,497 | 2,478 | 2,453 |
-| Sealdah Koley Market | 2,983 | 2,896 | 2,829 | 2,744 | 2,682 | 2,631 | 2,584 |
-| Vashi | 2,461 | 2,437 | 2,402 | 2,397 | 2,385 | 2,372 | 2,364 |
-| Yeshwanthpur | 2,186 | 2,248 | 2,251 | 2,252 | 2,265 | 2,271 | 2,276 |
+| Azadpur | 2,047 | 2,067 | 2,093 | 2,130 | 2,154 | 2,174 | 2,194 |
+| Bowenpally | 1,689 | 1,765 | 1,825 | 1,901 | 1,957 | 2,003 | 2,047 |
+| Koyambedu | 2,476 | 2,388 | 2,472 | 2,423 | 2,398 | 2,397 | 2,383 |
+| Muhana | 2,113 | 2,155 | 2,124 | 2,170 | 2,193 | 2,203 | 2,220 |
+| Naroda | 2,689 | 2,573 | 2,603 | 2,549 | 2,507 | 2,488 | 2,463 |
+| Sealdah Koley Market | 2,994 | 2,910 | 2,845 | 2,762 | 2,701 | 2,650 | 2,603 |
+| Vashi | 2,464 | 2,441 | 2,406 | 2,402 | 2,390 | 2,377 | 2,369 |
+| Yeshwanthpur | 2,184 | 2,247 | 2,249 | 2,250 | 2,264 | 2,270 | 2,275 |
 
 ## Verification
 
@@ -94,4 +94,4 @@ fresh 7-day table automatically. Day 24's rolling-MAE
 dashboard will start tracking these forecasts against
 realised prices as they arrive.
 
-![7-day forecast](../charts/forecast_7day_2026-11-23.svg)
+![7-day forecast](../charts/forecast_7day_2026-11-24.svg)

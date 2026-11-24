@@ -28,6 +28,10 @@ with the daily run — the HTML/JS never needs to change for a data update.
 
 ## What's on the site
 
+- **Hindi-first labels (Day 45)** — every heading, nav link, tab, category
+  chip, table header, sort option and calculator label shows Hindi alongside
+  English (Devanagari first); commodity names already carried Hindi.
+  Explanatory paragraphs stay English.
 - **Today's prices** — National benchmark for 24 commodities (real Agmarknet
   portal data), with ₹/kg, day-on-day change and vs-MSP.
 - **Trend detail** — tap any row for an 11-day trend chart, range and MSP.

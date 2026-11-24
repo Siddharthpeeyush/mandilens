@@ -1,0 +1,27 @@
+market,commodity,prev_date,prev_price,latest_date,latest_price,gap_days,pct_change,alert,direction
+National,Copra,2026-11-21,16707.96,2026-11-22,25285.27,1,51.3,True,up
+National,Jowar(Sorghum),2026-11-21,3914.61,2026-11-22,2545.48,1,-35.0,True,down
+National,Black Gram(Urd Beans)(Whole),2026-11-21,7414.61,2026-11-22,9571.88,1,29.1,True,up
+National,"Sesamum(Sesame,Gingelly,Til)",2026-11-21,12999.72,2026-11-22,16147.79,1,24.2,True,up
+National,Lentil(Masur)(Whole),2026-11-21,8661.53,2026-11-22,6918.45,1,-20.1,True,down
+National,Tomato,2026-11-21,1998.69,2026-11-22,2356.69,1,17.9,True,up
+National,Onion,2026-11-21,3534.26,2026-11-22,4157.47,1,17.6,True,up
+National,Potato,2026-11-21,674.63,2026-11-22,603.69,1,-10.5,True,down
+National,Groundnut,2026-11-21,7045.76,2026-11-22,6396.15,1,-9.2,False,down
+National,Ragi(Finger Millet),2026-11-21,3513.73,2026-11-22,3242.24,1,-7.7,False,down
+National,Green Gram(Moong)(Whole),2026-11-21,8401.59,2026-11-22,7804.31,1,-7.1,False,down
+National,Sunflower/Sunflower Seed,2026-11-21,7766.42,2026-11-22,8300.0,1,6.9,False,up
+National,Barley(Jau),2026-11-21,2760.99,2026-11-22,2950.0,1,6.8,False,up
+National,Bajra(Pearl Millet/Cumbu),2026-11-21,2543.06,2026-11-22,2687.66,1,5.7,False,up
+National,Mustard,2026-11-21,8492.28,2026-11-22,8896.0,1,4.8,False,up
+National,Red Gram/Arhar/Tur(Whole),2026-11-21,9885.88,2026-11-22,10199.46,1,3.2,False,up
+National,Paddy(Fine/Superfine/Grade A),2026-11-21,2748.63,2026-11-22,2809.31,1,2.2,False,up
+National,Soyabean,2026-11-21,7622.14,2026-11-22,7785.45,1,2.1,False,up
+National,Maize,2026-11-21,2745.85,2026-11-22,2798.2,1,1.9,False,up
+National,Bengal Gram(Gram)(Whole),2026-11-21,7315.94,2026-11-22,7208.03,1,-1.5,False,down
+National,Paddy(Common),2026-11-21,3126.02,2026-11-22,3138.46,1,0.4,False,up
+National,Wheat,2026-11-21,2771.33,2026-11-22,2780.52,1,0.3,False,up
+National,Cotton,2026-11-21,9143.54,2026-11-22,9130.41,1,-0.1,False,down
+Bowenpally,Tomato,2026-11-21,1500.0,2026-11-22,1500.0,1,0.0,False,down
+Bowenpally,Potato,2026-11-21,1200.0,2026-11-22,1200.0,1,0.0,False,down
+Sealdah Koley Market,Tomato,2026-11-21,3200.0,2026-11-22,3200.0,1,0.0,False,down

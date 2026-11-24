@@ -3,11 +3,16 @@
 (function () {
   "use strict";
   var D = window.MANDILENS_DATA;
-  if (!D) { document.getElementById("freshBadge").textContent = "Price data failed to load."; return; }
+  if (!D) { document.getElementById("freshBadge").textContent = "कीमतें लोड नहीं हुईं · Price data failed to load."; return; }
 
   var inr0 = new Intl.NumberFormat("en-IN", { maximumFractionDigits: 0 });
   var inr2 = new Intl.NumberFormat("en-IN", { maximumFractionDigits: 2, minimumFractionDigits: 0 });
   var MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  /* Day 45: Hindi-first labels — Hindi leads, English follows. Categories
+     are fixed in build_site.py, so the Hindi map lives here, not in data.js. */
+  var HINDI_CAT = { "Vegetables": "सब्जियाँ", "Cereals": "अनाज", "Pulses": "दालें",
+    "Oilseeds": "तिलहन", "Fibre & cash crops": "रेशा व नकदी फसलें" };
+  var HINDI_VEG = { "Onion": "प्याज", "Potato": "आलू", "Tomato": "टमाटर" };
 
   function fmtDate(iso) {
     var p = iso.split("-");
@@ -31,13 +36,13 @@
 
   /* ---------- freshness ---------- */
   var lagDays = Math.round((new Date(D.meta.generated) - new Date(D.meta.latestDate)) / 86400000);
-  var lagText = lagDays <= 0 ? "updated today" : lagDays === 1 ? "1 day old" : lagDays + " days old";
+  var lagText = lagDays <= 0 ? "आज अपडेट" : lagDays === 1 ? "1 दिन पुरानी" : lagDays + " दिन पुरानी";
   el("freshBadge").textContent =
-    "Latest prices: " + fmtDate(D.meta.latestDate) + " · portal feed is " + lagText +
-    " · " + D.meta.todayCount + " commodities";
+    "ताज़ा भाव: " + fmtDate(D.meta.latestDate) + " · " + D.meta.todayCount + " वस्तुएँ · फ़ीड " +
+    lagText + " · Latest prices";
   el("aboutLatest").textContent = fmtDate(D.meta.latestDate);
   el("moversSub").textContent =
-    "Day-on-day change, " + fmtDate(D.meta.prevDate) + " → " + fmtDate(D.meta.latestDate) + ".";
+    "दिन-प्रतिदिन बदलाव · Day-on-day change, " + fmtDate(D.meta.prevDate) + " → " + fmtDate(D.meta.latestDate) + ".";
 
   /* ---------- hero cards: onion, potato, tomato ---------- */
   var hero = el("heroCards");
@@ -48,8 +53,8 @@
     b.className = "hero-card";
     b.innerHTML =
       '<div class="veg">' + esc(t.short) + ' · <span class="hi">' + esc(t.hindi) + '</span></div>' +
-      '<div class="price">' + rs(t.price) + '<span style="font-size:14px;font-weight:600;color:var(--muted);"> /quintal</span></div>' +
-      '<div class="perkg">' + rs2(t.perKg) + ' /kg &nbsp; ' + pill(t.changePct) + '</div>';
+      '<div class="price">' + rs(t.price) + '<span style="font-size:14px;font-weight:600;color:var(--muted);"> /quintal · क्विंटल</span></div>' +
+      '<div class="perkg">' + rs2(t.perKg) + ' /kg · किलो &nbsp; ' + pill(t.changePct) + '</div>';
     b.addEventListener("click", function () { openDetail(t.commodity); });
     hero.appendChild(b);
   });
@@ -71,7 +76,7 @@
   ["All"].concat(D.categories).forEach(function (c) {
     var b = document.createElement("button");
     b.className = "chip";
-    b.textContent = c === "All" ? "All commodities" : c;
+    b.textContent = c === "All" ? "सभी वस्तुएँ · All commodities" : (HINDI_CAT[c] || c) + " · " + c;
     b.setAttribute("aria-pressed", c === "All" ? "true" : "false");
     b.addEventListener("click", function () {
       activeCat = c;
@@ -102,12 +107,12 @@
     });
     var box = el("priceList");
     if (!rows.length) {
-      box.innerHTML = '<div class="empty">No commodity matches that search.</div>';
+      box.innerHTML = '<div class="empty">कोई वस्तु नहीं मिली · No commodity matches that search.</div>';
       return;
     }
     box.innerHTML = rows.map(function (t) {
       var msp = t.msp === null || t.msp === undefined
-        ? '<span style="color:var(--muted);">no MSP</span>'
+        ? '<span style="color:var(--muted);">MSP नहीं · no MSP</span>'
         : t.vsMspPct >= 0
           ? '<span class="msp-vs above">+' + t.vsMspPct.toFixed(1) + '% vs MSP</span>'
           : '<span class="msp-vs below">' + t.vsMspPct.toFixed(1) + '% vs MSP</span>';
@@ -182,7 +187,7 @@
     var sec = el("detail");
     sec.hidden = false;
     el("detailTitle").textContent = t ? t.short + " (" + t.hindi + ")" : commodity;
-    el("detailDate").textContent = "National benchmark · " + fmtDate(D.meta.nationalSeriesStart) +
+    el("detailDate").textContent = "राष्ट्रीय बेंचमार्क · National benchmark · " + fmtDate(D.meta.nationalSeriesStart) +
       " – " + fmtDate(D.meta.latestDate);
     var prices = pts.map(function (p) { return p.p; });
     var hi = prices.length ? Math.max.apply(null, prices) : null;
@@ -196,10 +201,10 @@
         (sub ? ' <small>' + sub + '</small>' : "") + '</div></div>';
     }
     el("detailStats").innerHTML =
-      stat("Latest", t ? rs(t.price) : "—", "/quintal") +
-      stat("₹ / kg", t ? rs2(t.perKg) : "—", "") +
-      stat("11-day range", (lo !== null ? rs(lo) + " – " + rs(hi) : "—"), "") +
-      stat("Change since " + fmtDate(D.meta.nationalSeriesStart),
+      stat("ताज़ा भाव · Latest", t ? rs(t.price) : "—", "/quintal · क्विंटल") +
+      stat("₹ / किलो · ₹ / kg", t ? rs2(t.perKg) : "—", "") +
+      stat("11 दिन की सीमा · 11-day range", (lo !== null ? rs(lo) + " – " + rs(hi) : "—"), "") +
+      stat("बदलाव · Change since " + fmtDate(D.meta.nationalSeriesStart),
         periodChg === null ? "—" : (periodChg >= 0 ? "+" : "") + periodChg.toFixed(1) + "%", "");
     var mspLine = "";
     if (t && t.msp) {
@@ -232,7 +237,7 @@
     VEG.forEach(function (v) {
       var b = document.createElement("button");
       b.className = "tab";
-      b.textContent = v;
+      b.textContent = HINDI_VEG[v] + " · " + v;
       b.setAttribute("role", "tab");
       b.setAttribute("aria-selected", v === mandiTab ? "true" : "false");
       b.addEventListener("click", function () { mandiTab = v; renderMandiTabs(); renderMandiTable(); });
@@ -242,7 +247,7 @@
   function renderMandiTable() {
     var rows = D.mandiToday.filter(function (r) { return r.commodity === mandiTab; })
       .slice().sort(function (a, b) { return a.price - b.price; });
-    var html = "<thead><tr><th>Mandi</th><th>₹ / quintal</th><th>₹ / kg</th><th>Range (min–max)</th></tr></thead><tbody>";
+    var html = "<thead><tr><th>मंडी · Mandi</th><th>₹ / क्विंटल · quintal</th><th>₹ / किलो · kg</th><th>भाव सीमा · Range (min–max)</th></tr></thead><tbody>";
     rows.forEach(function (r, i) {
       var cls = i === 0 ? ' class="cheapest"' : (i === rows.length - 1 ? ' class="costliest"' : "");
       var m = D.mandis.filter(function (x) { return x.market === r.market; })[0] || {};
@@ -335,7 +340,7 @@
     VEG.forEach(function (v) {
       var b = document.createElement("button");
       b.className = "tab";
-      b.textContent = v;
+      b.textContent = HINDI_VEG[v] + " · " + v;
       b.setAttribute("role", "tab");
       b.setAttribute("aria-selected", v === fcTab ? "true" : "false");
       b.addEventListener("click", function () { fcTab = v; renderForecastTabs(); renderForecastTable(); });
@@ -344,7 +349,7 @@
   }
   function renderForecastTable() {
     var dates = D.meta.forecast.dates || [];
-    var head = "<thead><tr><th>Mandi</th>" + dates.map(function (d) {
+    var head = "<thead><tr><th>मंडी · Mandi</th>" + dates.map(function (d) {
       var p = d.split("-");
       return "<th>" + parseInt(p[2], 10) + " " + MONTHS[parseInt(p[1], 10) - 1] + "</th>";
     }).join("") + "</tr></thead><tbody>";
@@ -393,6 +398,7 @@
     el("calcResult").innerHTML =
       "<strong>" + rs2(total) + "</strong> for " + inr2.format(qty) + " " +
       (unit === "qtl" ? "quintal" : unit === "kg" ? "kg" : "tonne") + " of " + esc(t.short) +
+      " (" + esc(t.hindi) + ")" +
       "<small>At today's modal price of " + rs(t.price) + " per quintal (" + rs2(t.perKg) +
       " per kg) · " + fmtDate(D.meta.latestDate) + ", National benchmark.</small>";
   }

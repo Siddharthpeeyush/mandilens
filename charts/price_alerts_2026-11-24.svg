@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="280" font-family="sans-serif">
+<rect x="0" y="0" width="640" height="280" fill="#fdfefe" stroke="#d5dbdb"/>
+<text x="12" y="27" font-size="13" font-weight="bold">Price alerts — 2026-11-22  ·  |move| &gt; 10% day-over-day (8 of 26 series)</text>
+<text x="12" y="56" font-size="12" fill="#333">Copra · National</text>
+<rect x="400" y="45" width="220" height="14" fill="#c0392b"/>
+<text x="630" y="56" font-size="12" font-weight="bold" fill="#c0392b">+51.3%</text>
+<text x="12" y="82" font-size="12" fill="#333">Jowar(Sorghum) · National</text>
+<rect x="400" y="71" width="150" height="14" fill="#2471a3"/>
+<text x="560" y="82" font-size="12" font-weight="bold" fill="#2471a3">-35.0%</text>
+<text x="12" y="108" font-size="12" fill="#333">Black Gram(Urd Beans)(Whole) · National</text>
+<rect x="400" y="97" width="124" height="14" fill="#c0392b"/>
+<text x="534" y="108" font-size="12" font-weight="bold" fill="#c0392b">+29.1%</text>
+<text x="12" y="134" font-size="12" fill="#333">Sesamum(Sesame,Gingelly,Til) · National</text>
+<rect x="400" y="123" width="103" height="14" fill="#c0392b"/>
+<text x="513" y="134" font-size="12" font-weight="bold" fill="#c0392b">+24.2%</text>
+<text x="12" y="160" font-size="12" fill="#333">Lentil(Masur)(Whole) · National</text>
+<rect x="400" y="149" width="86" height="14" fill="#2471a3"/>
+<text x="496" y="160" font-size="12" font-weight="bold" fill="#2471a3">-20.1%</text>
+<text x="12" y="186" font-size="12" fill="#333">Tomato · National</text>
+<rect x="400" y="175" width="76" height="14" fill="#c0392b"/>
+<text x="486" y="186" font-size="12" font-weight="bold" fill="#c0392b">+17.9%</text>
+<text x="12" y="212" font-size="12" fill="#333">Onion · National</text>
+<rect x="400" y="201" width="75" height="14" fill="#c0392b"/>
+<text x="485" y="212" font-size="12" font-weight="bold" fill="#c0392b">+17.6%</text>
+<text x="12" y="238" font-size="12" fill="#333">Potato · National</text>
+<rect x="400" y="227" width="45" height="14" fill="#2471a3"/>
+<text x="455" y="238" font-size="12" font-weight="bold" fill="#2471a3">-10.5%</text>
+</svg>

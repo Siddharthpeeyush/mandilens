@@ -10,21 +10,23 @@ direction is printed with the move.
 
 ## Today
 
-- Latest data date: **2026-11-21** (run 2026-11-23, lag 2 day(s)).
-- Series evaluated: **30**; alerts fired: **6**.
+- Latest data date: **2026-11-22** (run 2026-11-24, lag 2 day(s)).
+- Series evaluated: **26**; alerts fired: **8**.
 
 | Commodity | Market | Previous | Latest | Change |
 |---|---|---|---|---|
-| Copra | National | ₹21,750 (2026-11-20) | ₹16,708 | 🔻 -23.2% |
-| Potato | National | ₹559 (2026-11-20) | ₹675 | 🔺 +20.7% |
-| Onion | Azadpur | ₹4,206 (2026-11-20) | ₹3,563 | 🔻 -15.3% |
-| Sesamum | National | ₹15,126 (2026-11-20) | ₹12,991 | 🔻 -14.1% |
-| Jowar | National | ₹4,385 (2026-11-20) | ₹3,851 | 🔻 -12.2% |
-| Tomato | National | ₹1,784 (2026-11-20) | ₹1,999 | 🔺 +12.0% |
+| Copra | National | ₹16,708 (2026-11-21) | ₹25,285 | 🔺 +51.3% |
+| Jowar(Sorghum) | National | ₹3,915 (2026-11-21) | ₹2,545 | 🔻 -35.0% |
+| Black Gram(Urd Beans)(Whole) | National | ₹7,415 (2026-11-21) | ₹9,572 | 🔺 +29.1% |
+| Sesamum(Sesame,Gingelly,Til) | National | ₹13,000 (2026-11-21) | ₹16,148 | 🔺 +24.2% |
+| Lentil(Masur)(Whole) | National | ₹8,662 (2026-11-21) | ₹6,918 | 🔻 -20.1% |
+| Tomato | National | ₹1,999 (2026-11-21) | ₹2,357 | 🔺 +17.9% |
+| Onion | National | ₹3,534 (2026-11-21) | ₹4,157 | 🔺 +17.6% |
+| Potato | National | ₹675 (2026-11-21) | ₹604 | 🔻 -10.5% |
 
 ## Backtest — does the rule fire on the motivating example?
 
-- Same rule run over every date in the dataset: **439 alerts** across 52 trading days (18 on the busiest day).
+- Same rule run over every date in the dataset: **450 alerts** across 53 trading days (18 on the busiest day).
 - Jowar(Sorghum) at National, 07 Nov 2026 (the move the 09 Nov daily log reported): **+57.6% — ALERT FIRED** ✓ (the move that motivated this rule).
 - The +57.6% itself is a revision artefact, not a real
   one-day market move (Day 34): the portal's first publication
@@ -51,4 +53,4 @@ direction is printed with the move.
   future daily report carries the alerts section
   automatically.
 
-![price alerts](../charts/price_alerts_2026-11-23.svg)
+![price alerts](../charts/price_alerts_2026-11-24.svg)
