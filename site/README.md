@@ -28,6 +28,10 @@ with the daily run — the HTML/JS never needs to change for a data update.
 
 ## What's on the site
 
+- **Shareable commodity links (Day 46)** — every commodity has a deep
+  link: `?c=Onion` opens that commodity's detail directly, and opening
+  any detail writes its link into the address bar; a copy-link button in
+  the detail panel copies it.
 - **Hindi-first labels (Day 45)** — every heading, nav link, tab, category
   chip, table header, sort option and calculator label shows Hindi alongside
   English (Devanagari first); commodity names already carried Hindi.

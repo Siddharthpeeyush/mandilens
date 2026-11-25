@@ -10,23 +10,21 @@ direction is printed with the move.
 
 ## Today
 
-- Latest data date: **2026-11-22** (run 2026-11-24, lag 2 day(s)).
-- Series evaluated: **26**; alerts fired: **8**.
+- Latest data date: **2026-11-23** (run 2026-11-25, lag 2 day(s)).
+- Series evaluated: **29**; alerts fired: **6**.
 
 | Commodity | Market | Previous | Latest | Change |
 |---|---|---|---|---|
-| Copra | National | ₹16,708 (2026-11-21) | ₹25,285 | 🔺 +51.3% |
-| Jowar(Sorghum) | National | ₹3,915 (2026-11-21) | ₹2,545 | 🔻 -35.0% |
-| Black Gram(Urd Beans)(Whole) | National | ₹7,415 (2026-11-21) | ₹9,572 | 🔺 +29.1% |
-| Sesamum(Sesame,Gingelly,Til) | National | ₹13,000 (2026-11-21) | ₹16,148 | 🔺 +24.2% |
-| Lentil(Masur)(Whole) | National | ₹8,662 (2026-11-21) | ₹6,918 | 🔻 -20.1% |
-| Tomato | National | ₹1,999 (2026-11-21) | ₹2,357 | 🔺 +17.9% |
-| Onion | National | ₹3,534 (2026-11-21) | ₹4,157 | 🔺 +17.6% |
-| Potato | National | ₹675 (2026-11-21) | ₹604 | 🔻 -10.5% |
+| Jowar(Sorghum) | National | ₹2,545 (2026-11-22) | ₹4,193 | 🔺 +64.7% |
+| Tomato | National | ₹2,357 (2026-11-22) | ₹1,685 | 🔻 -28.5% |
+| Onion | National | ₹4,157 (2026-11-22) | ₹3,235 | 🔻 -22.2% |
+| Tomato | Bowenpally | ₹1,500 (2026-11-22) | ₹1,800 | 🔺 +20.0% |
+| Black Gram(Urd Beans)(Whole) | National | ₹9,572 (2026-11-22) | ₹8,038 | 🔻 -16.0% |
+| Groundnut | National | ₹6,396 (2026-11-22) | ₹7,369 | 🔺 +15.2% |
 
 ## Backtest — does the rule fire on the motivating example?
 
-- Same rule run over every date in the dataset: **450 alerts** across 53 trading days (18 on the busiest day).
+- Same rule run over every date in the dataset: **456 alerts** across 54 trading days (18 on the busiest day).
 - Jowar(Sorghum) at National, 07 Nov 2026 (the move the 09 Nov daily log reported): **+57.6% — ALERT FIRED** ✓ (the move that motivated this rule).
 - The +57.6% itself is a revision artefact, not a real
   one-day market move (Day 34): the portal's first publication
@@ -53,4 +51,4 @@ direction is printed with the move.
   future daily report carries the alerts section
   automatically.
 
-![price alerts](../charts/price_alerts_2026-11-24.svg)
+![price alerts](../charts/price_alerts_2026-11-25.svg)

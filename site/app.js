@@ -184,6 +184,10 @@
     var pts = D.series[commodity] || [];
     selectedCommodity = commodity;
     renderPrices();
+    /* Day 46: shareable commodity view — every opened detail writes its
+       own deep link (?c=Commodity) into the URL, so the link in the
+       address bar always opens this exact commodity. */
+    try { history.replaceState(null, "", "?c=" + encodeURIComponent(commodity)); } catch (e) {}
     var sec = el("detail");
     sec.hidden = false;
     el("detailTitle").textContent = t ? t.short + " (" + t.hindi + ")" : commodity;
@@ -407,4 +411,38 @@
     el(id).addEventListener("change", renderCalc);
   });
   renderCalc();
+
+  /* ---------- Day 46: shareable commodity view (?c=Onion) ---------- */
+  var copyBtn = el("copyLink");
+  var copyLabel = "🔗 इस भाव का लिंक कॉपी करें · Copy link to this commodity";
+  if (copyBtn) {
+    copyBtn.addEventListener("click", function () {
+      function done() {
+        copyBtn.textContent = "कॉपी हो गया ✓ · Link copied";
+        setTimeout(function () { copyBtn.textContent = copyLabel; }, 2000);
+      }
+      function fallbackCopy(text) {
+        var ta = document.createElement("textarea");
+        ta.value = text; document.body.appendChild(ta); ta.select();
+        try { document.execCommand("copy"); } catch (e) {}
+        document.body.removeChild(ta);
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(location.href).then(done, function () { fallbackCopy(location.href); done(); });
+      } else { fallbackCopy(location.href); done(); }
+    });
+  }
+  /* Open ?c= on load — match commodity, short name or Hindi name,
+     case-insensitive. Unknown values are ignored (default view). */
+  (function () {
+    var q = null;
+    try { q = new URLSearchParams(location.search).get("c"); } catch (e) { return; }
+    if (!q) return;
+    var want = q.trim().toLowerCase();
+    var hit = D.today.filter(function (t) {
+      return t.commodity.toLowerCase() === want || t.short.toLowerCase() === want ||
+        (t.hindi && t.hindi.toLowerCase() === want);
+    })[0];
+    if (hit) openDetail(hit.commodity);
+  })();
 })();

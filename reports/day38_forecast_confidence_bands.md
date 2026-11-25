@@ -19,15 +19,15 @@ residuals gets no empirical quantiles: its band is
 
 ## Residual base (all scored rows to date)
 
-All 338 scored residuals rest on
+All 373 scored residuals rest on
 real Agmarknet portal actuals (0 scored against seeded
 sample-mode actuals — zero). Origins: 08–13 Nov 2026.
 
 | Commodity | Scored residuals (n) | Mean horizon h_bar | q10 (₹/qtl) | q90 (₹/qtl) | Method |
 |---|---|---|---|---|---|
-| Onion | 41 | 3.66 | 4.13 | 818.70 | empirical_q10_q90 |
-| Potato | 110 | 3.65 | -313.29 | 37.07 | empirical_q10_q90 |
-| Tomato | 187 | 3.64 | -695.56 | 728.89 | empirical_q10_q90 |
+| Onion | 48 | 3.71 | -234.86 | 818.70 | empirical_q10_q90 |
+| Potato | 124 | 3.69 | -308.44 | 30.90 | empirical_q10_q90 |
+| Tomato | 201 | 3.67 | -682.88 | 717.86 | empirical_q10_q90 |
 
 ## In-sample coverage (sanity check, not an out-of-sample claim)
 
@@ -36,21 +36,21 @@ band. By construction the pooled band covers ~80% at the mean
 horizon; per-horizon numbers will drift as more scored rows
 arrive.
 
-- Onion: 75.6% inside (n=41)
-- Potato: 75.5% inside (n=110)
-- Tomato: 89.8% inside (n=187)
+- Onion: 79.2% inside (n=48)
+- Potato: 76.6% inside (n=124)
+- Tomato: 89.6% inside (n=201)
 
 ## Today's bands (cross-mandi median, ₹/qtl)
 
-| Commodity | 23 Nov | 24 Nov | 25 Nov | 26 Nov | 27 Nov | 28 Nov | 29 Nov |
+| Commodity | 24 Nov | 25 Nov | 26 Nov | 27 Nov | 28 Nov | 29 Nov | 30 Nov |
 |---|---|---|---|---|---|---|---|
-| Onion | 2,280 (2,282–2,708) | 2,309 (2,312–2,915) | 2,324 (2,327–3,065) | 2,322 (2,326–3,178) | 2,328 (2,333–3,285) | 2,333 (2,339–3,382) | 2,337 (2,343–3,470) |
-| Potato | 1,432 (1,268–1,451) | 1,477 (1,245–1,504) | 1,438 (1,154–1,472) | 1,448 (1,120–1,487) | 1,461 (1,094–1,504) | 1,456 (1,054–1,503) | 1,457 (1,023–1,509) |
-| Tomato | 2,324 (1,960–2,706) | 2,318 (1,802–2,858) | 2,328 (1,696–2,989) | 2,326 (1,597–3,090) | 2,327 (1,512–3,181) | 2,324 (1,431–3,259) | 2,322 (1,358–3,333) |
+| Onion | 2,281 (2,159–2,707) | 2,309 (2,137–2,910) | 2,323 (2,112–3,059) | 2,321 (2,077–3,172) | 2,327 (2,054–3,277) | 2,331 (2,033–3,373) | 2,335 (2,012–3,460) |
+| Potato | 1,431 (1,270–1,447) | 1,476 (1,248–1,498) | 1,437 (1,158–1,464) | 1,446 (1,125–1,479) | 1,459 (1,099–1,495) | 1,454 (1,060–1,493) | 1,455 (1,030–1,497) |
+| Tomato | 2,324 (1,968–2,699) | 2,318 (1,814–2,848) | 2,328 (1,710–2,977) | 2,326 (1,613–3,076) | 2,327 (1,529–3,165) | 2,323 (1,450–3,242) | 2,322 (1,378–3,314) |
 
 ## Hand check
 
-- Azadpur Onion base 2026-11-08 h=1: forecast 3309.70 -> band [3311.86, 3737.73] (empirical q10 4.13 / q90 818.70, h_bar 3.66, scale sqrt(1/3.66)=0.523); actual 4019.00 -> OUTSIDE
+- Azadpur Onion base 2026-11-08 h=1: forecast 3309.70 -> band [3187.74, 3734.84] (empirical q10 -234.86 / q90 818.70, h_bar 3.71, scale sqrt(1/3.71)=0.519); actual 4019.00 -> OUTSIDE
 
 ## Verification
 
@@ -74,10 +74,5 @@ arrive.
   will expose that as scored rows arrive.
 - Bands inherit the forecast's own limits (sample-fit history
   to 29 Oct + real rows from 10 Nov; sparse per-mandi actuals).
-- Onion's band sits entirely ABOVE its point forecast (q10 is
-  +₹4/qtl): on the 41 scored Onion rows
-  the model under-predicts every time — the band is reporting a
-  real bias, not a symmetric error. A bias correction is a
-  follow-up, not today's change.
 
-![Forecast with 80% bands](../charts/confidence_bands_2026-11-24.svg)
+![Forecast with 80% bands](../charts/confidence_bands_2026-11-25.svg)
