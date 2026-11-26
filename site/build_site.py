@@ -28,6 +28,16 @@ Honesty rules baked in:
   mandis, Sealdah Onion/Potato, Bowenpally Onion — last actual 29 Oct
   2026 sample) are dropped here; the pipeline CSV keeps all 24.
   meta.forecastReal lists what is shown, so the site note can name it.
+- Day 47 (performance): the National trend series ships COLUMNAR —
+  {"dates": [...], "data": {commodity: {"i": [date-index...],
+  "p": [price...], "a": [arrivals...]}}} — instead of one object per
+  point. The old shape repeated the 10-char date string and the
+  (constant, unused-by-the-site) MSP on every point: 41.8KB of the
+  52KB data.js. Columnar + dropping series MSP cuts the series to
+  ~14KB. app.js expands it back to [{d, p, a}] at load. Split-by-
+  commodity was considered and rejected: it needs fetch(), which
+  breaks file:// preview and adds a request per commodity on a 2G
+  phone — the opposite of the goal.
 """
 import csv
 import glob
@@ -117,16 +127,24 @@ def main():
         })
 
     # --- National trend series (real portal data, 26 Oct 2026 -> latest) ---
-    series = {}
-    for r in nat:
+    # Day 47: columnar wire format — one shared dates array + per-commodity
+    # parallel arrays of date-index / price / arrivals. The old per-point
+    # objects repeated the 10-char date string and the (constant,
+    # unused-by-the-site) MSP on every point: 41.8KB of the 52KB data.js.
+    # app.js expands this back to [{d, p, a}] at load; nothing else reads
+    # D.series. MSP still reaches the site per commodity via `today`.
+    dates = sorted({r["arrival_date"] for r in nat})
+    di = {d: i for i, d in enumerate(dates)}
+    series_data = {}
+    for r in sorted(nat, key=lambda x: x["arrival_date"]):
         p = num(r["modal_price"])
         if p is None:
             continue
-        series.setdefault(r["commodity"], []).append(
-            {"d": r["arrival_date"], "p": p,
-             "a": num(r["arrival_tonnes"]), "msp": num(r["msp_rs"])})
-    for v in series.values():
-        v.sort(key=lambda x: x["d"])
+        s = series_data.setdefault(r["commodity"], {"i": [], "p": [], "a": []})
+        s["i"].append(di[r["arrival_date"]])
+        s["p"].append(p)
+        s["a"].append(num(r["arrival_tonnes"]))
+    series = {"dates": dates, "data": series_data}
 
     # --- Movers (latest vs previous trading day, National) ---
     with_chg = [t for t in today if t["changePct"] is not None]
@@ -265,7 +283,7 @@ def main():
         json.dump(data, fh, ensure_ascii=False, separators=(",", ":"))
         fh.write(";\n")
     print(f"wrote {out}: {len(today)} commodities on {latest}, "
-          f"{len(series)} series, {len(mandi_today)} mandi rows "
+          f"{len(series_data)} series, {len(mandi_today)} mandi rows "
           f"({'real' if mandi_real else 'sample'}, {mandi_latest}), "
           f"forecast {len(forecast)} keys, bands "
           f"{({c: band_meta[c]['n'] for c in band_meta}) if band_meta else 'none'}")

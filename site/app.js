@@ -5,6 +5,24 @@
   var D = window.MANDILENS_DATA;
   if (!D) { document.getElementById("freshBadge").textContent = "कीमतें लोड नहीं हुईं · Price data failed to load."; return; }
 
+  /* Day 47 (performance): data.js ships the trend series columnar —
+     {dates: [...], data: {commodity: {i: [date-index...], p: [...], a: [...]}}}
+     — so the file stays small on a phone. Expand back to the [{d, p, a}]
+     point objects the rest of this file uses. An old object-per-point
+     data.js still works (guarded by the .data check). */
+  if (D.series && D.series.data) {
+    (function () {
+      var dates = D.series.dates, out = {};
+      Object.keys(D.series.data).forEach(function (c) {
+        var s = D.series.data[c];
+        out[c] = s.i.map(function (idx, k) {
+          return { d: dates[idx], p: s.p[k], a: s.a[k] };
+        });
+      });
+      D.series = out;
+    })();
+  }
+
   var inr0 = new Intl.NumberFormat("en-IN", { maximumFractionDigits: 0 });
   var inr2 = new Intl.NumberFormat("en-IN", { maximumFractionDigits: 2, minimumFractionDigits: 0 });
   var MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];

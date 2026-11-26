@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="176" font-family="sans-serif">
+<rect x="0" y="0" width="640" height="176" fill="#fdfefe" stroke="#d5dbdb"/>
+<text x="12" y="27" font-size="13" font-weight="bold">Price alerts — 2026-11-24  ·  |move| &gt; 10% day-over-day (4 of 29 series)</text>
+<text x="12" y="56" font-size="12" fill="#333">Lentil(Masur)(Whole) · National</text>
+<rect x="400" y="45" width="220" height="14" fill="#c0392b"/>
+<text x="630" y="56" font-size="12" font-weight="bold" fill="#c0392b">+36.3%</text>
+<text x="12" y="82" font-size="12" fill="#333">Barley(Jau) · National</text>
+<rect x="400" y="71" width="169" height="14" fill="#2471a3"/>
+<text x="579" y="82" font-size="12" font-weight="bold" fill="#2471a3">-27.9%</text>
+<text x="12" y="108" font-size="12" fill="#333">Onion · National</text>
+<rect x="400" y="97" width="147" height="14" fill="#c0392b"/>
+<text x="557" y="108" font-size="12" font-weight="bold" fill="#c0392b">+24.4%</text>
+<text x="12" y="134" font-size="12" fill="#333">Jowar(Sorghum) · National</text>
+<rect x="400" y="123" width="108" height="14" fill="#c0392b"/>
+<text x="518" y="134" font-size="12" font-weight="bold" fill="#c0392b">+17.9%</text>
+</svg>
