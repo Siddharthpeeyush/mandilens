@@ -8,12 +8,12 @@ inside a normal-looking report. Tiers on overall lag:
 
 ## Today
 
-- **Verdict: STALE** — latest data 2026-11-23, 2 day(s) before the 2026-11-25 run (mode: portal).
-- Mandi feed (8 mandis): last reported 2026-11-23, 2 day(s) old — **STALE**.
-- Portal feed (National aggregate): last reported 2026-11-23, 2 day(s) old — **STALE**.
-- Calendar coverage **98.2%** — 55 of 56 days (2026-09-29 → 2026-11-23); missing: 2026-10-13.
+- **Verdict: STALE** — latest data 2026-11-24, 2 day(s) before the 2026-11-26 run (mode: portal).
+- Mandi feed (8 mandis): last reported 2026-11-24, 2 day(s) old — **STALE**.
+- Portal feed (National aggregate): last reported 2026-11-24, 2 day(s) old — **STALE**.
+- Calendar coverage **98.2%** — 56 of 57 days (2026-09-29 → 2026-11-24); missing: 2026-10-13.
 - Longest gap: 1 day(s).
-- Latest-day completeness: 24 of 24 portal commodities carried a price on 2026-11-23 (100.0%) — the rest were EMPTY cells in the portal table.
+- Latest-day completeness: 24 of 24 portal commodities carried a price on 2026-11-24 (100.0%) — the rest were EMPTY cells in the portal table.
 
 ## Reading the result
 
@@ -40,4 +40,4 @@ the SVG parses as valid XML. The module is wired into
 run_daily.py (runs after analyze.py) so every future daily
 report carries the badge section automatically.
 
-![data quality badge](../charts/data_quality_badge_2026-11-25.svg)
+![data quality badge](../charts/data_quality_badge_2026-11-26.svg)
