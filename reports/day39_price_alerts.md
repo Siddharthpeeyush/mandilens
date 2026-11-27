@@ -10,19 +10,21 @@ direction is printed with the move.
 
 ## Today
 
-- Latest data date: **2026-11-24** (run 2026-11-26, lag 2 day(s)).
-- Series evaluated: **29**; alerts fired: **4**.
+- Latest data date: **2026-11-25** (run 2026-11-27, lag 2 day(s)).
+- Series evaluated: **30**; alerts fired: **6**.
 
 | Commodity | Market | Previous | Latest | Change |
 |---|---|---|---|---|
-| Lentil(Masur)(Whole) | National | ₹7,117 (2026-11-23) | ₹9,701 | 🔺 +36.3% |
-| Barley(Jau) | National | ₹2,954 (2026-11-23) | ₹2,129 | 🔻 -27.9% |
-| Onion | National | ₹3,235 (2026-11-23) | ₹4,023 | 🔺 +24.4% |
-| Jowar(Sorghum) | National | ₹4,193 (2026-11-23) | ₹4,943 | 🔺 +17.9% |
+| Barley(Jau) | National | ₹2,129 (2026-11-24) | ₹2,666 | 🔺 +25.2% |
+| Jowar(Sorghum) | National | ₹4,943 (2026-11-24) | ₹3,726 | 🔻 -24.6% |
+| Lentil(Masur)(Whole) | National | ₹9,701 (2026-11-24) | ₹7,422 | 🔻 -23.5% |
+| Onion | National | ₹4,023 (2026-11-24) | ₹3,134 | 🔻 -22.1% |
+| Tomato | Bowenpally | ₹1,800 (2026-11-24) | ₹1,500 | 🔻 -16.7% |
+| Black Gram(Urd Beans)(Whole) | National | ₹8,603 (2026-11-24) | ₹7,596 | 🔻 -11.7% |
 
 ## Backtest — does the rule fire on the motivating example?
 
-- Same rule run over every date in the dataset: **460 alerts** across 55 trading days (18 on the busiest day).
+- Same rule run over every date in the dataset: **466 alerts** across 56 trading days (18 on the busiest day).
 - Jowar(Sorghum) at National, 07 Nov 2026 (the move the 09 Nov daily log reported): **+57.6% — ALERT FIRED** ✓ (the move that motivated this rule).
 - The +57.6% itself is a revision artefact, not a real
   one-day market move (Day 34): the portal's first publication
@@ -49,4 +51,4 @@ direction is printed with the move.
   future daily report carries the alerts section
   automatically.
 
-![price alerts](../charts/price_alerts_2026-11-26.svg)
+![price alerts](../charts/price_alerts_2026-11-27.svg)
