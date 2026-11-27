@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="228" font-family="sans-serif">
+<rect x="0" y="0" width="640" height="228" fill="#fdfefe" stroke="#d5dbdb"/>
+<text x="12" y="27" font-size="13" font-weight="bold">Price alerts — 2026-11-25  ·  |move| &gt; 10% day-over-day (6 of 30 series)</text>
+<text x="12" y="56" font-size="12" fill="#333">Barley(Jau) · National</text>
+<rect x="400" y="45" width="220" height="14" fill="#c0392b"/>
+<text x="630" y="56" font-size="12" font-weight="bold" fill="#c0392b">+25.2%</text>
+<text x="12" y="82" font-size="12" fill="#333">Jowar(Sorghum) · National</text>
+<rect x="400" y="71" width="214" height="14" fill="#2471a3"/>
+<text x="624" y="82" font-size="12" font-weight="bold" fill="#2471a3">-24.6%</text>
+<text x="12" y="108" font-size="12" fill="#333">Lentil(Masur)(Whole) · National</text>
+<rect x="400" y="97" width="205" height="14" fill="#2471a3"/>
+<text x="615" y="108" font-size="12" font-weight="bold" fill="#2471a3">-23.5%</text>
+<text x="12" y="134" font-size="12" fill="#333">Onion · National</text>
+<rect x="400" y="123" width="192" height="14" fill="#2471a3"/>
+<text x="602" y="134" font-size="12" font-weight="bold" fill="#2471a3">-22.1%</text>
+<text x="12" y="160" font-size="12" fill="#333">Tomato · Bowenpally</text>
+<rect x="400" y="149" width="145" height="14" fill="#2471a3"/>
+<text x="555" y="160" font-size="12" font-weight="bold" fill="#2471a3">-16.7%</text>
+<text x="12" y="186" font-size="12" fill="#333">Black Gram(Urd Beans)(Whole) · National</text>
+<rect x="400" y="175" width="102" height="14" fill="#2471a3"/>
+<text x="512" y="186" font-size="12" font-weight="bold" fill="#2471a3">-11.7%</text>
+</svg>
